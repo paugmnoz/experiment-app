@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,500,600,700,800,900");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body h1 {
+  font-size: 18px;
+}
+
+body .close-icon {
+  cursor: pointer;
+}
+
+body .text-title {
+  font-weight: 800;
+}
+
+body .input-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .green-link {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #44CD88;
+  cursor: pointer;
+}
+
+body input {
+  margin: 0 0.5rem;
+  padding: 5px;
+  height: 35px;
+  border-radius: 3px;
+  border: solid 1px #CBE2D7;
+}
+
+body input:focus {
+  border: solid 1px #44CD88;
+}
+
+body select {
+  margin: 0 0.5rem;
+  padding: 5px;
+  border-radius: 3px;
+  border: solid 1px #5a5a5a;
+}
+
+body select:focus {
+  border: solid 1px #44CD88;
+}
+
+body .hint-text {
+  font-style: italic;
+  color: #acacac;
+  font-size: 14px;
+  padding: 0.3rem 1rem;
+}
+
+body .green-button {
+  border-style: none;
+  background-color: #AFEA7D;
+  color: #272E2E;
+  font-weight: 800;
+  border-radius: 2px;
+  padding: 0.7rem 1rem;
+  min-width: 120px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+body .green-button:hover {
+  background-color: #5ad67f;
+}
+
+body .card-section {
+  border-bottom: solid 1px #dbdbdb;
+  padding: 1rem 0;
+}
+
+body #card-for-tagging {
+  position: absolute;
+  background-color: white;
+}
+/*# sourceMappingURL=App.css.map */

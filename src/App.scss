@@ -91,7 +91,9 @@ body{
         border-bottom: solid 1px  rgb(219, 219, 219);
         padding: 1rem 0;
     }
-
+    input[type="checkbox"] {
+        height: auto;
+    }
     #card-for-tagging{
         position: absolute;
         background-color: white;

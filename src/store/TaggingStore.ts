@@ -7,6 +7,9 @@ class TaggingStore {
     @observable posXCard = 0;
     @observable posYCard = 0;
 
+    @observable commonName = ''
+    @observable sciName = ''
+
     @action setMousePos(x: any, y: any) {
         this.posXCard = x;
         this.posYCard = y;
@@ -19,6 +22,10 @@ class TaggingStore {
     @action handlePosChange(e:any) {
           this.audioPos = e.originalArgs[0]
       }
+    @action birdClick(){
+        this.commonName = 'Hormiguero de Zeledón'
+        this.sciName = 'Hafferia zeledoni'
+    }
 }
 
 

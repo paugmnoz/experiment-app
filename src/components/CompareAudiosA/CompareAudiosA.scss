@@ -1,3 +1,5 @@
+@import "./../../variables.scss";
+
 @mixin on-circle($item-count, $circle-size, $item-size) {
     position: relative;
     width:  16em;
@@ -36,7 +38,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #F9F9F9;
+    background-color: $semiWhite;
     padding: 1rem;
     .left {
         width: 30%;
@@ -62,7 +64,7 @@
             }
             h3 {
                 font-weight: 700;
-                color: #44CD88;
+                color: $mainActiveColor;
                 font-size: 16px;
               
             }
@@ -79,7 +81,7 @@
                     align-items: center;
                     width: 45px;
                     height: 45px;
-                    background-color: white;
+                    background-color: $white;
                     border-radius: 25px;
                     cursor: pointer;
                     img { 
@@ -91,10 +93,10 @@
                         top: -125%;
                         font-weight: 600;
                         &.active {
-                            color: #333;
+                            color: $mainDarkColor;
                         }
                         &.disabled{
-                            color: rgb(170, 170, 170)
+                            color: $hintColor
                         }
                     }
 
@@ -119,9 +121,9 @@
         width: 60%;
         min-width: 600px;
         max-height: 500px;
-        background-color: white;
+        background-color: $white;
         border-radius: 9px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 4px 4px $boxShadow;
         overflow-y: auto;
     }
 }

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './IdentifySoundA.scss';
 import { taggingStore } from '../../store/TaggingStore';
+import Wavesurfer from 'react-wavesurfer';
 
 
 export class IdentifySoundA extends React.Component {

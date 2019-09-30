@@ -12,6 +12,38 @@ body{
     h1 {
         font-size: 18px;
     }
+    .tooltip {
+        position: relative;
+        &:hover .tooltiptext {
+            visibility: visible;
+          }
+        .tooltiptext {
+            visibility: hidden;
+            min-width: 120px;
+            word-wrap: break-word;
+            max-width: 200px;
+            background-color: #333333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 150%;
+            left: 50%;
+            margin-left: -60px;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent transparent #333333 transparent;
+              }
+          }
+    }
     .close-icon {
         cursor: pointer;
     }
@@ -91,7 +123,9 @@ body{
         border-bottom: solid 1px  rgb(219, 219, 219);
         padding: 1rem 0;
     }
-
+    input[type="checkbox"] {
+        height: auto;
+    }
     #card-for-tagging{
         position: absolute;
         background-color: white;

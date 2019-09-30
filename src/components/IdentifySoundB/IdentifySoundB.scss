@@ -1,6 +1,8 @@
 
 section {
     background-color: white;
+    position: relative;
+
 }
 .card-header {
     display: flex;
@@ -8,12 +10,9 @@ section {
     justify-content: space-between;
     background-color: #AFEA7D;
     padding: 1rem;
-
     h1 {
         margin: 0;
     }
-  
-   
 }
 .description-items-row {
     display: flex;
@@ -30,6 +29,36 @@ section {
         }
     }
 }
+.img-birds {
+    cursor: pointer;
+}
+
+.spectro {
+    cursor: pointer;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.input-col {
+    display: flex;
+    flex-direction: column;
+    &.search {
+        justify-content: space-between;
+        input {
+            width: 50%;
+        }
+    }
+}
+
+.birds{
+    margin-left: 10px;
+}
+
 .card-item {
     padding: 0.5rem 1rem;
 }

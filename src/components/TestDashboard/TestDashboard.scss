@@ -4,7 +4,8 @@
 .cont {
     background-color: #F2F2F2;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,6 +38,8 @@
         }
     }
 }
-.atom {
-
+.compareAudiosA {
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
 }

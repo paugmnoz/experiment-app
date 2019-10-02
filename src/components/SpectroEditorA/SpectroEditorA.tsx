@@ -59,7 +59,11 @@ export class SpectroEditorA extends React.Component {
                                 <button className="dark-button" onClick={() => taggingStore.onScaleSelection('7')}>Seleccionar</button>
                             </span>
                         </span> : (taggingStore.contrastEditionStatus) ? <span className="contrast-atom">
-                            contrast
+                        <div className="edit-header">
+                                <h3>Edición de brillo y contraste</h3>
+                                <img src="./assets/dark-x-close.svg" className="close" height="15px" alt="" />
+                            </div>
+                            <p>Modifica el brillo y contrate del espectrograma para resaltar la energía de los sonidos.</p>
                             </span> : ""
                     }
 

@@ -37,11 +37,6 @@
                 p {
                     margin: 1rem 0;
                 }
-            }
-
-            .color-atom {
-                background-color: $white;
-
                 .edit-header {
                     display: flex;
                     flex-direction: row;
@@ -55,6 +50,12 @@
                         cursor: pointer;
                     }
                 }
+            }
+
+            .color-atom {
+                background-color: $white;
+
+               
                 .color-scale-option {
                     display: flex;
                     flex-direction: row;

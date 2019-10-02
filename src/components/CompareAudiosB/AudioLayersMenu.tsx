@@ -1,9 +1,11 @@
 import * as React from 'react';
-import './SpectroEditorB.scss';
+import './CompareAudiosB.scss';
 import Iframe from 'react-iframe'
-import ToolsMenu from '../ToolsMenu/ToolsMenu';
-import '../SpectroEditorB/SpectroEditorB.scss';
+import '../CompareAudiosB/CompareAudiosB.scss';
+import { taggingStore } from '../../store/TaggingStore';
+import { observer } from 'mobx-react';
 
+@observer
 export default class AudioLayersMenu extends React.Component {
 
     render() {
@@ -15,7 +17,7 @@ export default class AudioLayersMenu extends React.Component {
             <span>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/unlocked-padlock.svg" alt="" height="25" width="25"></img></button>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/sound-icon.svg" alt="" height="25" width="25"></img></button>
-            <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25"></img></button>
+            <button className="mic-cont-btn" onClick={() => taggingStore.activateMicro('all')}><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25"></img></button>
             </span>
             <h3>Todos</h3>
             <span className="hex">
@@ -39,7 +41,7 @@ export default class AudioLayersMenu extends React.Component {
             <span>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/unlocked-padlock.svg" alt="" height="25" width="25"></img></button>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/sound-icon.svg" alt="" height="25" width="25"></img></button>
-            <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25"></img></button>
+            <button className="mic-cont-btn" onClick={() => taggingStore.activateMicro('2')}><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25" ></img></button>
             </span>
             <h3>Micrófono 2</h3>
             <span className="hex">
@@ -51,7 +53,7 @@ export default class AudioLayersMenu extends React.Component {
             <span>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/unlocked-padlock.svg" alt="" height="25" width="25"></img></button>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/sound-icon.svg" alt="" height="25" width="25"></img></button>
-            <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25"></img></button>
+            <button className="mic-cont-btn" onClick={() => taggingStore.activateMicro('3')}><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25"></img></button>
             </span>
             <h3>Micrófono 3</h3>
             <span className="hex">
@@ -63,7 +65,7 @@ export default class AudioLayersMenu extends React.Component {
             <span>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/unlocked-padlock.svg" alt="" height="25" width="25"></img></button>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/sound-icon.svg" alt="" height="25" width="25"></img></button>
-            <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25"></img></button>
+            <button className="mic-cont-btn" onClick={() => taggingStore.activateMicro('4')}><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25"></img></button>
             </span>
             <h3>Micrófono 4</h3>
             <span className="hex">
@@ -75,7 +77,7 @@ export default class AudioLayersMenu extends React.Component {
             <span>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/unlocked-padlock.svg" alt="" height="25" width="25"></img></button>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/sound-icon.svg" alt="" height="25" width="25"></img></button>
-            <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25"></img></button>
+            <button className="mic-cont-btn" onClick={() => taggingStore.activateMicro('5')}><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25"></img></button>
             </span>
             <h3>Micrófono 5</h3>
             <span className="hex">
@@ -87,7 +89,7 @@ export default class AudioLayersMenu extends React.Component {
             <span>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/unlocked-padlock.svg" alt="" height="25" width="25"></img></button>
             <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/sound-icon.svg" alt="" height="25" width="25"></img></button>
-            <button className="mic-cont-btn"><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25"></img></button>
+            <button className="mic-cont-btn" onClick={() => taggingStore.activateMicro('6')}><img src="./assets/layers-manag-assets/eye-icon.svg" alt="" height="25" width="25"></img></button>
             </span>
             <h3>Micrófono 6</h3>
             <span className="hex">

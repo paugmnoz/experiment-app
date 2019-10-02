@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../ToolsMenu/ToolsMenu.scss'
+import './ToolsMenu.scss'
 
 export default class ToolsMenu extends React.Component {
 

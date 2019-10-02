@@ -78,6 +78,21 @@ class TaggingStore {
     @action onChangeVolume(val) {
         this.volume = val;
     }
+
+    //EDITOR A
+
+    @observable colorEditionStatus:boolean = false;
+    @observable contrastEditionStatus:boolean = false;
+
+    @action onColorEdit() {
+        this.colorEditionStatus = true;
+        this.contrastEditionStatus = false;
+    }
+
+    @action onContrastEdit() {
+        this.contrastEditionStatus = true;
+        this.colorEditionStatus = false;
+    }
 }
 
 

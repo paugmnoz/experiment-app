@@ -1,4 +1,5 @@
 import { observable, action, computed } from 'mobx';
+var XenoCanto = require('xeno-canto');
 
 class TaggingStore {
     @observable playingAudio = false;
@@ -174,6 +175,18 @@ class TaggingStore {
         this.colorEditionStatus = false;
     }
 
+    //XENO CANTO
+
+    @action xenoSearch(birdName) {
+        let birdSearch = new XenoCanto();
+    
+        birdSearch.search("bearded bellbird", function(self){
+            console.log("numRecordings: " + self.entity.numRecordings);
+            console.log("numSpecies: " + self.entity.numSpecies);
+            // inspect more properties ..
+        });
+    }
+    
 }
 
 

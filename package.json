@@ -19,7 +19,8 @@
     "react-wavesurfer": "^0.8.6",
     "types-installer": "^1.6.3",
     "typescript": "^3.6.3",
-    "wavesurfer.js": "^2.0.0-beta01"
+    "wavesurfer.js": "^2.0.0-beta01",
+    "xeno-canto": "0.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

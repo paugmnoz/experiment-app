@@ -11,12 +11,17 @@ export default class SpectroEditorB extends React.Component {
             width: 280,
             // Set the initial color to pure red
             color: "#f00",
-
         });
 
-        return <div>
-            <button>Fondo</button>            
+        return <div className="color-picker-div">
+            <div className="header-color-pick-mang">
+                <h2>Edición de Color</h2>
+                <p>Escoge una escala de color para visualizar la energía del sonido.</p>
+            </div>
+            <div className="btns-sel-spectro">
+            <button style={{marginRight: '25'}}>Fondo</button>
             <button>Espectro</button>
+            </div>
             <div id="color-picker-container"></div>
         </div>
     }

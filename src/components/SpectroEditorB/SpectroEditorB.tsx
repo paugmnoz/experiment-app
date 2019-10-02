@@ -18,7 +18,7 @@ export class SpectroEditorB extends React.Component {
                 <section className="editor-section">
                     <div className="left">
                         <span className="spectrogram">
-                            <img src="./assets/Editor/original-gray-spectrum.png" alt="" />
+                            <img src="./assets/Editor/original-gray-spectrum.png" alt="" width="770" />
                         </span>
                     </div>
                 </section>

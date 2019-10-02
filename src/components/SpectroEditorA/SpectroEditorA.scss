@@ -1,0 +1,32 @@
+@import "./../../variables.scss";
+.editor-cont {
+    padding: 0.5rem;
+    background-color: $ligthGray2;
+    .editor-section {
+        background-color: $ligthGray2;
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .left {
+            width: 55%;
+            background-color: $white;
+            padding: 0.5rem;
+            border-radius: 5px;
+            img {
+                width: 95%;
+            }
+        }
+        .right {
+            width: 43%;
+            .color-atom {
+
+            }
+
+            .contrast-atom {
+
+            }
+
+        }
+    }
+}

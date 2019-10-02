@@ -13,7 +13,10 @@ export class SpectroEditorA extends React.Component {
     @observable brightVal = 1;
     @observable contrastVal = 1;
 
-
+    constructor(props){
+        super(props);
+        taggingStore.xenoSearch('a')
+    }
     onBrightChange(value) {
         console.log(value)
         this.brightVal = value;
@@ -50,8 +53,31 @@ export class SpectroEditorA extends React.Component {
             <section className="editor-section">
                 <div className="left">
                     <span className="spectrogram">
-                        <img id="spectro" style={ContrastBrightness}
+                        {
+                            (taggingStore.scale1Selected) ? 
+                            <img id="spectro" style={ContrastBrightness}
                             src="./assets/Editor/original-gray-spectrum.png" alt="" />
+                            : (taggingStore.scale2Selected) ? 
+                            <img id="spectro" style={ContrastBrightness}
+                            src="./assets/Editor/2.png" alt="" />
+                            :  (taggingStore.scale3Selected) ? 
+                            <img id="spectro" style={ContrastBrightness}
+                            src="./assets/Editor/3.png" alt="" />
+                            :  (taggingStore.scale4Selected) ? 
+                            <img id="spectro" style={ContrastBrightness}
+                            src="./assets/Editor/4.png" alt="" />
+                            :  (taggingStore.scale5Selected) ? 
+                            <img id="spectro" style={ContrastBrightness}
+                            src="./assets/Editor/5.png" alt="" />
+                            :  (taggingStore.scale6Selected) ? 
+                            <img id="spectro" style={ContrastBrightness}
+                            src="./assets/Editor/6.png" alt="" />
+                            :  (taggingStore.scale7Selected) ? 
+                            <img id="spectro" style={ContrastBrightness}
+                            src="./assets/Editor/7.png" alt="" />
+                            : ''
+                        }
+                       
                     </span>
                 </div>
                 <div className="right">
@@ -100,6 +126,7 @@ export class SpectroEditorA extends React.Component {
                         </span> : (taggingStore.contrastEditionStatus) ? <span className="contrast-atom">
                             <div className="edit-header">
                                 <h3>Edición de brillo y contraste</h3>
+                                
                                 <img src="./assets/dark-x-close.svg" className="close" height="15px" alt="" />
                             </div>
                             <p>Modifica el brillo y contrate del espectrograma para resaltar la energía de los sonidos.</p>
@@ -153,9 +180,13 @@ export class SpectroEditorA extends React.Component {
                                     onChange={(e) => this.onContrastInputChange(e.target.value)}
                                     name="" id="" />
                             </span>
+                            <br/>
+                            <span className="bcEditOption">
+                            <button className="dark-button">Cancelar</button>
+                            <button className="green-button">Guardar cambios</button>
+                            </span>
                         </span> : ""
                     }
-
 
                 </div>
             </section>

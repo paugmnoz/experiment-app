@@ -11,7 +11,7 @@ export default class App extends React.Component {
   render(){
     document.body.addEventListener('click', () => {
       dashboardStore.atomClicks++;
-      console.log(dashboardStore.atomClicks)
+   //   console.log(dashboardStore.atomClicks)
   }, true)
       return <TestDashboard></TestDashboard>
   }

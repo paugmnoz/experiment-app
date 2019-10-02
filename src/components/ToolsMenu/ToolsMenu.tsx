@@ -1,6 +1,9 @@
 import * as React from 'react';
 import '../ToolsMenu/ToolsMenu.scss'
+import { taggingStore } from '../../store/TaggingStore';
+import { observer } from 'mobx-react';
 
+@observer
 export default class ToolsMenu extends React.Component {
 
     render() {
@@ -44,12 +47,12 @@ export default class ToolsMenu extends React.Component {
                     <button className="tool-btn"><img src="./assets/tool-bar-assets/zoom-out-icon.svg" alt="" height="50" width="50"></img></button>
                     <span className="tooltiptext">Alejar</span>
                 </span>
-                <span className="tooltip">
+                <span className="tooltip" onClick={ () => taggingStore.onColorEdit()}>
                     <button className="tool-btn"><img src="./assets/tool-bar-assets/color-icon.svg" alt="" height="50" width="50"></img></button>
                     <span className="tooltiptext">Mapa de Color</span>
                 </span>
                 <span className="tooltip">
-                    <button className="tool-btn"><img src="./assets/tool-bar-assets/bright-icon.svg" alt="" height="50" width="50"></img></button>
+                    <button className="tool-btn" onClick={ () => taggingStore.onContrastEdit()}><img  src="./assets/tool-bar-assets/bright-icon.svg" alt="" height="50" width="50"></img></button>
                     <span className="tooltiptext">Brillo/Contraste</span>
                 </span>
             </div>

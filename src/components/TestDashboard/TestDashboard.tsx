@@ -30,8 +30,6 @@ import { SpectroEditorA } from '../SpectroEditorA/SpectroEditorA';
     _onMouseMove(e) {
         this.x = e.nativeEvent.offsetX;
         this.y = e.nativeEvent.offsetY;
-
-        console.log(this.x, this.y);
         taggingStore.setMousePos(this.x, this.y);
      }
 
@@ -52,23 +50,23 @@ import { SpectroEditorA } from '../SpectroEditorA/SpectroEditorA';
                     <div className="compareAudiosA atom">
                         <SpectroEditorA/>
                     </div>
-                   ) : (dashboardStore.actualAtom == '1B') ? (
+                   ) : (dashboardStore.actualAtom === '1B') ? (
                     <div className="SpectroA atom">
                     <SpectroEditorB/>
                     </div>
-                ): (dashboardStore.actualAtom == '2A') ? (
+                ): (dashboardStore.actualAtom === '2A') ? (
                     <div className="SpectroA atom">
                     <CompareAudiosA/>
                     </div>
-                ): (dashboardStore.actualAtom == '2B') ? (
+                ): (dashboardStore.actualAtom === '2B') ? (
                     <div className="SpectroA atom">
                     <CompareAudiosB/>
                     </div>
-                ): (dashboardStore.actualAtom == '3A') ? (
+                ): (dashboardStore.actualAtom === '3A') ? (
                     <div className="identifySoundA atom">
                     <IdentifySoundA/>
                     </div>
-                ): (dashboardStore.actualAtom == '3B') ? (
+                ): (dashboardStore.actualAtom === '3B') ? (
                     <div className="identifySoundA atom">
                     <IdentifySoundB/>
                     </div>

@@ -32,6 +32,11 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: $mainActiveColor; 
   }
+
+  .green-text {
+      color: $mainActiveColor;
+      font-weight: bold;
+  }
     h1 {
         font-size: 18px;
     }

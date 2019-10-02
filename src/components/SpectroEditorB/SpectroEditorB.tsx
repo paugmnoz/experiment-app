@@ -1,12 +1,11 @@
 import * as React from 'react';
 import ToolsMenu from '../ToolsMenu/ToolsMenu';
 import '../SpectroEditorB/SpectroEditorB.scss';
-import AudioLayersMenu from '../CompareAudiosB/AudioLayersMenu';
 import ColorWheelEditor from '../SpectroEditorB/ColorWheelEditor';
-import Slider, { Range } from 'rc-slider';
-import { taggingStore } from '../../store/TaggingStore';
+import BrightContrastEditor from '../SpectroEditorB/BrightContrastEditor';
+import { dashboardStore } from '../../store/DashboardStore';
+import { editorBStore } from '../../store/editorBStore';
 import { observer } from 'mobx-react';
-import { SpectrogramCompareView } from '../subcomponents/SpectrogramCompareView/SpectrogramCompareView';
 
 @observer
 export class SpectroEditorB extends React.Component {
@@ -22,7 +21,15 @@ export class SpectroEditorB extends React.Component {
                         </span>
                     </div>
                 </section>
-                <ColorWheelEditor />
+                {(editorBStore.getTool() === 0 && dashboardStore.actualAtom == '1B')
+                ? console.log('aayyyy')
+                : (editorBStore.getTool() === 1 && dashboardStore.actualAtom == '1B')
+                   ? <div>Aquí iría el Color Wheel</div>
+                   : (editorBStore.getTool() === 2 && dashboardStore.actualAtom == '1B')
+                   ? <div>Aquí iría el Editor de Brillo Contraste</div>
+                   : console.log('aayyyy')
+                }
+                <BrightContrastEditor/>
             </section>
         </div>
     }

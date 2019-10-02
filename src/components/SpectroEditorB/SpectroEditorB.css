@@ -1,5 +1,18 @@
+.spectro-editor-b {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #F9F9F9;
+  padding: 10px;
+}
+
 .layers-management {
   width: 400px;
+  border-radius: 4px;
 }
 
 .layers-management .header-lay-mang {
@@ -30,6 +43,12 @@
   border-top: 1.5px solid #F9F9F9;
 }
 
+.layers-management .mic-container h3 {
+  font-size: 18px;
+  color: #828282;
+  font-weight: 800;
+}
+
 .layers-management .mic-container .hex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,6 +57,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.layers-management .mic-container .hex h4 {
+  font-size: 16px;
+  color: #828282;
+  font-weight: 800;
+  margin-left: 2px;
 }
 
 .layers-management .mic-container .mic-cont-btn {
@@ -46,11 +75,5 @@
   border: none;
   text-decoration: none;
   margin: 5px;
-}
-
-.layers-management .mic-container .mic-cont-btn h3 {
-  font-size: 14px;
-  color: #828282;
-  font-weight: 900;
 }
 /*# sourceMappingURL=SpectroEditorB.css.map */

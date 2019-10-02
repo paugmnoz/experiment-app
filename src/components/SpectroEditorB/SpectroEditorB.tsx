@@ -9,7 +9,10 @@ export class SpectroEditorB extends React.Component {
     render() {
         return <div>
             <ToolsMenu />
+            <section className="spectro-editor-b">
+            <h1>Uy ekis de</h1>
             <AudioLayersMenu />
+            </section>
         </div>
     }
 }

@@ -1,1 +1,56 @@
-/* No CSS *//*# sourceMappingURL=SpectroEditorB.css.map */
+.layers-management {
+  width: 400px;
+}
+
+.layers-management .header-lay-mang {
+  padding: 15px 0 15px 0;
+}
+
+.layers-management .header-lay-mang h2 {
+  color: #44CD88;
+  margin-left: 20px;
+}
+
+.layers-management .mic-container {
+  margin: 0 15px 0 15px;
+  padding: 7px 0 7px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1.5px solid #F9F9F9;
+}
+
+.layers-management .mic-container .hex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.layers-management .mic-container .mic-cont-btn {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.layers-management .mic-container .mic-cont-btn h3 {
+  font-size: 14px;
+  color: #828282;
+  font-weight: 900;
+}
+/*# sourceMappingURL=SpectroEditorB.css.map */

@@ -1,0 +1,40 @@
+.layers-management {
+    width: 400px;
+
+    .header-lay-mang {
+        h2 {
+            color: #44CD88;
+            margin-left: 20px;
+        }
+        padding: 15px 0 15px 0;
+    }
+
+    .mic-container {
+        margin: 0 15px 0 15px;
+        padding: 7px 0 7px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1.5px solid #F9F9F9;
+
+        .hex{
+            display: flex;
+            flex-direction: row;
+        }
+        .mic-cont-btn {
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            text-decoration: none;
+            margin: 5px;
+
+            h3 {
+                font-size: 14px;
+                color: #828282;
+                font-weight: 900;
+            }
+        }
+
+    }
+}

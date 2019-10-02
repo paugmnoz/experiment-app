@@ -100,6 +100,25 @@
                     }
                 }
             }
+            .contrast-atom {
+                .bcEditOption {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    p {
+                        margin: 0 1rem 0 0;
+                        width: 70px;
+                    }
+                    input {
+                        width: 40px;
+                        text-align: center;
+
+                    }
+                    .rc-slider {
+                        width: 70%;
+                    }
+                }
+            }
 
         }
     }

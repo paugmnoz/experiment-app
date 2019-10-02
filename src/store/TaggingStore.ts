@@ -173,6 +173,7 @@ class TaggingStore {
         this.contrastEditionStatus = true;
         this.colorEditionStatus = false;
     }
+
 }
 
 

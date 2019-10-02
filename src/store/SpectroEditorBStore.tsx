@@ -1,7 +1,7 @@
 import { observable, action, computed } from 'mobx';
 
 class SpectroEditorBStore {
-    //@observable tool = false;
+    @observable tool = false;
 }
 
 

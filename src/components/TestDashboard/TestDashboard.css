@@ -5,7 +5,8 @@
 .cont {
   background-color: #F2F2F2;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,5 +51,20 @@
   font-weight: 600;
   font-size: 16px;
   font-family: 'Lato', sans-serif;
+}
+
+.cont .soft-handlers button.next {
+  background-color: #1d1c6e;
+}
+
+.cont .soft-handlers button.save {
+  background-color: #ffd255;
+  color: #232733;
+}
+
+.compareAudiosA {
+  width: 80%;
+  max-width: 1200px;
+  height: auto;
 }
 /*# sourceMappingURL=TestDashboard.css.map */

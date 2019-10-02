@@ -1,0 +1,41 @@
+.tool-bar {
+  background-color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1200px;
+}
+
+.tool-bar .audio-options {
+  margin-left: 30px;
+}
+
+.tool-bar .edition-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 30px;
+}
+
+.tool-bar .tool-btn {
+  background-color: #333333;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.tool-bar .tool-btn:hover {
+  background-color: #AFEA7D;
+}
+/*# sourceMappingURL=ToolsMenu.css.map */

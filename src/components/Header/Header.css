@@ -1,0 +1,17 @@
+.header {
+  background-color: #282c34;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.header img {
+  display: inline-block;
+  height: 200px;
+}
+
+.header h1 {
+  color: #61dafb;
+  font-size: 3rem;
+}
+/*# sourceMappingURL=Header.css.map */

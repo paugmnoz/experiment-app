@@ -1,6 +1,5 @@
 section {
   background-color: white;
-  position: relative;
 }
 
 .card-header {
@@ -46,15 +45,11 @@ section {
   width: 50%;
 }
 
-.img-birds {
-  cursor: pointer;
+.card-item {
+  padding: 0.5rem 1rem;
 }
 
-.spectro {
-  cursor: pointer;
-}
-
-.btns {
+.form-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,38 +57,16 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  margin: 0.5rem 0;
-}
-
-.input-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.input-col.search {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.input-col.search input {
-  width: 50%;
+.actions {
+  padding: 1rem;
 }
 
-.birds {
-  margin-left: 10px;
+.actions p {
+  margin: 0.5rem;
 }
-
-.card-item {
-  padding: 0.5rem 1rem;
-}
-/*# sourceMappingURL=IdentifySoundB.css.map */
+/*# sourceMappingURL=IdentifySoundA.css.map */

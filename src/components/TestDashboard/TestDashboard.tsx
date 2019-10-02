@@ -48,7 +48,7 @@ import { SpectroEditorA } from '../SpectroEditorA/SpectroEditorA';
             </div>
             {
                (dashboardStore.actualAtom == '1A') ? (
-                    <div className="compareAudiosA atom">
+                    <div className="SpectroA atom">
                         <SpectroEditorA/>
                     </div>
                    ) : (dashboardStore.actualAtom === '1B') ? (

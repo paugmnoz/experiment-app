@@ -24,8 +24,7 @@ export default class BrightContrastEditor extends React.Component {
                         trackColor={'#828282'}
                     />
                 </div>
-                <div className="contrast-slider"
-                style={{ marginLeft: 15}}>
+                <div className="contrast-slider">
                     <h3>Contraste</h3>
                     <CircularSlider
                         r={70}

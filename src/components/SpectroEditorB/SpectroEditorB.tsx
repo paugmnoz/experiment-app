@@ -29,7 +29,8 @@ export class SpectroEditorB extends React.Component {
                    ? <div>Aquí iría el Editor de Brillo Contraste</div>
                    : console.log('aayyyy')
                 }
-                <BrightContrastEditor/>
+                <ColorWheelEditor/>
+                {/*<BrightContrastEditor/>*/}
             </section>
         </div>
     }

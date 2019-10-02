@@ -1,7 +1,7 @@
 import * as React from 'react';
-import '../ToolsMenu/ToolsMenu.scss'
+import { editorBStore } from '../../store/editorBStore';
 import { taggingStore } from '../../store/TaggingStore';
-import { observer } from 'mobx-react';
+import './ToolsMenu.scss'
 
 @observer
 export default class ToolsMenu extends React.Component {
@@ -47,12 +47,22 @@ export default class ToolsMenu extends React.Component {
                     <button className="tool-btn"><img src="./assets/tool-bar-assets/zoom-out-icon.svg" alt="" height="50" width="50"></img></button>
                     <span className="tooltiptext">Alejar</span>
                 </span>
-                <span className="tooltip" onClick={ () => taggingStore.onColorEdit()}>
-                    <button className="tool-btn"><img src="./assets/tool-bar-assets/color-icon.svg" alt="" height="50" width="50"></img></button>
+                <span className="tooltip">
+                    <button className="tool-btn" 
+                    onClick={() => {
+                    (editorBStore.getTool() !== 1)
+                    ? editorBStore.setTool(1)
+                    : editorBStore.setTool(0)
+                    }}><img src="./assets/tool-bar-assets/color-icon.svg" alt="" height="50" width="50"></img></button>
                     <span className="tooltiptext">Mapa de Color</span>
                 </span>
                 <span className="tooltip">
-                    <button className="tool-btn" onClick={ () => taggingStore.onContrastEdit()}><img  src="./assets/tool-bar-assets/bright-icon.svg" alt="" height="50" width="50"></img></button>
+                    <button className="tool-btn"
+                    onClick={() => {
+                        (editorBStore.getTool() !== 2)
+                        ? editorBStore.setTool(2)
+                        : editorBStore.setTool(0)
+                        }}><img src="./assets/tool-bar-assets/bright-icon.svg" alt="" height="50" width="50"></img></button>
                     <span className="tooltiptext">Brillo/Contraste</span>
                 </span>
             </div>

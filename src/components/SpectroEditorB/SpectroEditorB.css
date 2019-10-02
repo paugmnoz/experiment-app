@@ -1,1 +1,12 @@
-/* No CSS *//*# sourceMappingURL=SpectroEditorB.css.map */
+.spectro-editor-b {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #F9F9F9;
+  padding: 10px;
+}
+/*# sourceMappingURL=SpectroEditorB.css.map */

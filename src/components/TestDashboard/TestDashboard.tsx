@@ -25,11 +25,12 @@ import { SpectroEditorA } from '../SpectroEditorA/SpectroEditorA';
       }
     constructor(props) {
         super(props);
- 
       }
+
     _onMouseMove(e) {
         this.x = e.nativeEvent.offsetX;
         this.y = e.nativeEvent.offsetY;
+
         taggingStore.setMousePos(this.x, this.y);
      }
 
@@ -42,7 +43,7 @@ import { SpectroEditorA } from '../SpectroEditorA/SpectroEditorA';
                     (!dashboardStore.isCounting) ? ( <button onClick={() => dashboardStore.handleStart('a')}>Empezar</button> ) :
                     (<button  onClick={() => dashboardStore.handleEnd('a')}>He terminado</button>)
                 }
-                <button className="save"  onClick={this.downloadTxtFile}>guardar</button>
+                <button className="save"  onClick={this.downloadTxtFile}>Guardar</button>
                 <button className="next" onClick={() => dashboardStore.handleNext('a')}>Siguiente</button>
             </div>
             {

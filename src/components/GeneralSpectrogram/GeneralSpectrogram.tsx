@@ -10,7 +10,7 @@ export class GeneralSpectrogram extends React.Component {
 
     render() {
         return <div className="gen-spectro-section">
-
+            
         </div>
     }
 }

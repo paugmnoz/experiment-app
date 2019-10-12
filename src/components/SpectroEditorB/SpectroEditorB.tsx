@@ -21,16 +21,18 @@ export class SpectroEditorB extends React.Component {
                         </span>
                     </div>
                 </section>
-                {(editorBStore.getTool() === 0 && dashboardStore.actualAtom == '1B')
-                ? console.log('aayyyy')
-                : (editorBStore.getTool() === 1 && dashboardStore.actualAtom == '1B')
-                   ? <div>Aquí iría el Color Wheel</div>
-                   : (editorBStore.getTool() === 2 && dashboardStore.actualAtom == '1B')
-                   ? <div>Aquí iría el Editor de Brillo Contraste</div>
-                   : console.log('aayyyy')
-                }
-                <ColorWheelEditor/>
-                {/*<BrightContrastEditor/>*/}
+                <div className="color-wheel-editor-cont"
+                    style={{
+                        display: editorBStore.getTool() === 1 && dashboardStore.actualAtom == '1B' ? 'flex' : 'none'
+                    }}>
+                    <ColorWheelEditor />
+                </div>
+                <div className="bright-contrast-editor-cont"
+                style={{
+                    display: editorBStore.getTool() === 2 && dashboardStore.actualAtom == '1B' ? 'flex' : 'none'
+                }}>
+                    <BrightContrastEditor />
+                </div>
             </section>
         </div>
     }

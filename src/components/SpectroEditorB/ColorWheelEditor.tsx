@@ -3,9 +3,17 @@ import { observer } from 'mobx-react';
 import { observable } from 'mobx';
 import iro from '@jaames/iro';
 import { editorBStore } from '../../store/editorBStore';
+import { dashboardStore } from '../../store/DashboardStore';
 
 @observer
 export default class SpectroEditorB extends React.Component {
+
+    colorPicker: any = new iro.ColorPicker('#color-picker-container', {
+        // Set the size of the color picker
+        width: 280,
+        // Set the initial color to pure red
+        color: "#f00",
+    });
 
     handleModBack(show: boolean) {
         console.log('show hamb menu');
@@ -14,12 +22,6 @@ export default class SpectroEditorB extends React.Component {
     }    
 
     render() {
-        var colorPicker = new iro.ColorPicker('#color-picker-container', {
-            // Set the size of the color picker
-            width: 280,
-            // Set the initial color to pure red
-            color: "#f00",
-        });
 
         function onColorChange(color, changes) {
             // print the color's new hex value to the developer console
@@ -27,7 +29,7 @@ export default class SpectroEditorB extends React.Component {
         }
 
         // listen to a color picker's color:change event
-        colorPicker.on('color:change', onColorChange);
+        this.colorPicker.on('color:change', onColorChange);
 
         return <div className="color-picker-div">
             <div className="header-color-pick-mang">

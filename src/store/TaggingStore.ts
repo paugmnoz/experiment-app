@@ -201,7 +201,7 @@ class TaggingStore {
     @observable verified = false;
 
     @action updateMark() {
-       this.verified =  true;
+        this.verified = true;
     }
     @action playBirdSong(url) {
         let a = new Audio(url);
@@ -230,7 +230,7 @@ class TaggingStore {
                 break;
             case 2:
                 if (!this.selected2) {
-                    this.playBirdSong(url); 
+                    this.playBirdSong(url);
                     this.isSomethingSelected = true;
                     this.selected1 = false;
                     this.selected3 = false;
@@ -244,7 +244,7 @@ class TaggingStore {
                 break;
             case 3:
                 if (!this.selected3) {
-                    this.playBirdSong(url); 
+                    this.playBirdSong(url);
                     this.isSomethingSelected = true;
                     this.selected2 = false;
                     this.selected1 = false;
@@ -270,7 +270,7 @@ class TaggingStore {
                 break;
             case 5:
                 if (!this.selected5) {
-                    this.playBirdSong(url) 
+                    this.playBirdSong(url)
                     this.isSomethingSelected = true;
                     this.selected2 = false;
                     this.selected3 = false;
@@ -283,7 +283,7 @@ class TaggingStore {
                 break;
             case 6:
                 if (!this.selected6) {
-                    this.playBirdSong(url) 
+                    this.playBirdSong(url)
                     this.isSomethingSelected = true;
                     this.selected2 = false;
                     this.selected3 = false;
@@ -297,6 +297,25 @@ class TaggingStore {
         }
     }
 
+    //SELECTION AI
+
+    @observable selectedMark1 = false;
+    @observable selectedMark2 = false;
+    @observable someMarkSelected = false;
+    @action selectMarkSuggestion(url, index) {
+        switch (index) {
+            case 1:
+                this.playBirdSong(url);
+                this.selectedMark1 = true;
+                this.selectedMark2 = false;
+                break;
+            case 2:
+                this.playBirdSong(url);
+                this.selectedMark1 = false;
+                this.selectedMark2 = true;
+                break;
+        }
+    }
 }
 
 

@@ -11,6 +11,7 @@ import { CompareAudiosA } from '../CompareAudiosA/CompareAudiosA';
 import { SpectroEditorB } from '../SpectroEditorB/SpectroEditorB';
 import { SpectroEditorA } from '../SpectroEditorA/SpectroEditorA';
 import { GeneralSpectrogram } from '../GeneralSpectrogram/GeneralSpectrogram';
+import { SelectionSpectrogram } from '../SelectionSpectrogram/SelectionSpectrogram';
 
 @observer export class TestDashboard extends React.Component {
 
@@ -58,8 +59,9 @@ import { GeneralSpectrogram } from '../GeneralSpectrogram/GeneralSpectrogram';
                     <SpectroEditorB/>
                     </div>
                 ): (dashboardStore.actualAtom === '2A') ? (
-                    <div className="SpectroA atom">
-                    <CompareAudiosA/>
+                    <div >
+                        <SelectionSpectrogram/>
+                    {/*<CompareAudiosA/>*/}
                     </div>
                 ): (dashboardStore.actualAtom === '2B') ? (
                     <div className="SpectroA atom">

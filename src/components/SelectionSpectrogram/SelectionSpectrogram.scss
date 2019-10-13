@@ -1,0 +1,116 @@
+@import "./../../variables.scss";
+
+.selected-spectro-section {
+    width: 900px;
+    background-color: $ligthGray2;
+    display: flex;
+    flex-direction: column;
+
+    .suggestions {
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        padding: 10px;
+    }
+    .up {
+        .marks {
+            position: relative;
+            height: 20px;
+
+            .mark {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column-reverse;
+                align-content: center;
+                align-items: center;
+
+                &.prevent-hover {
+                    pointer-events: none;
+                }
+
+                &:hover {
+                    z-index: 100;
+
+                    .bird-photo-cont {
+                        transform: scale(1.2);
+                        margin: 0 0 0.3rem 0;
+
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &.selected {
+                    z-index: 100;
+                    transform: scale(1.2);
+                }
+
+                &:first-child {
+                    bottom: 0;
+                    left: 116px;
+                }
+
+                &:nth-child(2) {
+                    bottom: 0;
+                    left: 161px;
+                }
+            }
+
+        }
+
+        .time {
+            //      background-color: $mainDarkColor;
+            height: 45px;
+                    }
+    }
+
+    h1 {
+        margin: 0 0 0.5rem 0;
+        color: $mainActiveColor;
+    }
+    hr {
+        border: 0.5px solid $mainActiveColor;
+    }
+
+    .down {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .suggested-specie {
+            width: 25%;
+            background-color: $white;
+            padding: 7px;
+            border-radius: 5px;
+            margin: 0 0.5rem 0 0;
+            border: 1.5px solid $ligthGray2;
+            position: relative;
+            cursor: pointer;
+            .exploreaction {
+                display: none;
+                position: absolute;
+                top: 25%;
+                left: 40%;
+            }
+            &:hover {
+                .exploreaction {
+                    display: inherit;
+                }
+            }
+            &.selected {
+                
+                border-color: $thirdActiveColor;
+            }
+            .spectrogram {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

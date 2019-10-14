@@ -9,8 +9,6 @@ import { observer } from 'mobx-react';
 //import Spectogram from '../SpectroEditorB/Spectogram';
 import p5 from 'p5';
 //import P5Wrapper from 'react-p5-wrapper';
-import P5Wrapper from './P5Wrapper';
-import P5Sketch from './P5Sketch';
 
 @observer
 export class SpectroEditorB extends React.Component {

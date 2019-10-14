@@ -25,7 +25,14 @@ export default class SpectroEditorB extends React.Component {
 
         function onColorChange(color, changes) {
             // print the color's new hex value to the developer console
-            console.log(color.hexString);
+            //console.log(color.rgb);
+            var rgbCode = color.rgb;
+            console.log('r', rgbCode.r);
+            console.log('g', rgbCode.g);
+            console.log('b', rgbCode.b);
+            editorBStore.setRNum(rgbCode.r);
+            editorBStore.setGNum(rgbCode.g);
+            editorBStore.setBNum(rgbCode.b);
         }
 
         // listen to a color picker's color:change event

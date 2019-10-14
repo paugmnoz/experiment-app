@@ -8,6 +8,33 @@ class EditorBStore {
     @observable backgroundColor = 0;
     @observable spectroColor = 0;
 
+    @observable rNum = 0;
+    @observable gNum = 0;
+    @observable bNum = 0;
+
+    @observable getRNum(){
+        return this.rNum;
+    }
+
+    @observable getGNum(){
+        return this.gNum;
+    }
+
+    @observable getBNum(){
+        return this.bNum;
+    }
+
+    @action setRNum(value: number) {
+        this.rNum = value;
+    }
+
+    @action setGNum(value: number) {
+        this.gNum = value;
+    }
+
+    @action setBNum(value: number) {
+        this.bNum = value;
+    }
 
     @observable getModifyingBack() {
         return this.modifiyingBack;

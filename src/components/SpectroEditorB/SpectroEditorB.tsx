@@ -32,9 +32,9 @@ values=".33 .33 .33 0 0
 </feColorMatrix>
 
 <feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
-    <feFuncR type="table" tableValues="0.75 0.53"></feFuncR>
-    <feFuncG type="table" tableValues="0.25 0.97"></feFuncG>
-    <feFuncB type="table" tableValues="0.64 0.77"></feFuncB>
+<feFuncR type="table" tableValues={editorBStore.getRNum()/255 + " " + 0.53}></feFuncR>
+    <feFuncG type="table" tableValues={editorBStore.getGNum()/255 + " " + 0.97}></feFuncG>
+    <feFuncB type="table" tableValues={editorBStore.getBNum()/255 + " " + 0.77}></feFuncB>
     <feFuncA type="table" tableValues="0 1"></feFuncA>
 </feComponentTransfer>
 <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>

@@ -31,6 +31,8 @@ export default class ColorWheelSpectro extends React.Component {
             rgbCode.r = editorBStore.getRNumSpectro();
             rgbCode.g = editorBStore.getGNumSpectro();
             rgbCode.b = editorBStore.getBNumSpectro();
+
+            editorBStore.setColorWheelOn(true);
         }
 
         // listen to a color picker's color:change event

@@ -31,6 +31,8 @@ export default class ColorWheelBack extends React.Component {
             rgbCode.r = editorBStore.getRNumBack();
             rgbCode.g = editorBStore.getGNumBack();
             rgbCode.b = editorBStore.getBNumBack();
+
+            editorBStore.setColorWheelOn(true);
         }
 
         // listen to a color picker's color:change event

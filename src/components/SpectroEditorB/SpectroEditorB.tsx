@@ -33,7 +33,7 @@ export class SpectroEditorB extends React.Component {
         <feFuncR type="table" tableValues={editorBStore.getRNumSpectro()/255 + " " + editorBStore.getRNumBack()/255}></feFuncR>
         <feFuncG type="table" tableValues={editorBStore.getGNumSpectro()/255 + " " + editorBStore.getGNumBack()/255}></feFuncG>
         <feFuncB type="table" tableValues={editorBStore.getBNumSpectro()/255 + " " + editorBStore.getBNumBack()/255}></feFuncB>
-        {false
+        {editorBStore.getColorWheelOn()
         ?<feFuncA type="table" tableValues="0 1"></feFuncA>
         :<feFuncA type="table" tableValues="0 0"></feFuncA>}
     </feComponentTransfer>

@@ -3,7 +3,9 @@ import { observer } from 'mobx-react';
 
 class EditorBStore {
 
-    @observable tool:number = 0;
+    @observable colorWheelOn: boolean = false;
+
+    @observable tool: number = 0;
     @observable modifiyingSpectro = true;
     @observable backgroundColor = 0;
     @observable spectroColor = 0;
@@ -19,35 +21,43 @@ class EditorBStore {
     @observable brightValStore = 85;
     @observable contrastValStore = 85;
 
-    @observable getRNumBack(){
+    @observable getColorWheelOn() {
+        return this.colorWheelOn;
+    }
+
+    @action setColorWheelOn(value: boolean) {
+        this.colorWheelOn = value;
+    }
+
+    @observable getRNumBack() {
         return this.rNumBack;
     }
 
-    @observable getGNumBack(){
+    @observable getGNumBack() {
         return this.gNumBack;
     }
 
-    @observable getBNumBack(){
+    @observable getBNumBack() {
         return this.bNumBack;
     }
 
-    @observable getRNumSpectro(){
+    @observable getRNumSpectro() {
         return this.rNumSpectro;
     }
 
-    @observable getGNumSpectro(){
+    @observable getGNumSpectro() {
         return this.gNumSpectro;
     }
 
-    @observable getBNumSpectro(){
+    @observable getBNumSpectro() {
         return this.bNumSpectro;
     }
 
-    @observable getBrightValStore(){
+    @observable getBrightValStore() {
         return this.brightValStore;
     }
 
-    @observable getContrastValStore(){
+    @observable getContrastValStore() {
         return this.contrastValStore;
     }
 

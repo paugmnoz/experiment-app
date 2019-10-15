@@ -37,11 +37,12 @@ import { SpectroEditorA } from '../SpectroEditorA/SpectroEditorA';
      
     render(){
         return <div className="cont" onMouseMove={this._onMouseMove.bind(this)}>
+            <div className={(!dashboardStore.isCounting) ? 'overlay' :  'overlay started'}></div>
             <div className="soft-handlers">
                 <h1>ATOMO: {dashboardStore.actualAtom}</h1>
                 {
                     (!dashboardStore.isCounting) ? ( <button onClick={() => dashboardStore.handleStart('a')}>Empezar</button> ) :
-                    (<button  onClick={() => dashboardStore.handleEnd('a')}>He terminado</button>)
+                    (<button className="finish"  onClick={() => dashboardStore.handleEnd('a')}>He terminado</button>)
                 }
                 <button className="save"  onClick={this.downloadTxtFile}>Guardar</button>
                 <button className="next" onClick={() => dashboardStore.handleNext('a')}>Siguiente</button>

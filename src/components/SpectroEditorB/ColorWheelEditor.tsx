@@ -16,9 +16,9 @@ export default class SpectroEditorB extends React.Component {
     });
 
     handleModBack(show: boolean) {
-        console.log(editorBStore.getModifyingBack());
+        console.log(editorBStore.getModifyingSpectro());
         //console.log(store.getShowHambMenu());
-        editorBStore.setModifyingBack(show);
+        editorBStore.setModifyingSpectro(show);
     }    
 
     render() {
@@ -30,9 +30,25 @@ export default class SpectroEditorB extends React.Component {
             console.log('r', rgbCode.r);
             console.log('g', rgbCode.g);
             console.log('b', rgbCode.b);
-            editorBStore.setRNum(rgbCode.r);
-            editorBStore.setGNum(rgbCode.g);
-            editorBStore.setBNum(rgbCode.b);
+            if(editorBStore.getModifyingSpectro()){
+            editorBStore.setRNumBack(rgbCode.r);
+            editorBStore.setGNumBack(rgbCode.g);
+            editorBStore.setBNumBack(rgbCode.b);
+
+            rgbCode.r = editorBStore.getRNumSpectro();
+            rgbCode.g = editorBStore.getGNumSpectro();
+            rgbCode.b = editorBStore.getBNumSpectro();
+
+            } else if (!editorBStore.getModifyingSpectro()){
+            editorBStore.setRNumSpectro(rgbCode.r);
+            editorBStore.setGNumSpectro(rgbCode.g);
+            editorBStore.setBNumSpectro(rgbCode.b);
+
+            rgbCode.r = editorBStore.getRNumBack();
+            rgbCode.g = editorBStore.getGNumBack();
+            rgbCode.b = editorBStore.getBNumBack();
+
+        }
         }
 
         // listen to a color picker's color:change event
@@ -46,23 +62,23 @@ export default class SpectroEditorB extends React.Component {
             <div className="btns-sel-spectro">
                 <button style={{ 
                 marginRight: '25',
-                backgroundColor: editorBStore.getModifyingBack() ? '#53CC8F':'#F4F4F4',
-                color: editorBStore.getModifyingBack() ? '#FFF':'#000000'
+                backgroundColor: editorBStore.getModifyingSpectro() ? '#53CC8F':'#F4F4F4',
+                color: editorBStore.getModifyingSpectro() ? '#FFF':'#000000'
                 }}
                 onClick={() => {
                     this.handleModBack(true);
-                    console.log('modifying back', editorBStore.getModifyingBack());
-                    }}>Fondo</button>
+                    console.log('modifying back', editorBStore.getModifyingSpectro());
+                    }}>Espectro</button>
                 <button
                 style={{ 
                 marginRight: '25',
-                backgroundColor: editorBStore.getModifyingBack() ? '#F4F4F4':'#53CC8F',
-                color: editorBStore.getModifyingBack() ? '#000000':'#FFF'
+                backgroundColor: editorBStore.getModifyingSpectro() ? '#F4F4F4':'#53CC8F',
+                color: editorBStore.getModifyingSpectro() ? '#000000':'#FFF'
                 }}
                 onClick={() => {
                     this.handleModBack(false);
-                    console.log('modifying back', editorBStore.getModifyingBack());
-                }}>Espectro</button>
+                    console.log('modifying back', editorBStore.getModifyingSpectro());
+                }}>Fondo</button>
             </div>
             <div className="current-color"></div>
             <div id="color-picker-container"></div>

@@ -4,23 +4,43 @@ import { observer } from 'mobx-react';
 class EditorBStore {
 
     @observable tool:number = 0;
-    @observable modifiyingBack = true;
+    @observable modifiyingSpectro = true;
     @observable backgroundColor = 0;
     @observable spectroColor = 0;
 
-    @observable rNum = 0;
-    @observable gNum = 0;
-    @observable bNum = 0;
+    @observable rNumBack = 0;
+    @observable gNumBack = 0;
+    @observable bNumBack = 0;
+
+    @observable rNumSpectro = 0;
+    @observable gNumSpectro = 0;
+    @observable bNumSpectro = 0;
 
     @observable brightValStore = 85;
     @observable contrastValStore = 85;
 
-    @observable getRNum(){
-        return this.rNum;
+    @observable getRNumBack(){
+        return this.rNumBack;
     }
 
-    @observable getGNum(){
-        return this.gNum;
+    @observable getGNumBack(){
+        return this.gNumBack;
+    }
+
+    @observable getBNumBack(){
+        return this.bNumBack;
+    }
+
+    @observable getRNumSpectro(){
+        return this.rNumSpectro;
+    }
+
+    @observable getGNumSpectro(){
+        return this.gNumSpectro;
+    }
+
+    @observable getBNumSpectro(){
+        return this.bNumSpectro;
     }
 
     @observable getBrightValStore(){
@@ -31,10 +51,6 @@ class EditorBStore {
         return this.contrastValStore;
     }
 
-    @observable getBNum(){
-        return this.bNum;
-    }
-
     @action setBrightValStore(value: number) {
         this.brightValStore = value;
     }
@@ -43,24 +59,36 @@ class EditorBStore {
         this.contrastValStore = value;
     }
 
-    @action setRNum(value: number) {
-        this.rNum = value;
+    @action setRNumBack(value: number) {
+        this.rNumBack = value;
     }
 
-    @action setGNum(value: number) {
-        this.gNum = value;
+    @action setGNumBack(value: number) {
+        this.gNumBack = value;
     }
 
-    @action setBNum(value: number) {
-        this.bNum = value;
+    @action setBNumBack(value: number) {
+        this.bNumBack = value;
     }
 
-    @observable getModifyingBack() {
-        return this.modifiyingBack;
+    @action setRNumSpectro(value: number) {
+        this.rNumSpectro = value;
     }
 
-    @action setModifyingBack(value: boolean) {
-        this.modifiyingBack = value;
+    @action setGNumSpectro(value: number) {
+        this.gNumSpectro = value;
+    }
+
+    @action setBNumSpectro(value: number) {
+        this.bNumSpectro = value;
+    }
+
+    @observable getModifyingSpectro() {
+        return this.modifiyingSpectro;
+    }
+
+    @action setModifyingSpectro(value: boolean) {
+        this.modifiyingSpectro = value;
     }
 
     @observable getBackgroundColor() {

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 import ToolsMenu from '../ToolsMenu/ToolsMenu';
 import '../SpectroEditorB/SpectroEditorB.scss';
 import ColorWheelEditor from '../SpectroEditorB/ColorWheelEditor';
@@ -14,14 +14,17 @@ import p5 from 'p5';
 export class SpectroEditorB extends React.Component {
 
     render() {
-        return <div>
+        
+        return (
+
+        <div>
             <ToolsMenu />
             <section className="spectro-editor-b">
                 <section className="editor-section">
                     <div className="left">
                         <span className="spectrogram">
-   <svg className="duotone-filter" xmlns="http://www.w3.org/2000/svg">
-       <filter id="duotone-1" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+   <svg className="duotone-filter" xmlns="http://www.w3.org/2000/svg" key={"" + editorBStore.rNumSpectro + "" + editorBStore.rNumBack + ""}>
+       <filter id="duotone-1" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
     <feColorMatrix type="matrix" result="gray"
     values=".33 .33 .33 0 0
             .33 .33 .33 0 0
@@ -29,14 +32,14 @@ export class SpectroEditorB extends React.Component {
             0 0 0 1 0">
     </feColorMatrix>
 
-    <feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
-        <feFuncR type="table" tableValues={editorBStore.getRNumSpectro()/255 + " " + editorBStore.getRNumBack()/255}></feFuncR>
-        <feFuncG type="table" tableValues={editorBStore.getGNumSpectro()/255 + " " + editorBStore.getGNumBack()/255}></feFuncG>
-        <feFuncB type="table" tableValues={editorBStore.getBNumSpectro()/255 + " " + editorBStore.getBNumBack()/255}></feFuncB>
-        {editorBStore.getColorWheelOn()
-        ?<feFuncA type="table" tableValues="0 1"></feFuncA>
-        :<feFuncA type="table" tableValues="0 0"></feFuncA>}
-    </feComponentTransfer>
+    <feComponentTransfer colorInterpolationFilters="sRGB" result="duotone">
+            <feFuncR type="table" tableValues={editorBStore.rNumSpectro/255 + " " + editorBStore.rNumBack/255}></feFuncR>
+            <feFuncG type="table" tableValues={editorBStore.gNumSpectro/255 + " " + editorBStore.gNumBack/255}></feFuncG>
+            <feFuncB type="table" tableValues={editorBStore.bNumSpectro/255 + " " + editorBStore.bNumBack/255}></feFuncB>
+            {editorBStore.getColorWheelOn()
+            ?<feFuncA type="table" tableValues="0 1"></feFuncA>
+            :<feFuncA type="table" tableValues="0 0"></feFuncA>}
+        </feComponentTransfer>
     <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
        </filter>
    </svg>
@@ -66,5 +69,6 @@ export class SpectroEditorB extends React.Component {
                 </div>
             </section>
         </div>
+        );    
     }
 }

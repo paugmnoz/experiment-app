@@ -1,5 +1,4 @@
 import { observable, action, computed } from 'mobx';
-import { observer } from 'mobx-react';
 
 class EditorBStore {
 
@@ -41,15 +40,15 @@ class EditorBStore {
         return this.bNumBack;
     }
 
-    @observable getRNumSpectro() {
+    @action getRNumSpectro() {
         return this.rNumSpectro;
     }
 
-    @observable getGNumSpectro() {
+    @action getGNumSpectro() {
         return this.gNumSpectro;
     }
 
-    @observable getBNumSpectro() {
+    @action getBNumSpectro() {
         return this.bNumSpectro;
     }
 

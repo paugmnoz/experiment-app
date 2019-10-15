@@ -20,7 +20,9 @@ export default class SpectroEditorB extends React.Component {
 
         return <div className="color-picker-div">
             <div className="header-color-pick-mang">
-                <h2>Edición de Color</h2>
+                <div className="title-button">
+                <h2>Edición de Color</h2><button>Act</button>
+                </div>
                 <p>Escoge una escala de color para visualizar la energía del sonido.</p>
             </div>
             <div className="btns-sel-spectro">

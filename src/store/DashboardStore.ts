@@ -7,14 +7,14 @@ class DashboardStore {
     @observable actualComponentData = { atom: '1A', duration: 0, clicks: 0}
 
     @observable atomClicks = 0;
-    @observable actualAtom = '2B';
+    @observable actualAtom = '1B';
 //    @observable actualAtom = '1B'
     @observable start = 0;
     @observable end = 0;
     @observable duration = 0;
 
     @observable isCounting = false;
-    @observable data = Array()
+    @observable data = Array();
 
     @action handleStart(atom:string) {
         this.start = performance.now();

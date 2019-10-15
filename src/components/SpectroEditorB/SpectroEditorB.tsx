@@ -22,20 +22,22 @@ export class SpectroEditorB extends React.Component {
                         <span className="spectrogram">
    <svg className="duotone-filter" xmlns="http://www.w3.org/2000/svg">
        <filter id="duotone-1" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feColorMatrix type="matrix" result="gray"
-values=".33 .33 .33 0 0
-        .33 .33 .33 0 0
-        .33 .33 .33 0 0
-        0 0 0 1 0">
-</feColorMatrix>
+    <feColorMatrix type="matrix" result="gray"
+    values=".33 .33 .33 0 0
+            .33 .33 .33 0 0
+            .33 .33 .33 0 0
+            0 0 0 1 0">
+    </feColorMatrix>
 
-<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
-    <feFuncR type="table" tableValues={editorBStore.getRNumSpectro()/255 + " " + editorBStore.getRNumBack()/255}></feFuncR>
-    <feFuncG type="table" tableValues={editorBStore.getGNumSpectro()/255 + " " + editorBStore.getGNumBack()/255}></feFuncG>
-    <feFuncB type="table" tableValues={editorBStore.getBNumSpectro()/255 + " " + editorBStore.getBNumBack()/255}></feFuncB>
-    <feFuncA type="table" tableValues="0 1"></feFuncA>
-</feComponentTransfer>
-<feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+    <feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+        <feFuncR type="table" tableValues={editorBStore.getRNumSpectro()/255 + " " + editorBStore.getRNumBack()/255}></feFuncR>
+        <feFuncG type="table" tableValues={editorBStore.getGNumSpectro()/255 + " " + editorBStore.getGNumBack()/255}></feFuncG>
+        <feFuncB type="table" tableValues={editorBStore.getBNumSpectro()/255 + " " + editorBStore.getBNumBack()/255}></feFuncB>
+        {false
+        ?<feFuncA type="table" tableValues="0 1"></feFuncA>
+        :<feFuncA type="table" tableValues="0 0"></feFuncA>}
+    </feComponentTransfer>
+    <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
        </filter>
    </svg>
         <div className="spectro-div">

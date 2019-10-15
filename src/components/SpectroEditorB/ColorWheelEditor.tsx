@@ -31,18 +31,18 @@ export default class SpectroEditorB extends React.Component {
             console.log('g', rgbCode.g);
             console.log('b', rgbCode.b);
             if(editorBStore.getModifyingSpectro()){
-            editorBStore.setRNumBack(rgbCode.r);
-            editorBStore.setGNumBack(rgbCode.g);
-            editorBStore.setBNumBack(rgbCode.b);
+            editorBStore.setRNumSpectro(rgbCode.r);
+            editorBStore.setGNumSpectro(rgbCode.g);
+            editorBStore.setBNumSpectro(rgbCode.b);
 
             rgbCode.r = editorBStore.getRNumSpectro();
             rgbCode.g = editorBStore.getGNumSpectro();
             rgbCode.b = editorBStore.getBNumSpectro();
 
             } else if (!editorBStore.getModifyingSpectro()){
-            editorBStore.setRNumSpectro(rgbCode.r);
-            editorBStore.setGNumSpectro(rgbCode.g);
-            editorBStore.setBNumSpectro(rgbCode.b);
+            editorBStore.setRNumBack(rgbCode.r);
+            editorBStore.setGNumBack(rgbCode.g);
+            editorBStore.setBNumBack(rgbCode.b);
 
             rgbCode.r = editorBStore.getRNumBack();
             rgbCode.g = editorBStore.getGNumBack();

@@ -44,18 +44,24 @@ export default class SpectroEditorB extends React.Component {
                 <p>Escoge una escala de color para visualizar la energía del sonido.</p>
             </div>
             <div className="btns-sel-spectro">
-                <button style={{ marginRight: '25',
-                backgroundColor: (editorBStore.getModifyingBack) ? '#53CC8F':'#FFFFFF',
-                color: (editorBStore.getModifyingBack) ? '#FFF':'#000000'
+                <button style={{ 
+                marginRight: '25',
+                backgroundColor: editorBStore.getModifyingBack() ? '#53CC8F':'#F4F4F4',
+                color: editorBStore.getModifyingBack() ? '#FFF':'#000000'
                 }}
                 onClick={() => {
                     this.handleModBack(true);
-                    console.log('TRUE', editorBStore.getModifyingBack());
+                    console.log('modifying back', editorBStore.getModifyingBack());
                     }}>Fondo</button>
                 <button
+                style={{ 
+                marginRight: '25',
+                backgroundColor: editorBStore.getModifyingBack() ? '#F4F4F4':'#53CC8F',
+                color: editorBStore.getModifyingBack() ? '#000000':'#FFF'
+                }}
                 onClick={() => {
                     this.handleModBack(false);
-                    console.log('FALSE', editorBStore.getModifyingBack());
+                    console.log('modifying back', editorBStore.getModifyingBack());
                 }}>Espectro</button>
             </div>
             <div className="current-color"></div>

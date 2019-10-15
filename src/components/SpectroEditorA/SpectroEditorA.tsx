@@ -15,7 +15,7 @@ export class SpectroEditorA extends React.Component {
 
     constructor(props){
         super(props);
-        taggingStore.xenoSearch('a')
+       // taggingStore.xenoSearch('a')
     }
     onBrightChange(value) {
         console.log(value)

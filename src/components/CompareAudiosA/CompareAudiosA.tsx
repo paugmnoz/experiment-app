@@ -98,6 +98,7 @@ export class CompareAudiosA extends React.Component {
             </div>
 
             <div className="right">
+                <img src="./assets/compare/timeline.png" width="100%" alt=""/>
                 <span className="principal-micro">
                     <SpectrogramCompareView name={'M1'} spectroNum={'1'} volume={50} />
                 </span>

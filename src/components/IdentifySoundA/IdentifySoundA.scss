@@ -1,6 +1,13 @@
 section {
     background-color: white;
 }
+.spec {
+    width: 100%;
+    img {
+        width: 100%;
+        
+    }
+}
 .card-header {
     display: flex;
     flex-direction: row;
@@ -37,6 +44,29 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    .naming{
+        width: 60%;
+        .react-selector {
+            width: 60%;
+            margin: 0 0 0 0.5rem;
+        }
+    }
+    .actions {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        align-items: flex-end;
+        justify-content: flex-start;
+        p {
+            text-align: right;
+        }
+        .react-selector {
+            width: 70%;
+            margin: 0 0.5rem 0 0 ;
+        }
+    }
 }
 
 .actions {

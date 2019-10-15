@@ -43,10 +43,10 @@ body{
     .tooltip {
         position: relative;
         &:hover .tooltiptext {
-            visibility: visible;
+            display: inherit;
           }
         .tooltiptext {
-            visibility: hidden;
+            display: none;
             min-width: 120px;
             word-wrap: break-word;
             max-width: 200px;
@@ -149,7 +149,7 @@ body{
     }
     .card-section {
         border-bottom: solid 1px  ;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
     }
     input[type="checkbox"] {
         height: auto;

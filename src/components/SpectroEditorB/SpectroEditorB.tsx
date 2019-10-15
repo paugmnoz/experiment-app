@@ -30,7 +30,7 @@ values=".33 .33 .33 0 0
 </feColorMatrix>
 
 <feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
-<feFuncR type="table" tableValues={editorBStore.getRNum()/255 + " " + 0.53}></feFuncR>
+    <feFuncR type="table" tableValues={editorBStore.getRNum()/255 + " " + 0.53}></feFuncR>
     <feFuncG type="table" tableValues={editorBStore.getGNum()/255 + " " + 0.97}></feFuncG>
     <feFuncB type="table" tableValues={editorBStore.getBNum()/255 + " " + 0.77}></feFuncB>
     <feFuncA type="table" tableValues="0 1"></feFuncA>
@@ -39,7 +39,10 @@ values=".33 .33 .33 0 0
        </filter>
    </svg>
         <div className="spectro-div">
-        <img src="./assets/Editor/original-gray-spectrum-B.png" alt="" width="770" className="spectro" />
+        <img src="./assets/Editor/original-gray-spectrum-B.png" alt="" width="770" className="spectro" 
+        style={{
+            filter: 'brightness('+ editorBStore.getBrightValStore() +'%)' + 'contrast('+ editorBStore.getContrastValStore() +'%)' + 'url(#duotone-1)'
+        }}/>
         <img src="./assets/Editor/timeline-B.png" alt="" width="770" />
         </div>
                             {/*<Spectogram/>*/}

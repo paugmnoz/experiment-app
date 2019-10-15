@@ -16,7 +16,7 @@ export default class SpectroEditorB extends React.Component {
     });
 
     handleModBack(show: boolean) {
-        console.log('show hamb menu');
+        console.log(editorBStore.getModifyingBack());
         //console.log(store.getShowHambMenu());
         editorBStore.setModifyingBack(show);
     }    

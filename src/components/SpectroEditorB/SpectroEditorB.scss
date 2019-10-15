@@ -4,22 +4,23 @@
     background-color: #F9F9F9;
     padding: 10px;
 
-.duotone-filter{
-    height: 0;
-    width: 0;
-    margin: 0;
-    padding: 0;
-    position:absolute;
-    top: -999px;
-}
-
-.spectro-div{
-    display: flex;
-    flex-direction: column;
-    .spectro {
-        filter: url(#duotone-1);
+    .duotone-filter {
+        height: 0;
+        width: 0;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: -999px;
     }
-}
+
+    .spectro-div {
+        display: flex;
+        flex-direction: column;
+
+        .spectro {
+            //filter: url(#duotone-1);
+        }
+    }
 
 
     .bright-cont-editor {

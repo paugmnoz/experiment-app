@@ -12,6 +12,9 @@ class EditorBStore {
     @observable gNum = 0;
     @observable bNum = 0;
 
+    @observable brightValStore = 85;
+    @observable contrastValStore = 85;
+
     @observable getRNum(){
         return this.rNum;
     }
@@ -20,8 +23,24 @@ class EditorBStore {
         return this.gNum;
     }
 
+    @observable getBrightValStore(){
+        return this.brightValStore;
+    }
+
+    @observable getContrastValStore(){
+        return this.contrastValStore;
+    }
+
     @observable getBNum(){
         return this.bNum;
+    }
+
+    @action setBrightValStore(value: number) {
+        this.brightValStore = value;
+    }
+
+    @action setContrastValStore(value: number) {
+        this.contrastValStore = value;
     }
 
     @action setRNum(value: number) {

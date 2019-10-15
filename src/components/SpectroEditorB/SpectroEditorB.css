@@ -29,11 +29,6 @@
           flex-direction: column;
 }
 
-.spectro-editor-b .spectro-div .spectro {
-  -webkit-filter: url(#duotone-1);
-          filter: url(#duotone-1);
-}
-
 .spectro-editor-b .bright-cont-editor {
   background-color: #FFF;
   width: 400px;

@@ -105,6 +105,7 @@ body{
             border: solid 1px $mainActiveColor;
         }
     }
+    
     .hint-text {
         font-style: italic;
         color: $hintColor;
@@ -149,8 +150,5 @@ body{
     input[type="checkbox"] {
         height: auto;
     }
-    #card-for-tagging{
-        position: absolute;
-        background-color: $white;
-    }
+
 }

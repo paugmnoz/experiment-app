@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 section {
     background-color: white;
     position: relative;
@@ -37,6 +39,7 @@ section {
 .spectro {
     cursor: pointer;
 }
+
 .btns{
     display: flex;
     flex-direction: row;
@@ -62,4 +65,20 @@ section {
 
 .card-item {
     padding: 0.5rem 1rem;
+}
+
+textarea{
+    margin: 0 0.5rem;
+    padding: 5px;
+    height: 35px;
+    border-radius: 3px;
+    border: solid 1px $lightColoredBorderColor;
+    &:focus {
+        border: solid 1px $mainActiveColor;
+    }
+}
+
+.song-type{
+    width: 171px;
+    height: 34px;
 }

@@ -20,6 +20,10 @@ export class CompareAudiosB extends React.Component {
                         <SpectrogramCompareView name={'M1'} spectroNum={'1'} volume={50} />
                     </span>
                     {
+                        (taggingStore.comparedMicro1Activated && !taggingStore.isPrincipal1) ?
+                            <SpectrogramCompareView name={'M2'} spectroNum={'1'} volume={50} /> : ''
+                    }
+                    {
                         (taggingStore.comparedMicro2Activated && !taggingStore.isPrincipal2) ?
                             <SpectrogramCompareView name={'M2'} spectroNum={'2'} volume={50} /> : ''
                     }

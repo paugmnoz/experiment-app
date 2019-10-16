@@ -1,6 +1,7 @@
 .identifySoundA {
     max-width: 50vw;
 }
+
 .cont {
     background-color: #F2F2F2;
     width: 100vw;
@@ -12,6 +13,7 @@
     align-content: center;
     align-items: center;
     position: relative;
+
     .overlay {
         position: absolute;
         top: 0;
@@ -20,17 +22,20 @@
         width: 100vw;
         min-height: 100vh;
         z-index: 2;
+
         &.started {
             background-color: transparent;
             display: none;
         }
     }
+
     .soft-handlers {
         display: flex;
         flex-direction: row;
         justify-content: center;
         margin: 0 0 2rem 0;
-       z-index: 4;
+        z-index: 4;
+
         button {
             margin: 0 0 0 10rem;
             background-color: #5855FF;
@@ -42,13 +47,20 @@
             font-weight: 600;
             font-size: 16px;
             font-family: 'Lato', sans-serif;
+
+            &:disabled {
+                opacity: 0.4;
+            }
+
             &.finish {
                 background-color: rgb(255, 85, 85);
                 color: white
             }
+
             &.next {
                 background-color: rgb(29, 28, 110)
             }
+
             &.save {
                 background-color: rgb(255, 210, 85);
                 color: #232733
@@ -56,6 +68,7 @@
         }
     }
 }
+
 .compareAudiosA {
     width: 80%;
     max-width: 1200px;

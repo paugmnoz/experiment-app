@@ -45,7 +45,7 @@ import { SpectroEditorA } from '../SpectroEditorA/SpectroEditorA';
                     (<button className="finish"  onClick={() => dashboardStore.handleEnd('a')}>He terminado</button>)
                 }
                 <button className="save"  onClick={this.downloadTxtFile}>Guardar</button>
-                <button className="next" onClick={() => dashboardStore.handleNext('a')}>Siguiente</button>
+                <button className="next" disabled={dashboardStore.isCounting} onClick={() => dashboardStore.handleNext('a')}>Siguiente</button>
             </div>
             {
                (dashboardStore.actualAtom == '1A') ? (

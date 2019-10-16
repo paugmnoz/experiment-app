@@ -1,9 +1,8 @@
-
 section {
     background-color: white;
     position: relative;
-
 }
+
 .card-header {
     display: flex;
     flex-direction: row;
@@ -14,6 +13,7 @@ section {
         margin: 0;
     }
 }
+
 .description-items-row {
     display: flex;
     flex-direction: row;
@@ -29,6 +29,7 @@ section {
         }
     }
 }
+
 .img-birds {
     cursor: pointer;
 }

@@ -18,7 +18,6 @@ import { relative, isAbsolute } from 'path';
 
     constructor(props) {
         super(props);
- 
       }
 
     render() {
@@ -28,12 +27,6 @@ import { relative, isAbsolute } from 'path';
                 <img className="close-icon" src="./assets/icons/close.svg" alt="" />
             </div>
             <div className="card-section">
-                {/*<Wavesurfer
-          audioFile={'./assets/Anchicaya_LaLocaTrocha_2019.06.22_07.50.35_1.mp3'}
-          pos={taggingStore.audioPos}
-          onPosChange={taggingStore.handlePosChange}
-          playing={taggingStore.playingAudio}
-            />*/}
                 <img className="spectro"  
                 src="./assets/espectogramaB.png" alt="" onClick={() => {
                     this.showTagOption = !this.showTagOption;
@@ -42,12 +35,7 @@ import { relative, isAbsolute } from 'path';
                     console.log('printing');
                 }} />
             </div>
-            {(this.showTagOption)
-                ? <div className="card-section" id="card-for-tagging" 
-                style={{
-                    top: this.posYCard,
-                    left: this.posXCard,
-                }}>
+            <div className="card-section" id="card-for-tagging">
                     <span className="description-items-row">
                         <p><span className="text-title">Fecha:</span> 28 Julio 2019</p>
                         <p><span className="text-title">Hora:</span> 06:36 AM</p>

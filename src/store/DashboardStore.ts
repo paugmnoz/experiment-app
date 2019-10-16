@@ -7,7 +7,7 @@ class DashboardStore {
     @observable actualComponentData = { atom: '1A', duration: 0, clicks: 0}
 
     @observable atomClicks = 0;
-    @observable actualAtom = '1B';
+    @observable actualAtom = '3B';
 //    @observable actualAtom = '1B'
     @observable start = 0;
     @observable end = 0;

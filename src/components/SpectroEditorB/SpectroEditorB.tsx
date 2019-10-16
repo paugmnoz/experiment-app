@@ -36,7 +36,7 @@ export class SpectroEditorB extends React.Component {
             <feFuncR type="table" tableValues={editorBStore.rNumSpectro/255 + " " + editorBStore.rNumBack/255}></feFuncR>
             <feFuncG type="table" tableValues={editorBStore.gNumSpectro/255 + " " + editorBStore.gNumBack/255}></feFuncG>
             <feFuncB type="table" tableValues={editorBStore.bNumSpectro/255 + " " + editorBStore.bNumBack/255}></feFuncB>
-            {editorBStore.getColorWheelOn()
+            {editorBStore.colorWheelOn
             ?<feFuncA type="table" tableValues="0 1"></feFuncA>
             :<feFuncA type="table" tableValues="0 0"></feFuncA>}
         </feComponentTransfer>
@@ -46,7 +46,7 @@ export class SpectroEditorB extends React.Component {
         <div className="spectro-div">
         <img src="./assets/Editor/original-gray-spectrum-B.png" alt="" width="770" className="spectro" 
         style={{
-            filter: 'brightness('+ editorBStore.getBrightValStore() +'%)' + 'contrast('+ editorBStore.getContrastValStore() +'%)' + 'url(#duotone-1)'
+            filter: 'brightness('+ editorBStore.brightValStore +'%)' + 'contrast('+ editorBStore.contrastValStore +'%)' + 'url(#duotone-1)'
         }}/>
         <img src="./assets/Editor/timeline-B.png" alt="" width="770" />
         </div>
@@ -57,13 +57,13 @@ export class SpectroEditorB extends React.Component {
                 </section>
                 <div className="color-wheel-editor-cont"
                     style={{
-                        display: editorBStore.getTool() === 1 && dashboardStore.actualAtom == '1B' ? 'flex' : 'none'
+                        display: editorBStore.tool === 1 && dashboardStore.actualAtom == '1B' ? 'flex' : 'none'
                     }}>
                     <ColorWheelEditor />
                 </div>
                 <div className="bright-contrast-editor-cont"
                     style={{
-                        display: editorBStore.getTool() === 2 && dashboardStore.actualAtom == '1B' ? 'flex' : 'none'
+                        display: editorBStore.tool === 2 && dashboardStore.actualAtom == '1B' ? 'flex' : 'none'
                     }}>
                     <BrightContrastEditor />
                 </div>

@@ -50,7 +50,17 @@
   padding: 15px 0 15px 0;
 }
 
-.spectro-editor-b .bright-cont-editor .header-color-pick-mang h2 {
+.spectro-editor-b .bright-cont-editor .header-color-pick-mang .title-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.spectro-editor-b .bright-cont-editor .header-color-pick-mang .title-button h2 {
   color: #44CD88;
   margin-left: 20px;
 }
@@ -126,9 +136,29 @@
   padding: 15px 0 15px 0;
 }
 
-.spectro-editor-b .color-picker-div .header-color-pick-mang h2 {
+.spectro-editor-b .color-picker-div .header-color-pick-mang .title-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.spectro-editor-b .color-picker-div .header-color-pick-mang .title-button h2 {
   color: #44CD88;
   margin-left: 20px;
+}
+
+.spectro-editor-b .color-picker-div .header-color-pick-mang .title-button .act-btn {
+  margin-left: 5px;
+  background-color: #F4F4F4;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  padding: 8px;
 }
 
 .spectro-editor-b .color-picker-div .header-color-pick-mang p {

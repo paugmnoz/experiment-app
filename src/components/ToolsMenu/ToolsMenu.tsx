@@ -48,7 +48,7 @@ export default class ToolsMenu extends React.Component {
                 <span className="tooltip">
                     <button className="tool-btn" 
                     onClick={() => {
-                    (editorBStore.getTool() !== 1)
+                    (editorBStore.tool !== 1)
                     ? editorBStore.setTool(1)
                     : editorBStore.setTool(0)
                     }}><img src="./assets/tool-bar-assets/color-icon.svg" alt="" height="50" width="50"></img></button>
@@ -57,7 +57,7 @@ export default class ToolsMenu extends React.Component {
                 <span className="tooltip">
                     <button className="tool-btn"
                     onClick={() => {
-                        (editorBStore.getTool() !== 2)
+                        (editorBStore.tool !== 2)
                         ? editorBStore.setTool(2)
                         : editorBStore.setTool(0)
                         }}><img src="./assets/tool-bar-assets/bright-icon.svg" alt="" height="50" width="50"></img></button>

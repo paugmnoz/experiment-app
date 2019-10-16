@@ -28,9 +28,9 @@ export default class ColorWheelSpectro extends React.Component {
             editorBStore.setGNumSpectro(rgbCode.g);
             editorBStore.setBNumSpectro(rgbCode.b);
 
-            rgbCode.r = editorBStore.getRNumSpectro();
-            rgbCode.g = editorBStore.getGNumSpectro();
-            rgbCode.b = editorBStore.getBNumSpectro();
+            rgbCode.r = editorBStore.rNumSpectro;
+            rgbCode.g = editorBStore.gNumSpectro;
+            rgbCode.b = editorBStore.bNumSpectro;
 
             editorBStore.setColorWheelOn(true);
         }
@@ -40,7 +40,7 @@ export default class ColorWheelSpectro extends React.Component {
 
         return <div className="color-picker-div">
             <div id="color-picker-container" style={{
-                display: editorBStore.getModifyingSpectro() ? 'flex' : 'none',
+                display: editorBStore.modifiyingSpectro ? 'flex' : 'none',
             }}></div>
         </div>
     }

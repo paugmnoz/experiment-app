@@ -28,9 +28,9 @@ export default class ColorWheelBack extends React.Component {
             editorBStore.setGNumBack(rgbCode.g);
             editorBStore.setBNumBack(rgbCode.b);
 
-            rgbCode.r = editorBStore.getRNumBack();
-            rgbCode.g = editorBStore.getGNumBack();
-            rgbCode.b = editorBStore.getBNumBack();
+            rgbCode.r = editorBStore.rNumBack;
+            rgbCode.g = editorBStore.gNumBack;
+            rgbCode.b = editorBStore.bNumBack;
 
             editorBStore.setColorWheelOn(true);
         }
@@ -40,7 +40,7 @@ export default class ColorWheelBack extends React.Component {
 
         return <div className="color-picker-div">
             <div id="color-picker2-container" style={{
-                display: !editorBStore.getModifyingSpectro() ? 'flex' : 'none',
+                display: !editorBStore.modifiyingSpectro ? 'flex' : 'none',
             }}></div>
         </div>
     }

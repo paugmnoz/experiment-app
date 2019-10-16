@@ -20,44 +20,8 @@ class EditorBStore {
     @observable brightValStore = 85;
     @observable contrastValStore = 85;
 
-    @observable getColorWheelOn() {
-        return this.colorWheelOn;
-    }
-
     @action setColorWheelOn(value: boolean) {
         this.colorWheelOn = value;
-    }
-
-    @observable getRNumBack() {
-        return this.rNumBack;
-    }
-
-    @observable getGNumBack() {
-        return this.gNumBack;
-    }
-
-    @observable getBNumBack() {
-        return this.bNumBack;
-    }
-
-    @action getRNumSpectro() {
-        return this.rNumSpectro;
-    }
-
-    @action getGNumSpectro() {
-        return this.gNumSpectro;
-    }
-
-    @action getBNumSpectro() {
-        return this.bNumSpectro;
-    }
-
-    @observable getBrightValStore() {
-        return this.brightValStore;
-    }
-
-    @observable getContrastValStore() {
-        return this.contrastValStore;
     }
 
     @action setBrightValStore(value: number) {
@@ -92,16 +56,8 @@ class EditorBStore {
         this.bNumSpectro = value;
     }
 
-    @observable getModifyingSpectro() {
-        return this.modifiyingSpectro;
-    }
-
     @action setModifyingSpectro(value: boolean) {
         this.modifiyingSpectro = value;
-    }
-
-    @observable getBackgroundColor() {
-        return this.backgroundColor;
     }
 
     @action setBackgroundColor(value: number) {
@@ -109,17 +65,9 @@ class EditorBStore {
         console.log('exdi');
     }
 
-    @observable getSpectroColor() {
-        return this.spectroColor;
-    }
-
     @action setSpectroColor(value: number) {
         this.spectroColor = value;
         console.log('exdi');
-    }
-
-    @observable getTool() {
-        return this.tool;
     }
 
     @action setTool(value: number) {

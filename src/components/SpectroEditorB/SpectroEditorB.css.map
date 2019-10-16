@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,gBAAgB,EAAE,OAAO;EACzB,OAAO,EAAE,IAAI;CAChB",
-    "sources": [
-        "SpectroEditorB.scss"
-    ],
-    "names": [],
-    "file": "SpectroEditorB.css"
-}

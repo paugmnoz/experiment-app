@@ -23,10 +23,28 @@ class TaggingStore {
     @action handlePosChange(e: any) {
         this.audioPos = e.originalArgs[0]
     }
-    @action birdClick() {
-        this.commonName = 'Hormiguero de Zeledón'
-        this.sciName = 'Hafferia zeledoni'
+    @action birdClick(value: number) {
+        switch (value) {
+            case 1:
+                this.commonName = 'Barranquero bocon'
+                this.sciName = 'Electron platyrhynchum'
+                break;
+            case 2:
+                this.commonName = 'Piranga Roja'
+                this.sciName = 'Piranga rubra'
+                break;
+            case 3:
+                this.commonName = 'Mosquero moñudo'
+                this.sciName = 'Mitrephanes phaeocercus'
+                break;
+            case 4:
+                this.commonName = 'Torito cabeciblanco'
+                this.sciName = 'Capito maculicoronatus'
+                break;
+        }
+
     }
+
     //COMPARE SECTION
     @observable comparedMicro1Activated = true;
     @observable comparedMicro2Activated = false;
@@ -66,12 +84,18 @@ class TaggingStore {
                 this.comparedMicro6Activated = !this.comparedMicro6Activated
                 break;
             case 'all':
-                this.comparedMicro1Activated = !this.comparedMicro1Activated
+                //this.comparedMicro1Activated = !this.comparedMicro1Activated
                 this.comparedMicro2Activated = !this.comparedMicro2Activated
                 this.comparedMicro3Activated = !this.comparedMicro3Activated
                 this.comparedMicro4Activated = !this.comparedMicro4Activated
                 this.comparedMicro5Activated = !this.comparedMicro5Activated
                 this.comparedMicro6Activated = !this.comparedMicro6Activated
+                console.log('mic 1', this.comparedMicro1Activated);
+                console.log('mic 2', this.comparedMicro2Activated);
+                console.log('mic 3', this.comparedMicro3Activated);
+                console.log('mic 4', this.comparedMicro4Activated);
+                console.log('mic 5', this.comparedMicro5Activated);
+                console.log('mic 6', this.comparedMicro6Activated);
                 break;
         }
     }

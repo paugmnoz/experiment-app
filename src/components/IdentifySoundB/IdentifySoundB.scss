@@ -1,34 +1,52 @@
+@import "../../variables.scss";
 
 section {
     background-color: white;
     position: relative;
-
 }
+
 .card-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: #AFEA7D;
     padding: 1rem;
+
     h1 {
         margin: 0;
     }
 }
-.description-items-row {
+
+.imgs-array {
     display: flex;
     flex-direction: row;
+    .img-birds{
+        padding: 4px;
+    }
+}
+
+.card-items-head {
+    display: flex;
+    flex-direction: row;
+}
+
+.description-items-col {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 0.5rem 1rem ;
+    padding: 0.5rem 1rem;
 }
 
 .input-row {
     &.search {
         justify-content: space-between;
+
         input {
             width: 50%;
         }
     }
 }
+
 .img-birds {
     cursor: pointer;
 }
@@ -36,7 +54,8 @@ section {
 .spectro {
     cursor: pointer;
 }
-.btns{
+
+.btns {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -47,18 +66,38 @@ section {
 .input-col {
     display: flex;
     flex-direction: column;
+
     &.search {
         justify-content: space-between;
+
         input {
             width: 50%;
         }
     }
 }
 
-.birds{
+.birds {
     margin-left: 10px;
 }
 
 .card-item {
     padding: 0.5rem 1rem;
+}
+
+textarea {
+    margin: 0 0.5rem;
+    padding: 5px;
+    height: 35px;
+    border-radius: 3px;
+    border: solid 1px $lightColoredBorderColor;
+
+    &:focus {
+        border: solid 1px $mainActiveColor;
+    }
+}
+
+.song-type {
+    width: 171px;
+    height: 34px;
+    cursor: pointer;
 }

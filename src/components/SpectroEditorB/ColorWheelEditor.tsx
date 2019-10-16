@@ -3,54 +3,55 @@ import { observer } from 'mobx-react';
 import { observable } from 'mobx';
 import iro from '@jaames/iro';
 import { editorBStore } from '../../store/editorBStore';
+import { dashboardStore } from '../../store/DashboardStore';
+import ColorWheelSpectro from '../../components/SpectroEditorB/ColorWheelSpectro';
+import ColorWheelBack from '../../components/SpectroEditorB/ColorWheelBack';
 
 @observer
 export default class SpectroEditorB extends React.Component {
 
     handleModBack(show: boolean) {
-        console.log('show hamb menu');
+        console.log(editorBStore.modifiyingSpectro);
         //console.log(store.getShowHambMenu());
-        editorBStore.setModifyingBack(show);
-    }    
+        editorBStore.setModifyingSpectro(show);
+    }
 
     render() {
-        var colorPicker = new iro.ColorPicker('#color-picker-container', {
-            // Set the size of the color picker
-            width: 280,
-            // Set the initial color to pure red
-            color: "#f00",
-        });
-
-        function onColorChange(color, changes) {
-            // print the color's new hex value to the developer console
-            console.log(color.hexString);
-        }
-
-        // listen to a color picker's color:change event
-        colorPicker.on('color:change', onColorChange);
 
         return <div className="color-picker-div">
             <div className="header-color-pick-mang">
+                <div className="title-button">
                 <h2>Edición de Color</h2>
+                <button className="act-btn"
+                 onClick={() => {
+                  editorBStore.setColorWheelOn(false);
+                }}><img src="./assets/act-btn.svg" alt="" height="20" width="20"></img></button>
+                </div>
                 <p>Escoge una escala de color para visualizar la energía del sonido.</p>
             </div>
             <div className="btns-sel-spectro">
-                <button style={{ marginRight: '25',
-                backgroundColor: (editorBStore.getModifyingBack) ? '#53CC8F':'#FFFFFF',
-                color: (editorBStore.getModifyingBack) ? '#FFF':'#000000'
+                <button style={{
+                    marginRight: '25',
+                    backgroundColor: editorBStore.modifiyingSpectro ? '#53CC8F' : '#F4F4F4',
+                    color: editorBStore.modifiyingSpectro ? '#FFF' : '#000000'
                 }}
-                onClick={() => {
-                    this.handleModBack(true);
-                    console.log('TRUE', editorBStore.getModifyingBack());
-                    }}>Fondo</button>
+                    onClick={() => {
+                        this.handleModBack(true);
+                        console.log('modifying back', editorBStore.modifiyingSpectro);
+                    }}>Espectro</button>
                 <button
-                onClick={() => {
-                    this.handleModBack(false);
-                    console.log('FALSE', editorBStore.getModifyingBack());
-                }}>Espectro</button>
+                    style={{
+                        marginRight: '25',
+                        backgroundColor: editorBStore.modifiyingSpectro ? '#F4F4F4' : '#53CC8F',
+                        color: editorBStore.modifiyingSpectro ? '#000000' : '#FFF'
+                    }}
+                    onClick={() => {
+                        this.handleModBack(false);
+                        console.log('modifying back', editorBStore.modifiyingSpectro);
+                    }}>Fondo</button>
             </div>
-            <div className="current-color"></div>
-            <div id="color-picker-container"></div>
+                <ColorWheelSpectro />
+                <ColorWheelBack />
         </div>
     }
 }

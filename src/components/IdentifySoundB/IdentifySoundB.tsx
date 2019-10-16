@@ -28,24 +28,34 @@ import { relative, isAbsolute } from 'path';
             </div>
             <div className="card-section">
                 <img className="spectro"
-                    src="./assets/espectogramaB.png" alt="" width="600" />
+                    src="./assets/espectogramaB.png" alt="" width="580" />
             </div>
             <div className="card-section" id="card-for-tagging">
-                <span className="description-items-row">
-                    <p><span className="text-title">Fecha:</span> 28 Julio 2019</p>
-                    <p><span className="text-title">Hora:</span> 06:36 AM</p>
-                    <p><span className="text-title">Duración:</span> 5s</p>
-                </span>
-                <div className="card-item" style={{
-                    display: 'flex',
-                    flexDirection: 'column'
-                }}>
-                    <p>Especies estudiando</p>
-                    <img src="./assets/Birds.png"
-                        onClick={() => {
-                            taggingStore.birdClick()
-                        }}
-                        alt="" className="img-birds" width="246"></img>
+                <div className="card-items-head">
+                    <span className="description-items-col">
+                        <p><span className="text-title">Fecha:</span> 28 Julio 2019</p>
+                        <p><span className="text-title">Hora:</span> 06:36 AM</p>
+                        <p><span className="text-title">Duración:</span> 5s</p>
+                    </span>
+                    <div className="card-item" style={{
+                        display: 'flex',
+                        flexDirection: 'column'
+                    }}>
+                        <span className="text-title">Especies estudiando</span>
+                        <div className="imgs-array">
+                            <img src="./assets/birds-array/bird-2.png"
+                                alt="" className="img-birds" width="50"></img>
+                            <img src="./assets/birds-array/bird-1.png"
+                                onClick={() => {
+                                    taggingStore.birdClick()
+                                }}
+                                alt="" className="img-birds" width="50"></img>
+                            <img src="./assets/birds-array/bird-3.png"
+                                alt="" className="img-birds" width="50"></img>
+                            <img src="./assets/birds-array/bird-4.png"
+                                alt="" className="img-birds" width="50"></img>
+                        </div>
+                    </div>
                 </div>
                 <span className="input-row card-item">
                     <span className="input-col "> <p className="text-title"> Nombre Común</p> <input type="text" value={taggingStore.commonName} /></span>

@@ -7,7 +7,6 @@ import { dashboardStore } from '../../store/DashboardStore';
 import { editorBStore } from '../../store/editorBStore';
 import { observer } from 'mobx-react';
 //import Spectogram from '../SpectroEditorB/Spectogram';
-import p5 from 'p5';
 //import P5Wrapper from 'react-p5-wrapper';
 
 @observer

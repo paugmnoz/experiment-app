@@ -45,24 +45,33 @@ import { relative, isAbsolute } from 'path';
                         <div className="imgs-array">
                             <span className="tooltip">
                                 <img src="./assets/birds-array/bird-1.png"
+                                    onClick={() => {
+                                        taggingStore.birdClick(1)
+                                    }}
                                     alt="" className="img-birds" width="50"></img>
                                 <span className="tooltiptext">Electron platyrhynchum</span>
                             </span>
                             <span className="tooltip">
                                 <img src="./assets/birds-array/bird-2.png"
                                     onClick={() => {
-                                        taggingStore.birdClick()
+                                        taggingStore.birdClick(2)
                                     }}
                                     alt="" className="img-birds" width="50"></img>
                                 <span className="tooltiptext">Piranga rubra</span>
                             </span>
                             <span className="tooltip">
                                 <img src="./assets/birds-array/bird-3.png"
+                                    onClick={() => {
+                                        taggingStore.birdClick(3)
+                                    }}
                                     alt="" className="img-birds" width="50"></img>
                                 <span className="tooltiptext">Mitrephanes phaeocercus</span>
                             </span>
                             <span className="tooltip">
                                 <img src="./assets/birds-array/bird-4.png"
+                                    onClick={() => {
+                                        taggingStore.birdClick(4)
+                                    }}
                                     alt="" className="img-birds" width="50"></img>
                                 <span className="tooltiptext">Capito maculicoronatus</span>
                             </span>

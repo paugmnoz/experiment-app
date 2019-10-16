@@ -22,10 +22,28 @@ class TaggingStore {
     @action handlePosChange(e: any) {
         this.audioPos = e.originalArgs[0]
     }
-    @action birdClick() {
-        this.commonName = 'Piranga Roja'
-        this.sciName = 'Piranga rubra'
+    @action birdClick(value: number) {
+        switch (value) {
+            case 1:
+                this.commonName = 'Barranquero bocon'
+                this.sciName = 'Electron platyrhynchum'
+                break;
+            case 2:
+                this.commonName = 'Piranga Roja'
+                this.sciName = 'Piranga rubra'
+                break;
+            case 3:
+                this.commonName = 'Mosquero moñudo'
+                this.sciName = 'Mitrephanes phaeocercus'
+                break;
+            case 4:
+                this.commonName = 'Torito cabeciblanco'
+                this.sciName = 'Capito maculicoronatus'
+                break;
+        }
+
     }
+
     //COMPARE SECTION
     @observable comparedMicro1Activated = true;
     @observable comparedMicro2Activated = false;

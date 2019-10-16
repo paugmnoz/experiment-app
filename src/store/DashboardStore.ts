@@ -1,17 +1,17 @@
 import { observable, action, computed, flow } from 'mobx';
 
 class DashboardStore {
-  @observable atomList = ['1A', '1B', '2A', '2B', '3A', '3B']
+  @observable atomList = ['1B', '1A', '2A', '2B', '3A', '3B']
   //@observable atomList = [ '1B', '1A', '2B', '2A', '3B', '3A' ]
   @observable atomIndex = 0;
   @observable actualComponentData = { atom: '1A', duration: 0, clicks: 0 }
 
-    @observable atomClicks = 0;
-    @observable actualAtom = '1A';
-//    @observable actualAtom = '1B'
-    @observable start = 0;
-    @observable end = 0;
-    @observable duration = 0;
+  @observable atomClicks = 0;
+  @observable actualAtom = '1B';
+  //@observable actualAtom = '1B'
+  @observable start = 0;
+  @observable end = 0;
+  @observable duration = 0;
 
   @observable isCounting = false;
   @observable data = Array();

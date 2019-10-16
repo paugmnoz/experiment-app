@@ -23,8 +23,8 @@ class TaggingStore {
         this.audioPos = e.originalArgs[0]
     }
     @action birdClick() {
-        this.commonName = 'Hormiguero de Zeledón'
-        this.sciName = 'Hafferia zeledoni'
+        this.commonName = 'Piranga Roja'
+        this.sciName = 'Piranga rubra'
     }
     //COMPARE SECTION
     @observable comparedMicro1Activated = true;

@@ -43,17 +43,29 @@ import { relative, isAbsolute } from 'path';
                     }}>
                         <span className="text-title">Especies estudiando</span>
                         <div className="imgs-array">
-                            <img src="./assets/birds-array/bird-2.png"
-                                alt="" className="img-birds" width="50"></img>
-                            <img src="./assets/birds-array/bird-1.png"
-                                onClick={() => {
-                                    taggingStore.birdClick()
-                                }}
-                                alt="" className="img-birds" width="50"></img>
-                            <img src="./assets/birds-array/bird-3.png"
-                                alt="" className="img-birds" width="50"></img>
-                            <img src="./assets/birds-array/bird-4.png"
-                                alt="" className="img-birds" width="50"></img>
+                            <span className="tooltip">
+                                <img src="./assets/birds-array/bird-1.png"
+                                    alt="" className="img-birds" width="50"></img>
+                                <span className="tooltiptext">Electron platyrhynchum</span>
+                            </span>
+                            <span className="tooltip">
+                                <img src="./assets/birds-array/bird-2.png"
+                                    onClick={() => {
+                                        taggingStore.birdClick()
+                                    }}
+                                    alt="" className="img-birds" width="50"></img>
+                                <span className="tooltiptext">Piranga rubra</span>
+                            </span>
+                            <span className="tooltip">
+                                <img src="./assets/birds-array/bird-3.png"
+                                    alt="" className="img-birds" width="50"></img>
+                                <span className="tooltiptext">Mitrephanes phaeocercus</span>
+                            </span>
+                            <span className="tooltip">
+                                <img src="./assets/birds-array/bird-4.png"
+                                    alt="" className="img-birds" width="50"></img>
+                                <span className="tooltiptext">Capito maculicoronatus</span>
+                            </span>
                         </div>
                     </div>
                 </div>

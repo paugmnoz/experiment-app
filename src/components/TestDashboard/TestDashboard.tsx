@@ -10,71 +10,80 @@ import { CompareAudiosB } from '../CompareAudiosB/CompareAudiosB';
 import { CompareAudiosA } from '../CompareAudiosA/CompareAudiosA';
 import { SpectroEditorB } from '../SpectroEditorB/SpectroEditorB';
 import { SpectroEditorA } from '../SpectroEditorA/SpectroEditorA';
+import ReactCursorPosition from 'react-cursor-position';
 
 @observer export class TestDashboard extends React.Component {
 
     @observable x = 0;
     @observable y = 0;
+
     downloadTxtFile = () => {
         const element = document.createElement("a");
-        const file = new Blob([JSON.stringify(dashboardStore.data)], {type: 'text/plain'});
+        const file = new Blob([JSON.stringify(dashboardStore.data)], { type: 'text/plain' });
         element.href = URL.createObjectURL(file);
         element.download = "myFile.txt";
         document.body.appendChild(element); // Required for this to work in FireFox
         element.click();
-      }
+    }
+
     constructor(props) {
         super(props);
-      }
+
+    }
 
     _onMouseMove(e) {
         this.x = e.nativeEvent.offsetX;
         this.y = e.nativeEvent.offsetY;
+        dashboardStore.setMousePos(this.x, this.y);
+        console.log("uyy", this.x  + ", " + this.y);
+    }
 
-        taggingStore.setMousePos(this.x, this.y);
-     }
+    render() {
 
-     
-    render(){
         return <div className="cont" onMouseMove={this._onMouseMove.bind(this)}>
-            <div className={(!dashboardStore.isCounting) ? 'overlay' :  'overlay started'}></div>
+            <div className={(!dashboardStore.isCounting) ? 'overlay' : 'overlay started'}></div>
             <div className="soft-handlers">
                 <h1>ATOMO: {dashboardStore.actualAtom}</h1>
                 {
-                    (!dashboardStore.isCounting) ? ( <button onClick={() => dashboardStore.handleStart('a')}>Empezar</button> ) :
-                    (<button className="finish"  onClick={() => dashboardStore.handleEnd('a')}>He terminado</button>)
+                    (!dashboardStore.isCounting) ? (<button onClick={() => dashboardStore.handleStart('a')}>Empezar</button>) :
+                        (<button className="finish" onClick={() => dashboardStore.handleEnd('a')}>He terminado</button>)
                 }
-                <button className="save"  onClick={this.downloadTxtFile}>Guardar</button>
+                <button className="save" onClick={this.downloadTxtFile}>Guardar</button>
                 <button className="next" disabled={dashboardStore.isCounting} onClick={() => dashboardStore.handleNext('a')}>Siguiente</button>
             </div>
             {
-               (dashboardStore.actualAtom == '1A') ? (
+                (dashboardStore.actualAtom == '1A') ? (
                     <div className="SpectroA atom">
-                        <SpectroEditorA/>
+                        <SpectroEditorA />
                     </div>
-                   ) : (dashboardStore.actualAtom === '1B') ? (
+                ) : (dashboardStore.actualAtom === '1B') ? (
                     <div className="SpectroA atom">
-                    <SpectroEditorB/>
+                        <SpectroEditorB />
                     </div>
-                ): (dashboardStore.actualAtom === '2A') ? (
+                ) : (dashboardStore.actualAtom === '2A') ? (
                     <div className="SpectroA atom">
-                    <CompareAudiosA/>
+                        <CompareAudiosA />
                     </div>
-                ): (dashboardStore.actualAtom === '2B') ? (
+                ) : (dashboardStore.actualAtom === '2B') ? (
                     <div className="SpectroA atom">
-                    <CompareAudiosB/>
+                        <CompareAudiosB />
                     </div>
-                ): (dashboardStore.actualAtom === '3A') ? (
+                ) : (dashboardStore.actualAtom === '3A') ? (
                     <div className="identifySoundA atom">
-                    <IdentifySoundA/>
+                        <IdentifySoundA />
                     </div>
-                ): (dashboardStore.actualAtom === '3B') ? (
+                ) : (dashboardStore.actualAtom === '3B') ? (
                     <div className="identifySoundA atom">
-                    <IdentifySoundB/>
+                        <IdentifySoundB />
                     </div>
-                ):('TERMINAMOS')
-                
-            }     
+                ) : ('TERMINAMOS')
+
+            }
         </div>
     }
+}
+
+const Comp = (props) => {
+    console.log(props.position);
+    return null;
 }

@@ -5,15 +5,15 @@ class TaggingStore {
     @observable playingAudio = false;
     @observable audioPos = 0;
 
-    @observable posXCard = 0;
-    @observable posYCard = 0;
+    @observable mouseX = 0;
+    @observable mouseY = 0;
 
-    @observable commonName = ''
-    @observable sciName = ''
+    @observable commonName = '';
+    @observable sciName = '';
 
     @action setMousePos(x: any, y: any) {
-        this.posXCard = x;
-        this.posYCard = y;
+        this.mouseX = x;
+        this.mouseY = y;
     }
 
     @action handleTogglePlay() {

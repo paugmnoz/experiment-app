@@ -8,19 +8,27 @@ import { observer } from 'mobx-react';
 import { relative, isAbsolute } from 'path';
 /*import Wavesurfer from 'react-wavesurfer';*/
 
-
-
 @observer export class IdentifySoundB extends React.Component {
 
     @observable showTagOption = false;
-    @observable posXCard: any;
-    @observable posYCard: any;
+    @observable mouseX: any;
+    @observable mouseY: any;
 
     constructor(props) {
         super(props);
     }
 
+    selectOnlyThis(id: any) {
+        /*for (var i = 1;i <= 4; i++)
+        {
+            document.getElementById("Check" + i).checked = false;
+        }
+        document.getElementById(id).checked = true;*/
+    }
+
+
     render() {
+
         return <section >
             <div className="card-header">
                 <h1>Selección</h1>
@@ -91,9 +99,9 @@ import { relative, isAbsolute } from 'path';
                 <span className="input-col card-item"> <p className="text-title"> Anotación/Comentario:</p> <textarea style={{ height: 50 }}> </textarea></span>
                 <p className="card-item">Marcar como:</p>
                 <div className="save-options">
-                    <label className="card-item"><input type="checkbox" id="myCheck"></input>Seguro</label>
-                    <label className="card-item"><input type="checkbox" id="myCheck"></input>Pendiente</label>
-                    <label className="card-item"><input type="checkbox" id="myCheck"></input>Duda</label>
+                    <label className="card-item"><input type="checkbox" ref="Check1" name="myCheckbox" onClick={() => { this.selectOnlyThis(this) }}></input>Seguro</label>
+                    <label className="card-item"><input type="checkbox" ref="Check2" name="myCheckbox" onClick={() => { this.selectOnlyThis(this) }}></input>Pendiente</label>
+                    <label className="card-item"><input type="checkbox" ref="Check3" name="myCheckbox" onClick={() => { this.selectOnlyThis(this) }}></input>Duda</label>
                     <button className="green-button" style={{}}>Guardar</button>
                 </div>
             </div>

@@ -17,6 +17,7 @@
     "rc-slider": "^8.7.1",
     "react": "^16.9.0",
     "react-circle-slider": "^1.6.2",
+    "react-cursor-position": "^3.0.3",
     "react-dom": "^16.9.0",
     "react-iframe": "^1.8.0",
     "react-p5-wrapper": "^2.0.0",

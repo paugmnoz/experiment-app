@@ -35,7 +35,7 @@ import ReactCursorPosition from 'react-cursor-position';
         this.x = e.nativeEvent.offsetX;
         this.y = e.nativeEvent.offsetY;
         dashboardStore.setMousePos(this.x, this.y);
-        console.log("uyy", this.x  + ", " + this.y);
+        //console.log("uyy", this.x  + ", " + this.y);
     }
 
     render() {
@@ -51,15 +51,18 @@ import ReactCursorPosition from 'react-cursor-position';
                 <button className="save" onClick={this.downloadTxtFile}>Guardar</button>
                 <button className="next" disabled={dashboardStore.isCounting} onClick={() => dashboardStore.handleNext('a')}>Siguiente</button>
             </div>
+
+            <div className={(dashboardStore.displayWheelAtom) ? 'SpectroA atom' : 'SpectroA atom undisplay'}>
+                <SpectroEditorB display={(dashboardStore.displayWheelAtom) ? 'inherit' : 'none'}></SpectroEditorB>
+            </div>
+
             {
                 (dashboardStore.actualAtom == '1A') ? (
                     <div className="SpectroA atom">
                         <SpectroEditorA />
                     </div>
                 ) : (dashboardStore.actualAtom === '1B') ? (
-                    <div className="SpectroA atom">
-                        <SpectroEditorB />
-                    </div>
+                    dashboardStore.setWheelDisplay()
                 ) : (dashboardStore.actualAtom === '2A') ? (
                     <div className="SpectroA atom">
                         <CompareAudiosA />

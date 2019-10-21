@@ -66,14 +66,10 @@ class DashboardStore {
     console.log('data', this.data)
 
   }
-<<<<<<< HEAD
-  
-=======
 
   @action setWheelDisplay() {
     this.displayWheelAtom = true;
   }
->>>>>>> develop
   @action handleNext(atom: string) {
 
     this.atomIndex += 1;

@@ -13,7 +13,8 @@ const options = [
 const species = [
     { value: 'a', label: 'Sipia nigricauda' },
     { value: 'b', label: 'Sipia berlschepi' },
-    { value: 'c', label: 'Hafferia Zeledoni' }
+    { value: 'c', label: 'Piranga rubra' },
+    { value: 'c', label: 'Hafferia zeledoni' }
 ]
 
 const tagState = [

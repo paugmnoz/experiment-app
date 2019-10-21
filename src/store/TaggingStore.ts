@@ -8,8 +8,8 @@ class TaggingStore {
     @observable mouseX = 0;
     @observable mouseY = 0;
 
-    @observable commonName = '';
-    @observable sciName = '';
+    @observable commonName;
+    @observable sciName;
 
     @action setMousePos(x: any, y: any) {
         this.mouseX = x;

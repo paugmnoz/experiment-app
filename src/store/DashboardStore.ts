@@ -46,6 +46,7 @@ class DashboardStore {
     console.log('data', this.data)
 
   }
+  
   @action handleNext(atom: string) {
     this.atomIndex += 1;
     console.log(this.atomIndex)

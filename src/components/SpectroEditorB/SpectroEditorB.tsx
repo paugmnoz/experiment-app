@@ -9,14 +9,20 @@ import { observer } from 'mobx-react';
 //import Spectogram from '../SpectroEditorB/Spectogram';
 //import P5Wrapper from 'react-p5-wrapper';
 
+interface spectroB {
+    display: string
+}
 @observer
-export class SpectroEditorB extends React.Component {
+export class SpectroEditorB extends React.Component<spectroB> {
 
+    constructor(props) {
+        super(props);
+    }
     render() {
         
         return (
 
-        <div>
+        <div style={{display:this.props.display}}>
             <ToolsMenu />
             <section className="spectro-editor-b">
                 <section className="editor-section">

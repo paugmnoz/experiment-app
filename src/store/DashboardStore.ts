@@ -1,28 +1,48 @@
 import { observable, action, computed, flow } from 'mobx';
 
 class DashboardStore {
-  @observable atomList = ['1B', '1A', '2A', '2B', '3A', '3B']
+  @observable atomList = Array();
   //@observable atomList = [ '1B', '1A', '2B', '2A', '3B', '3A' ]
   @observable atomIndex = 0;
   @observable actualComponentData = { atom: '1A', duration: 0, clicks: 0, mousePos: Array() }
 
   @observable atomClicks = 0;
-  @observable actualAtom = '1B';
+  @observable actualAtom = '';
   //@observable actualAtom = '1B'
   @observable start = 0;
   @observable end = 0;
   @observable duration = 0;
-
+  @observable displayWheelAtom = false;
   @observable isCounting = false;
   @observable data = Array();
-
+  possibleArrays = [
+    ['1B', '1A', '2A', '2B', '3A', '3B'],
+    ['1A', '1B', '2B', '2A', '3B', '3A'],
+    ['3A', '3B', '1A', '1B', '2A', '2B'],
+    ['3B', '3A', '1A', '1B', '2B', '2A'],
+    ['2A', '2B', '3A', '3B', '1A', '1B'],
+    ['2B', '2A', '3B', '3A', '1B', '1A'],
+    ['1B', '1A', '2A', '2B', '3A', '3B'],
+    ['1A', '1B', '2B', '2A', '3B', '3A'],
+    ['3A', '3B', '1A', '1B', '2A', '2B'],
+    ['3B', '3A', '1A', '1B', '2B', '2A'],
+    ['2A', '2B', '3A', '3B', '1A', '1B'],
+    ['2B', '2A', '3B', '3A', '1B', '1A']
+  ]
+  constructor() {
+    let index = Math.floor((Math.random() * 12))
+    console.log(index, 'random')
+    this.atomList = this.possibleArrays[index]
+    this.actualAtom = this.atomList[0]
+    if (this.actualAtom === '1B') { this.displayWheelAtom = true }
+  }
   @observable mousePosArray = Array();
 
   @action setMousePos(x: any, y: any) {
     if (this.isCounting) {
       this.mousePosArray.push({ mouseX: x, mouseY: y });
-      console.log('x', x);
-      console.log(this.mousePosArray)
+      //console.log('x', x);
+      //console.log(this.mousePosArray)
     }
   }
 
@@ -46,19 +66,35 @@ class DashboardStore {
     console.log('data', this.data)
 
   }
+<<<<<<< HEAD
   
+=======
+
+  @action setWheelDisplay() {
+    this.displayWheelAtom = true;
+  }
+>>>>>>> develop
   @action handleNext(atom: string) {
+
     this.atomIndex += 1;
     console.log(this.atomIndex)
     let temp_atom = this.atomList[this.atomIndex]
     this.actualAtom = temp_atom;
-    console.log(this.actualAtom)
+    if (this.actualAtom === '1B') {
+      console.log('')
+    } else {
+      this.displayWheelAtom = false;
+    }
     this.start = 0;
     this.end = 0;
     this.duration = 0;
     this.atomClicks = 0;
     this.mousePosArray = [];
     this.isCounting = false;
+  }
+  @action shuffleAtoms() {
+    let index = (Math.random() * 7)
+    this.atomList = this.possibleArrays[index]
   }
 }
 

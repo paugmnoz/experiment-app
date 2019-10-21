@@ -29,6 +29,15 @@
         }
     }
 
+    .SpectroA {
+        &.atom {
+            &.undisplay {
+                display: none;
+            }
+        }
+      
+    }
+    
     .soft-handlers {
         display: flex;
         flex-direction: row;

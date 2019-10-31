@@ -201,7 +201,7 @@ class TaggingStore {
                 break;
         }
     }
-    
+
     @action onContrastEdit() {
         this.contrastEditionStatus = true;
         this.colorEditionStatus = false;
@@ -211,14 +211,143 @@ class TaggingStore {
 
     @action xenoSearch(birdName) {
         let birdSearch = new XenoCanto();
-    
-        birdSearch.search("bearded bellbird", function(self){
+
+        birdSearch.search("bearded bellbird", function (self) {
             console.log("numRecordings: " + self.entity.numRecordings);
             console.log("numSpecies: " + self.entity.numSpecies);
             // inspect more properties ..
         });
     }
-    
+
+    // RECOMMENDATION
+
+    @observable playingSuggestion = false;
+    @observable selected1 = false;
+    @observable selected2 = false;
+    @observable selected3 = false;
+    @observable selected4 = false;
+    @observable selected5 = false;
+    @observable selected6 = false;
+    @observable isSomethingSelected = false;
+
+    @observable verified = false;
+
+    @action updateMark() {
+        this.verified = true;
+    }
+    @action playBirdSong(url) {
+        let a = new Audio(url);
+        a.play()
+        setTimeout(function () {
+            a.pause();
+        },
+            4500)
+    }
+    @action selectMark(url, index) {
+
+        switch (index) {
+            case 1:
+                if (!this.selected1) {
+                    this.playBirdSong(url);
+                    this.isSomethingSelected = true;
+                    this.selected2 = false;
+                    this.selected3 = false;
+                    this.selected4 = false;
+                    this.selected5 = false;
+                    this.selected6 = false;
+                } else {
+                    this.isSomethingSelected = false;
+                }
+                this.selected1 = !this.selected1;
+                break;
+            case 2:
+                if (!this.selected2) {
+                    this.playBirdSong(url);
+                    this.isSomethingSelected = true;
+                    this.selected1 = false;
+                    this.selected3 = false;
+                    this.selected4 = false;
+                    this.selected5 = false;
+                    this.selected6 = false;
+                } else {
+                    this.isSomethingSelected = false;
+                }
+                this.selected2 = !this.selected2;
+                break;
+            case 3:
+                if (!this.selected3) {
+                    this.playBirdSong(url);
+                    this.isSomethingSelected = true;
+                    this.selected2 = false;
+                    this.selected1 = false;
+                    this.selected4 = false;
+                    this.selected5 = false;
+                    this.selected6 = false;
+                } else {
+                    this.isSomethingSelected = false;
+                } this.selected3 = !this.selected3;
+                break;
+            case 4:
+                if (!this.selected4) {
+                    this.playBirdSong(url)
+                    this.isSomethingSelected = true;
+                    this.selected2 = false;
+                    this.selected3 = false;
+                    this.selected1 = false;
+                    this.selected5 = false;
+                    this.selected6 = false;
+                } else {
+                    this.isSomethingSelected = false;
+                } this.selected4 = !this.selected4;
+                break;
+            case 5:
+                if (!this.selected5) {
+                    this.playBirdSong(url)
+                    this.isSomethingSelected = true;
+                    this.selected2 = false;
+                    this.selected3 = false;
+                    this.selected4 = false;
+                    this.selected1 = false;
+                    this.selected6 = false;
+                } else {
+                    this.isSomethingSelected = false;
+                } this.selected5 = !this.selected5;
+                break;
+            case 6:
+                if (!this.selected6) {
+                    this.playBirdSong(url)
+                    this.isSomethingSelected = true;
+                    this.selected2 = false;
+                    this.selected3 = false;
+                    this.selected4 = false;
+                    this.selected5 = false;
+                    this.selected1 = false;
+                } else {
+                    this.isSomethingSelected = false;
+                } this.selected6 = !this.selected6;
+                break;
+        }
+    }
+
+    //SELECTION AI
+
+    @observable selectedMark1 = false;
+    @observable selectedMark2 = false;
+    @observable someMarkSelected = false;
+    @action selectMarkSuggestion(url, index) {
+        switch (index) {
+            case 1:
+                this.playBirdSong(url);
+                this.selectedMark1 = true;
+                this.selectedMark2 = false;
+                break;
+            case 2:
+                this.playBirdSong(url);
+                this.selectedMark1 = false;
+                this.selectedMark2 = true;
+                break;
+        }
+    }
 }
 
 

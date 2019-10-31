@@ -8,7 +8,6 @@ class DashboardStore {
 
   @observable atomClicks = 0;
   @observable actualAtom = '';
-  //@observable actualAtom = '1B'
   @observable start = 0;
   @observable end = 0;
   @observable duration = 0;

@@ -10,7 +10,8 @@ import { CompareAudiosB } from '../CompareAudiosB/CompareAudiosB';
 import { CompareAudiosA } from '../CompareAudiosA/CompareAudiosA';
 import { SpectroEditorB } from '../SpectroEditorB/SpectroEditorB';
 import { SpectroEditorA } from '../SpectroEditorA/SpectroEditorA';
-import ReactCursorPosition from 'react-cursor-position';
+import { GeneralSpectrogram } from '../GeneralSpectrogram/GeneralSpectrogram';
+import { SelectionSpectrogram } from '../SelectionSpectrogram/SelectionSpectrogram';
 
 @observer export class TestDashboard extends React.Component {
 
@@ -59,7 +60,8 @@ import ReactCursorPosition from 'react-cursor-position';
             {
                 (dashboardStore.actualAtom == '1A') ? (
                     <div className="SpectroA atom">
-                        <SpectroEditorA />
+                       <GeneralSpectrogram></GeneralSpectrogram>
+                       {/* <SpectroEditorA/> */}
                     </div>
                 ) : (dashboardStore.actualAtom === '1B') ? (
                     dashboardStore.setWheelDisplay()

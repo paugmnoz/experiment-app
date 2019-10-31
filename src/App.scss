@@ -13,7 +13,6 @@
 body{
     margin: 0;
     font-family: 'Lato', sans-serif;
-
     /* width */
     ::-webkit-scrollbar {
         width: 8px;
@@ -239,3 +238,88 @@ body{
         background-color: $white;
     }
 }
+
+.react-selector {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+
+    .css-1pahdxg-control {
+        height: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+    }
+    .css-yk16xz-control {
+        height: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        .css-1hwfws3 {
+            height: 25px;
+  
+        }
+    }
+
+
+
+}
+
+.check-container {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:hover input ~ .checkmark {
+      background-color: rgb(247, 247, 247);
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked ~ .checkmark:after {
+          display: block;
+        }
+      &:checked ~ .checkmark {
+          background-color: $secondActiveColor;
+          border: none;
+  
+        }
+    }
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 4px;
+      border: 1.5px solid $mainActiveColor;
+      &:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+      &:after {
+          left: 6px;
+          top: 2px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+    }
+    
+  }

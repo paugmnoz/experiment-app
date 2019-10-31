@@ -329,6 +329,13 @@ class TaggingStore {
         }
     }
 
+    //SELECTION-TAG WITHOUT AI
+    @observable isNoteActivated = false;
+
+    @action onNoteClick(){
+        this.isNoteActivated = true;
+    }
+
     //SELECTION AI
 
     @observable selectedMark1 = false;

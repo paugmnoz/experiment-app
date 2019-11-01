@@ -1,10 +1,10 @@
 import * as React from 'react';
-import './GeneralSpectrogram.scss';
+import '../GeneralSpectrogramA/GeneralSpectrogramA.scss';
 import { observer } from 'mobx-react';
-import { taggingStore } from '../../store/TaggingStore';
+import { taggingStore } from '../../../store/TaggingStore';
 
 @observer
-export class GeneralSpectrogram extends React.Component {
+export class GeneralSpectrogramA extends React.Component {
 
     render() {
 

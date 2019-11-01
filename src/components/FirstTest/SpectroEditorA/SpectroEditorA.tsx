@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './SpectroEditorA.scss';
-import ToolsMenu from '../ToolsMenu/ToolsMenu';
-import { taggingStore } from '../../store/TaggingStore';
+import ToolsMenu from '../../subcomponents/ToolsMenu/ToolsMenu';
+import { taggingStore } from '../../../store/TaggingStore';
 import { observer } from 'mobx-react';
 import * as CSS from 'csstype';
 import { observable } from 'mobx';

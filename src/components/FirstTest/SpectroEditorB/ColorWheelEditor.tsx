@@ -2,10 +2,10 @@ import * as React from 'react';
 import { observer } from 'mobx-react';
 import { observable } from 'mobx';
 import iro from '@jaames/iro';
-import { editorBStore } from '../../store/editorBStore';
-import { dashboardStore } from '../../store/DashboardStore';
-import ColorWheelSpectro from '../../components/SpectroEditorB/ColorWheelSpectro';
-import ColorWheelBack from '../../components/SpectroEditorB/ColorWheelBack';
+import { editorBStore } from '../../../store/editorBStore';
+import { dashboardStore } from '../../../store/DashboardStore';
+import ColorWheelSpectro from '../SpectroEditorB/ColorWheelSpectro';
+import ColorWheelBack from '../SpectroEditorB/ColorWheelBack';
 
 @observer
 export default class SpectroEditorB extends React.Component {

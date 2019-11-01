@@ -2,8 +2,7 @@ import * as React from 'react';
 import { observer } from 'mobx-react';
 import { observable } from 'mobx';
 import iro from '@jaames/iro';
-import { editorBStore } from '../../store/editorBStore';
-import { dashboardStore } from '../../store/DashboardStore';
+import { editorBStore } from '../../../store/editorBStore';
 
 @observer
 export default class ColorWheelBack extends React.Component {

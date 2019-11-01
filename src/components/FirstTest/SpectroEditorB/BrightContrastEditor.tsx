@@ -2,7 +2,7 @@ import * as React from 'react';
 import { observer } from 'mobx-react';
 import CircularSlider from 'react-circular-slider-bar';
 import { CircleSlider } from "react-circle-slider";
-import { editorBStore } from '../../store/editorBStore';
+import { editorBStore } from '../../../store/editorBStore';
 
 @observer
 export default class BrightContrastEditor extends React.Component<{}, { valueBright: any, valueContrast: any }> {

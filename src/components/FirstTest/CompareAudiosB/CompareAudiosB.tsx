@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Iframe from 'react-iframe'
-import ToolsMenu from '../ToolsMenu/ToolsMenu';
-import AudioLayersMenu from './AudioLayersMenu';
+import ToolsMenu from '../../subcomponents/ToolsMenu/ToolsMenu';
+import AudioLayersMenu from '../CompareAudiosB/AudioLayersMenu';
 import Slider, { Range } from 'rc-slider';
-import { taggingStore } from '../../store/TaggingStore';
+import { taggingStore } from '../../../store/TaggingStore';
 import { observer } from 'mobx-react';
-import { SpectrogramCompareView } from '../subcomponents/SpectrogramCompareView/SpectrogramCompareView';
-import '../CompareAudiosB/CompareAudiosB.scss';
+import { SpectrogramCompareView } from '../../subcomponents/SpectrogramCompareView/SpectrogramCompareView';
+import './CompareAudiosB.scss';
 
 @observer
 export class CompareAudiosB extends React.Component {

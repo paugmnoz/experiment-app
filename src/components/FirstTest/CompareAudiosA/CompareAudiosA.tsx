@@ -1,9 +1,9 @@
 import * as React from 'react';
 import './CompareAudiosA.scss';
 import Iframe from 'react-iframe'
-import { taggingStore } from '../../store/TaggingStore';
+import { taggingStore } from '../../../store/TaggingStore';
 import { observer } from 'mobx-react';
-import { SpectrogramCompareView } from '../subcomponents/SpectrogramCompareView/SpectrogramCompareView';
+import { SpectrogramCompareView } from '../../subcomponents/SpectrogramCompareView/SpectrogramCompareView';
 
 @observer
 export class CompareAudiosA extends React.Component {

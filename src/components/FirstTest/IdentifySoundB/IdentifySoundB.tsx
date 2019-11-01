@@ -1,7 +1,7 @@
 /*require('wavesurfer.js');*/
 
 import * as React from 'react';
-import { taggingStore } from '../../store/TaggingStore';
+import { taggingStore } from '../../../store/TaggingStore';
 import './IdentifySoundB.scss';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';

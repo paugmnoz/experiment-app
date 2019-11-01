@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { editorBStore } from '../../store/editorBStore';
-import { taggingStore } from '../../store/TaggingStore';
+import { editorBStore } from '../../../store/editorBStore';
+import { taggingStore } from '../../../store/TaggingStore';
 import './ToolsMenu.scss'
-import { dashboardStore } from '../../store/DashboardStore';
+import { dashboardStore } from '../../../store/DashboardStore';
 import { observer } from 'mobx-react';
 
 @observer

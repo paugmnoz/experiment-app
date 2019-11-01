@@ -1,17 +1,17 @@
 import * as React from 'react';
 import './TestDashboard.scss';
-import { IdentifySoundB } from '../../components/IdentifySoundB/IdentifySoundB';
+import { IdentifySoundB } from '../../components/FirstTest/IdentifySoundB/IdentifySoundB';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
 import { taggingStore } from '../../store/TaggingStore'
-import { IdentifySoundA } from '../IdentifySoundA/IdentifySoundA';
+import { IdentifySoundA } from '../../components/FirstTest/IdentifySoundA/IdentifySoundA';
 import { dashboardStore } from '../../store/DashboardStore';
-import { CompareAudiosB } from '../CompareAudiosB/CompareAudiosB';
-import { CompareAudiosA } from '../CompareAudiosA/CompareAudiosA';
-import { SpectroEditorB } from '../SpectroEditorB/SpectroEditorB';
-import { SpectroEditorA } from '../SpectroEditorA/SpectroEditorA';
-import { GeneralSpectrogram } from '../GeneralSpectrogram/GeneralSpectrogram';
-import { SelectionSpectrogram } from '../SelectionSpectrogram/SelectionSpectrogram';
+import { CompareAudiosB } from '../FirstTest/CompareAudiosB/CompareAudiosB';
+import { CompareAudiosA } from '../FirstTest/CompareAudiosA/CompareAudiosA';
+import { SpectroEditorB } from '../../components/FirstTest/SpectroEditorB/SpectroEditorB';
+import { SpectroEditorA } from '../FirstTest/SpectroEditorA/SpectroEditorA';
+import { GeneralSpectrogramA } from '../../components/SecondTest/GeneralSpectrogramA/GeneralSpectrogramA';
+import { SelectionSpectrogramA } from '../../components/SecondTest/SelectionSpectrogram/SelectionSpectrogramA';
 
 @observer export class TestDashboard extends React.Component {
 
@@ -60,8 +60,8 @@ import { SelectionSpectrogram } from '../SelectionSpectrogram/SelectionSpectrogr
             {
                 (dashboardStore.actualAtom == '1A') ? (
                     <div className="SpectroA atom">
-                       <GeneralSpectrogram></GeneralSpectrogram>
-                       {/* <SpectroEditorA/> */}
+                        {/*<GeneralSpectrogramA></GeneralSpectrogramA>*/}
+                        {<SpectroEditorA/>}
                     </div>
                 ) : (dashboardStore.actualAtom === '1B') ? (
                     dashboardStore.setWheelDisplay()

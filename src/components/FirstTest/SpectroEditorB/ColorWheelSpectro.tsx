@@ -2,8 +2,8 @@ import * as React from 'react';
 import { observer } from 'mobx-react';
 import { observable } from 'mobx';
 import iro from '@jaames/iro';
-import { editorBStore } from '../../store/editorBStore';
-import { dashboardStore } from '../../store/DashboardStore';
+import { editorBStore } from '../../../store/editorBStore';
+import { dashboardStore } from '../../../store/DashboardStore';
 
 @observer
 export default class ColorWheelSpectro extends React.Component {

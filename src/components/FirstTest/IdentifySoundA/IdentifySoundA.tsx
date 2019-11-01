@@ -3,7 +3,7 @@ import './IdentifySoundA.scss';
 import Select from 'react-select'
 import CreatableSelect from 'react-select/creatable';
 import chroma from 'chroma-js';
-import { taggingStore } from '../../store/TaggingStore';
+import { taggingStore } from '../../../store/TaggingStore';
 import { observer } from 'mobx-react';
 
 const options = [

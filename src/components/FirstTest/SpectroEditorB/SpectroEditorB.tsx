@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ToolsMenu from '../ToolsMenu/ToolsMenu';
+import ToolsMenu from '../../subcomponents/ToolsMenu/ToolsMenu';
 import '../SpectroEditorB/SpectroEditorB.scss';
 import ColorWheelEditor from '../SpectroEditorB/ColorWheelEditor';
 import BrightContrastEditor from '../SpectroEditorB/BrightContrastEditor';
-import { dashboardStore } from '../../store/DashboardStore';
-import { editorBStore } from '../../store/editorBStore';
+import { dashboardStore } from '../../../store/DashboardStore';
+import { editorBStore } from '../../../store/editorBStore';
 import { observer } from 'mobx-react';
 //import Spectogram from '../SpectroEditorB/Spectogram';
 //import P5Wrapper from 'react-p5-wrapper';

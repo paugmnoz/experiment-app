@@ -1,8 +1,8 @@
 import * as React from 'react';
 import './CompareAudiosB.scss';
 import Iframe from 'react-iframe'
-import '../CompareAudiosB/CompareAudiosB.scss';
-import { taggingStore } from '../../store/TaggingStore';
+import './CompareAudiosB.scss';
+import { taggingStore } from '../../../store/TaggingStore';
 import { observer } from 'mobx-react';
 
 @observer

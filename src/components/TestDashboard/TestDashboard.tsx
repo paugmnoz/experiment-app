@@ -1,17 +1,21 @@
 import * as React from 'react';
 import './TestDashboard.scss';
-import { IdentifySoundB } from '../../components/FirstTest/IdentifySoundB/IdentifySoundB';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
 import { taggingStore } from '../../store/TaggingStore'
-import { IdentifySoundA } from '../../components/FirstTest/IdentifySoundA/IdentifySoundA';
 import { dashboardStore } from '../../store/DashboardStore';
-import { CompareAudiosB } from '../FirstTest/CompareAudiosB/CompareAudiosB';
-import { CompareAudiosA } from '../FirstTest/CompareAudiosA/CompareAudiosA';
-import { SpectroEditorB } from '../../components/FirstTest/SpectroEditorB/SpectroEditorB';
+
 import { SpectroEditorA } from '../FirstTest/SpectroEditorA/SpectroEditorA';
+import { SpectroEditorB } from '../../components/FirstTest/SpectroEditorB/SpectroEditorB';
+import { CompareAudiosA } from '../FirstTest/CompareAudiosA/CompareAudiosA';
+import { CompareAudiosB } from '../FirstTest/CompareAudiosB/CompareAudiosB';
+import { IdentifySoundA } from '../../components/FirstTest/IdentifySoundA/IdentifySoundA';
+import { IdentifySoundB } from '../../components/FirstTest/IdentifySoundB/IdentifySoundB';
+
 import { GeneralSpectrogramA } from '../../components/SecondTest/GeneralSpectrogramA/GeneralSpectrogramA';
-import { SelectionSpectrogramA } from '../../components/SecondTest/SelectionSpectrogram/SelectionSpectrogramA';
+import { SelectionSpectrogramA } from '../SecondTest/SelectionSpectrogramA/SelectionSpectrogramA';
+import { AITaggingA } from '../SecondTest/AITaggingA/AITaggingA';
+import { GeneralSpectrogramB } from '../SecondTest/GeneralSpectrogramB/GeneralSpectrogramB';
 
 @observer export class TestDashboard extends React.Component {
 
@@ -54,32 +58,37 @@ import { SelectionSpectrogramA } from '../../components/SecondTest/SelectionSpec
             </div>
 
             <div className={(dashboardStore.displayWheelAtom) ? 'SpectroA atom' : 'SpectroA atom undisplay'}>
-                <SpectroEditorB display={(dashboardStore.displayWheelAtom) ? 'inherit' : 'none'}></SpectroEditorB>
+                {/*<SpectroEditorB display={(dashboardStore.displayWheelAtom) ? 'inherit' : 'none'}></SpectroEditorB>*/}
             </div>
 
             {
                 (dashboardStore.actualAtom == '1A') ? (
                     <div className="SpectroA atom">
-                        {/*<GeneralSpectrogramA></GeneralSpectrogramA>*/}
-                        {<SpectroEditorA/>}
+                        {<GeneralSpectrogramA/>}
+                        {/*<SpectroEditorA/>*/}
                     </div>
                 ) : (dashboardStore.actualAtom === '1B') ? (
-                    dashboardStore.setWheelDisplay()
+                    <GeneralSpectrogramB/>
+                    /*dashboardStore.setWheelDisplay()*/
                 ) : (dashboardStore.actualAtom === '2A') ? (
                     <div className="SpectroA atom">
-                        <CompareAudiosA />
+                        {<SelectionSpectrogramA />}
+                        {/*<CompareAudiosA />*/}
                     </div>
                 ) : (dashboardStore.actualAtom === '2B') ? (
                     <div className="SpectroA atom">
-                        <CompareAudiosB />
+                        <div>LMAO 2B</div>
+                        {/*<CompareAudiosB />*/}
                     </div>
                 ) : (dashboardStore.actualAtom === '3A') ? (
                     <div className="identifySoundA atom">
-                        <IdentifySoundA />
+                        {<AITaggingA />}
+                        {/*<IdentifySoundA />*/}
                     </div>
                 ) : (dashboardStore.actualAtom === '3B') ? (
                     <div className="identifySoundA atom">
-                        <IdentifySoundB />
+                        <div>LMAO 3B</div>
+                        {/*<IdentifySoundB />*/}
                     </div>
                 ) : ('TERMINAMOS')
 

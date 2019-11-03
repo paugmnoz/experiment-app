@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './SelectionSpectrogram.scss';
+import './SelectionSpectrogramA.scss';
 import { observer } from 'mobx-react';
 import { taggingStore } from '../../../store/TaggingStore';
 

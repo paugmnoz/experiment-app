@@ -1,0 +1,32 @@
+@import "../../../variables.scss";
+
+.gen-spectro-section {
+    width: 100%;
+    height: 50vh;
+    background-color: $ligthGray2;
+    display: flex;
+    flex-direction: column;
+
+    .spectro-section {
+
+        .time {
+            background-color: $mainDarkColor;
+            width: 949px;
+            height: 40px;
+        }
+
+        .spectro-viz{
+            margin: 0;
+        }
+
+        .marks {
+            position: relative;
+            height: 100px;
+            .mark-timeline{
+                width: 949px;
+                height: 10px;
+                background-color: #333333;
+            }
+        }
+    }
+}

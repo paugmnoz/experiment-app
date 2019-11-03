@@ -9,12 +9,7 @@ export class GeneralSpectrogramA extends React.Component {
     render() {
 
         return <div className="gen-spectro-section" >
-            <span className="left">
-                <div className="frequency">
-
-                </div>
-            </span>
-            <span className="right">
+            <span className="spectro-section">
                 <div className="marks">
                     <span className={((taggingStore.selected1) ? "mark selected" : "mark") /* + ((taggingStore.isSomethingSelected && !taggingStore.selected1) ? " prevent-hover" : "")*/}
                         onClick={() =>

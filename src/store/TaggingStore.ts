@@ -220,8 +220,10 @@ class TaggingStore {
     }
 
     // RECOMMENDATION GENERAL SPECTROGRAM B
+    @observable specieIndex = 0;
     @observable speciesArray = [
         {
+            index: 0,
             startTime: 1.921,
             finishTime: 2.666,
             posX: (948.99  * 1.921)/19,
@@ -231,6 +233,7 @@ class TaggingStore {
             color: '#FAC22B'
         },
         {
+            index: 1,
             startTime: 4.186,
             finishTime: 6.264,
             posX: (948.99  * 4.186)/19,
@@ -240,6 +243,7 @@ class TaggingStore {
             color: '#53D470'
         },
         {
+            index: 2,
             startTime: 10.32,
             finishTime: 12.685,
             posX: (948.99  * 10.32)/19,
@@ -249,6 +253,7 @@ class TaggingStore {
             color: '#53D470'
         },
         {
+            index: 3,
             startTime: 13.32,
             finishTime: 14.414,
             posX: (948.99  * 13.32)/19,
@@ -258,6 +263,7 @@ class TaggingStore {
             color: '#FAC22B'
         },
         {
+            index: 4,
             startTime: 16.189,
             finishTime: 18.985,
             posX: (948.99  * 16.189)/19,
@@ -267,6 +273,7 @@ class TaggingStore {
             color: '#53D470'
         },
         {
+            index: 5,
             startTime: 17.154,
             finishTime: 19,
             posX: (948.99  * 17.154)/19,

@@ -23,6 +23,7 @@
 
         .marks {
             display: flex;
+            flex-direction: column;
             height: 100px;
             position: relative;
 
@@ -44,6 +45,42 @@
                         border-color: white;
                         border-width: 1px;
                         -webkit-transition: 0s;
+                    }
+                }
+            }
+
+            .suggestion-cont {
+                background-color: #E6E6E6;
+                height: 100px;
+
+                .mark-card {
+                    background-color: white;
+                    width: 230px;
+                    height: 90px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    align-content: space-between;
+
+                    .bird-photo-cont {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 25px;
+                        margin: 0 0 0.2rem 0;
+                        overflow: hidden;
+                        background-color: white;
+                        border: solid 1.5px transparent;
+
+                        img {
+                            height: 110%;
+                            width: 110%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .info-mark-card {
+                        display: flex;
+                        flex-direction: column;
                     }
                 }
             }

@@ -17,13 +17,26 @@ export class GeneralSpectrogramB extends React.Component {
                 </div>
                 <div className="marks">
                     <div className="mark-timeline">
-                        {taggingStore.speciesArray.map((specie)=>{
-                            return <div style={{
-                                backgroundColor: specie.color,
-                                width: specie.width,
-                                left: specie.posX,
-                            }} className="specie-mark"></div>;
+                        {taggingStore.speciesArray.map((specie) => {
+                            return <div className="specie-mark"
+                                style={{
+                                    backgroundColor: specie.color,
+                                    width: specie.width,
+                                    left: specie.posX,
+                                }}
+                                onClick={() => { taggingStore.specieIndex = specie.index; }}></div>;
                         })}
+                    </div>
+                    <div className="suggestion-cont">
+                        <div className="mark-card">
+                            <div className="bird-photo-cont">
+                                <img src="./assets/birds/vireolaniusleucotis.jpg" />
+                            </div>
+                            <div className="info-mark-card">
+                                <h4>{taggingStore.speciesArray[taggingStore.specieIndex].scientificName}</h4>
+                                <p>{taggingStore.speciesArray[taggingStore.specieIndex].commonName}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </span>

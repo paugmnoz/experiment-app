@@ -230,6 +230,7 @@ class TaggingStore {
     @observable selected6 = false;
     @observable isSomethingSelected = false;
 
+    @observable isPlaying = false;
     @observable verified = false;
 
     @action updateMark() {
@@ -237,11 +238,19 @@ class TaggingStore {
     }
     @action playBirdSong(url) {
         let a = new Audio(url);
-        a.play()
-        setTimeout(function () {
-            a.pause();
-        },
-            4500)
+        let setPlay = true;
+        if (!this.isPlaying) {
+            this.isPlaying = true;
+            a.play()
+            let that =  this;
+            setTimeout(function () {
+                that.isPlaying = false;
+                a.pause();
+               
+            },
+                4500)
+        }
+       
     }
     @action selectMark(url, index) {
 

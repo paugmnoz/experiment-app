@@ -94,10 +94,115 @@ export class AITaggingA extends React.Component {
                 <img className="close-icon" src="./assets/icons/close.svg" alt="" />
             </div>
             <div className="spec">
-            <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
-            <img className="spectro-play" src="./assets/Tagging/play-time.png"  />
+                <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
+                <img className="spectro-play" src="./assets/Tagging/play-time.png" />
             </div>
-            <div className="card-section"> 
+            <div className="suggest-header">
+                <h1>Sugerencias del sistema</h1>
+            </div>
+            <div className="cards-cont">
+                <div className="suggest-card-cont">
+                    <div className="ai-section">
+                        <div className="row">
+                            <div className="bird-photo-cont">
+                                <img src="./assets/birds/sipiaberlepschi.jpg" alt="" />
+                            </div>
+                            <div className="bird-info">
+                                <h3 className="yellow-text">#1</h3>
+                                <p className="sci-name-style gray-text _12px">Passeriformes > Thamnophilidae </p>
+                                <p className="bold  _14px">Hormiguero Colimocho</p>
+                                <p className="sci-name-style gray-text _14px">Sipia berlepschi</p>
+                            </div>
+                        </div>
+
+                        <span className="main-spec">
+                            <img className="spec-img" src="./assets/Tagging/ai/colimocho-spec.jpg" alt="" />
+                            <img className="lens-img" src="./assets/Tagging/lens.svg" alt="" />
+
+                        </span>
+                        <div className="suggestion-actions">
+                            <span className="play">
+                                <img className="play-img" src="./assets/Tagging/play-audio.svg" height="25px" alt="" />
+                                <p>Reproducir canto</p>
+                            </span>
+                            <span className="match-perc">
+                                <p>Este sugerencia tiene</p>
+                                <p className="green-text _12px bold">85% coincidencia</p>
+                                <div className="actions-wrapper">
+                                    <span className="action-btn">
+                                        <span className="tooltip">
+                                            <img src="./assets/Tagging/tick.png"
+                                                onClick={() => taggingStore.updateMark()}
+                                                height="20px"
+                                                width="20px" alt="" />
+                                            <span className="tooltiptextUp">Validar sugerencia</span>
+                                        </span>
+                                    </span>
+                                    <span className="action-btn">
+                                        <span className="tooltip">
+                                            <img src="./assets/Tagging/question.svg"
+                                                onClick={() => taggingStore.updateMark()}
+                                                height="20px"
+                                                width="20px" alt="" />
+                                            <span className="tooltiptextUp">Pedir opinión a la comunidad</span>
+                                        </span>
+                                    </span>
+                                    <span className="action-btn">
+
+                                        <span className="tooltip">
+                                            <img src="./assets/Tagging/cancel.png" height="20px" width="20px" alt="" />
+                                            <span className="tooltiptextUp">No es esta especie</span>
+                                        </span>
+                                    </span>
+
+                                </div>
+                            </span>
+
+                        </div>
+                    </div>
+                    <div className="card-section ai-sources">
+                        <p>Basado en estos cantos encontrados en eBird:</p>
+                        <span className="row">
+                            <article className="spec">
+
+                                <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
+                                <p className="_14px">Linda Macaulay</p>
+                                <p className="gray-text _14px">Selanche Road Km 126, Ecuador</p>
+                                <span className="play">
+                                    <img className="play-img" src="./assets/Tagging/play-audio.svg" height="20px" alt="" />
+                                    <p className="_14px"> Reproducir canto</p>
+                                </span>
+
+                            </article>
+                            <article className="spec">
+
+                                <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
+                                <p className="_14px">Linda Macaulay</p>
+                                <p className="gray-text _14px">Selanche Road Km 126, Ecuador</p>
+                                <span className="play">
+                                    <img className="play-img" src="./assets/Tagging/play-audio.svg" height="20px" alt="" />
+                                    <p className="_14px"> Reproducir canto</p>
+                                </span>
+
+                            </article>
+                            <article className="spec">
+
+                                <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
+                                <p className="_14px">Linda Macaulay</p>
+                                <p className="gray-text _14px">Selanche Road Km 126, Ecuador</p>
+                                <span className="play">
+                                    <img className="play-img" src="./assets/Tagging/play-audio.svg" height="20px" alt="" />
+                                    <p className="_14px"> Reproducir canto</p>
+                                </span>
+
+                            </article>
+                        </span>
+                    </div>
+
+                </div>
+                <span className="next-card">
+                    <img src="./assets/Tagging/right-arrow.svg" width="25px" alt=""/>
+                </span>
             </div>
             <div className="card-section">
                 <span className="description-items-row">
@@ -176,8 +281,8 @@ export class AITaggingA extends React.Component {
                                 isSearchable />
                         </span>
                     </span>
-                    <p className={taggingStore.isNoteActivated ? 'green-link card-item undisplay' : 'green-link card-item'} 
-                    onClick={()=> taggingStore.onNoteClick()}
+                    <p className={taggingStore.isNoteActivated ? 'green-link card-item undisplay' : 'green-link card-item'}
+                        onClick={() => taggingStore.onNoteClick()}
                     >Agregar anotación o comentario</p>
                     <div className={taggingStore.isNoteActivated ? 'card-item' : 'card-item undisplay'}>
                         <p className="text-title green-text">Anotación</p>
@@ -208,7 +313,7 @@ export class AITaggingA extends React.Component {
                 </span>
             </div>
             */}
-            
+
         </section>
     }
 }

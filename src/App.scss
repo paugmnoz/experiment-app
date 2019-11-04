@@ -39,6 +39,10 @@ body{
         color: $mainActiveColor;
         font-weight: bold;
     }
+    .yellow-text {
+        color: $thirdActiveColor;
+        font-weight: bold;
+    }
 
     .sci-name-style {
         font-family: 'Lato', sans-serif;
@@ -225,7 +229,7 @@ body{
     }
 
     .card-section {
-        border-bottom: solid 1px  ;
+        border-bottom: solid 1px $lightColoredBorderColor;
         padding: 0.5rem 0;
     }
 

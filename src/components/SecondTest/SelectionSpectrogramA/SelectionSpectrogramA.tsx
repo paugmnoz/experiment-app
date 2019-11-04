@@ -17,7 +17,9 @@ export class SelectionSpectrogramA extends React.Component {
                         <img src={"./assets/marks/" + ((taggingStore.verified) ? "ai-mark-verified" : "ai-mark-suggestion") + ".svg"}
                             width="17px" alt=""
                             className="mark-icon" />
-
+                            <div className="bird-photo-cont">
+                            <img src="./assets/birds/hafferiazeledoni.jpg" alt="" />
+                        </div>
                     </span>
                     <span className={((taggingStore.selectedMark2) ? "mark selected" : "mark") /* + ((taggingStore.isSomethingSelected && !taggingStore.selected2) ? " prevent-hover" : "")*/}
                         onClick={() =>
@@ -25,7 +27,9 @@ export class SelectionSpectrogramA extends React.Component {
                         <img src="./assets/marks/ai-mark-suggestion.svg"
                             width="17px" alt=""
                             className="mark-icon" />
-
+                            <div className="bird-photo-cont">
+                            <img src="./assets/birds/sipiaberlepschi.jpg" alt="" />
+                        </div>
                     </span>
                 </div>
                 <div className="time">
@@ -35,22 +39,32 @@ export class SelectionSpectrogramA extends React.Component {
                     <img src="./assets/Tagging/selection.png" height="200px" width="397px" alt="" />
                 </div>
             </span>
-            <span className="suggestions">
-                <h1 >Especies sugeridas de la selección</h1>
-                <hr/>
-                <br/>
+            <div className="suggestions">
+                <span className="section-title-ai">
+                    <h1 >Especies sugeridas de los cantos encontrados en la selección</h1>
+                </span>
                 <span className="down">
                     <div id="hafferia"
                         className={((taggingStore.selectedMark1) ? "suggested-specie selected" : "suggested-specie")}
-                        onClick={() =>
-                            taggingStore.selectMarkSuggestion("./assets/audio-samples/filteredHafferia.wav", 1)}
+                        
                     >
                         <span className="spectrogram">
                             <img src="./assets/Tagging/hafferia_filtered.png" alt="" />
                         </span>
-                        <p className="sci-name-style bold">Hormiguero de Zeledón</p>
+
+                        <span className="row-span">
+                        <img src="./assets/Tagging/play-audio.svg"
+                        onClick={() =>
+                            taggingStore.selectMarkSuggestion("./assets/audio-samples/filteredHafferia.wav", 1)}
+                        alt="" />
+                            <div>
+                            <p className="sci-name-style bold">Hormiguero de Zeledón</p>
                         <p className="sci-name-style gray-text _14px">Hafferia zeledoni</p>
                         <p className="green-text _12px">98% coincidencia</p>
+                            </div>
+                        
+                         </span>
+                        
                         <span className="tooltip exploreaction">
                             <img src="./assets/Tagging/vision.png" height="auto" width="45px" alt="" />
                             <span className="tooltiptextUp">Explorar canto</span>
@@ -58,22 +72,32 @@ export class SelectionSpectrogramA extends React.Component {
                     </div>
                     <div id="sipia"
                         className={((taggingStore.selectedMark2) ? "suggested-specie selected" : "suggested-specie")}
-                        onClick={() =>
-                            taggingStore.selectMarkSuggestion("./assets/audio-samples/filteredSipia.wav", 2)}
+                       
                     >
                         <span className="spectrogram">
                             <img src="./assets/Tagging/sipia_filtered.png" alt="" />
                         </span>
-                        <p className="sci-name-style bold">Hormiguero de Zeledón</p>
+
+                        <span className="row-span">
+                        <img src="./assets/Tagging/play-audio.svg"
+                        onClick={() =>
+                            taggingStore.selectMarkSuggestion("./assets/audio-samples/filteredSipia.wav",2)}
+                        alt="" />
+                            <div>
+                      
+                            <p className="sci-name-style bold">Hormiguero Colimocho</p>
                         <p className="sci-name-style gray-text _14px">Sipia berlepschi</p>
                         <p className="green-text _12px">85% coincidencia</p>
+                            </div>
+                        
+                         </span>
                         <span className="tooltip exploreaction">
                             <img src="./assets/Tagging/vision.png" height="auto" width="45px" alt="" />
                             <span className="tooltiptextUp">Explorar canto</span>
                         </span>                    </div>
                 </span>
 
-            </span>
+            </div>
         </div>
     }
 }

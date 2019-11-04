@@ -23,13 +23,17 @@ export class GeneralSpectrogramB extends React.Component {
                     <img src="./assets/Tagging/general.png" alt="" />
                 </div>
                 <div className="marks">
-                    <div className="mark-timeline">
+                    <div className="mark-timeline" 
+                    style={{
+
+                    }}>
                         {taggingStore.speciesArray.map((specie) => {
                             return <div className="specie-mark"
                                 style={{
                                     backgroundColor: specie.color,
                                     width: specie.width,
                                     left: specie.posX,
+                                    opacity: (taggingStore.specieIndex == specie.index) || (taggingStore.specieIndex == 0) ? 1 : 0.4
                                 }}
                                 onClick={() => {
                                     if (taggingStore.specieIndex == specie.index && taggingStore.specieMarkSelected == true) {

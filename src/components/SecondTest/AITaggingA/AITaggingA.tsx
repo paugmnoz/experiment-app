@@ -88,13 +88,14 @@ export class AITaggingA extends React.Component {
         console.groupEnd();
     };
     render() {
-        return <section>
+        return <section className="tagging-section">
             <div className="card-header">
                 <h1>Selección</h1>
                 <img className="close-icon" src="./assets/icons/close.svg" alt="" />
             </div>
             <div className="spec">
-                <img src="./assets/spectroSelected.png" alt="" />
+            <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
+            <img className="spectro-play" src="./assets/Tagging/play-time.png"  />
             </div>
             <div className="card-section">
                 <span className="description-items-row">

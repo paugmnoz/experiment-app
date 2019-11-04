@@ -31,7 +31,7 @@ class DashboardStore {
   constructor() {
     let index = Math.floor((Math.random() * 12))
     console.log(index, 'random')
-    this.atomList = this.possibleArrays[0]
+    this.atomList = this.possibleArrays[2]
     this.actualAtom = this.atomList[0]
     if (this.actualAtom === '1B') { this.displayWheelAtom = true }
   }

@@ -125,8 +125,9 @@ export class AITaggingA extends React.Component {
 
                         </span>
                         <div className="suggestion-actions">
-                            <span className="play">
-                                <img className="play-img" src="./assets/Tagging/play-audio.svg" height="25px" alt="" />
+                            <span className="play" onClick={()=> taggingStore.playBirdSong('//www.xeno-canto.org/sounds/uploaded/FPAGKPAQYO/XC428690-Stub-tailed%20Antbird_SanCipriano_Co_1sep2017_FSchmitt.mp3')}>
+                                <img className="play-img" src="./assets/Tagging/play-audio.svg" 
+                                height="25px" alt="" />
                                 <p>Reproducir canto</p>
                             </span>
                             <span className="match-perc">

@@ -58,7 +58,7 @@ export class SelectionSpectrogramA extends React.Component {
                             taggingStore.selectMarkSuggestion("./assets/audio-samples/filteredHafferia.wav", 1)}
                         alt="" />
                             <div>
-                            <p className="sci-name-style bold">Hormiguero de Zeledón</p>
+                            <p className=" bold  _14px">Hormiguero de Zeledón</p>
                         <p className="sci-name-style gray-text _14px">Hafferia zeledoni</p>
                         <p className="green-text _12px">98% coincidencia</p>
                             </div>
@@ -85,7 +85,7 @@ export class SelectionSpectrogramA extends React.Component {
                         alt="" />
                             <div>
                       
-                            <p className="sci-name-style bold">Hormiguero Colimocho</p>
+                            <p className="bold  _14px">Hormiguero Colimocho</p>
                         <p className="sci-name-style gray-text _14px">Sipia berlepschi</p>
                         <p className="green-text _12px">85% coincidencia</p>
                             </div>

@@ -17,7 +17,13 @@ export class GeneralSpectrogramB extends React.Component {
                 </div>
                 <div className="marks">
                     <div className="mark-timeline">
-                        
+                        {taggingStore.speciesArray.map((specie)=>{
+                            return <div style={{
+                                backgroundColor: specie.color,
+                                width: specie.width,
+                                left: specie.posX,
+                            }} className="specie-mark"></div>;
+                        })}
                     </div>
                 </div>
             </span>

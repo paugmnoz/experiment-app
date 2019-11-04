@@ -84,25 +84,25 @@ class TaggingStore {
                 this.comparedMicro6Activated = !this.comparedMicro6Activated
                 break;
             case 'all':
-                if(this.comparedMicro1Activated  && 
-                    this.comparedMicro2Activated  &&
-                    this.comparedMicro3Activated && 
-                    this.comparedMicro4Activated && 
-                    this.comparedMicro5Activated && 
+                if (this.comparedMicro1Activated &&
+                    this.comparedMicro2Activated &&
+                    this.comparedMicro3Activated &&
+                    this.comparedMicro4Activated &&
+                    this.comparedMicro5Activated &&
                     this.comparedMicro6Activated) {
-                        this.comparedMicro1Activated = true;
-                        this.comparedMicro2Activated = false;
-                        this.comparedMicro3Activated = false;
-                        this.comparedMicro4Activated = false;
-                        this.comparedMicro5Activated = false;
-                        this.comparedMicro6Activated = false;
+                    this.comparedMicro1Activated = true;
+                    this.comparedMicro2Activated = false;
+                    this.comparedMicro3Activated = false;
+                    this.comparedMicro4Activated = false;
+                    this.comparedMicro5Activated = false;
+                    this.comparedMicro6Activated = false;
                 } else {
-                this.comparedMicro1Activated = true
-                this.comparedMicro2Activated = true;
-                this.comparedMicro3Activated = true;
-                this.comparedMicro4Activated = true;
-                this.comparedMicro5Activated = true;
-                this.comparedMicro6Activated = true;
+                    this.comparedMicro1Activated = true
+                    this.comparedMicro2Activated = true;
+                    this.comparedMicro3Activated = true;
+                    this.comparedMicro4Activated = true;
+                    this.comparedMicro5Activated = true;
+                    this.comparedMicro6Activated = true;
                 }
                 break;
         }
@@ -219,6 +219,64 @@ class TaggingStore {
         });
     }
 
+    // RECOMMENDATION GENERAL SPECTROGRAM B
+    @observable speciesArray = [
+        {
+            startTime: 1.921,
+            finishTime: 2.666,
+            posX: (948.99  * 1.921)/19,
+            width: (948.99 * (2.666 - 1.921))/19,
+            commonName: 'Vireón Coronigris',
+            scientificName: 'Vireolanius leucotis',
+            color: '#FAC22B'
+        },
+        {
+            startTime: 4.186,
+            finishTime: 6.264,
+            posX: (948.99  * 4.186)/19,
+            width: (948.99 * (6.264 - 4.186))/19,
+            commonName: 'Hormiguero de Esmeraldas',
+            scientificName: 'Sipia nigricauda',
+            color: '#53D470'
+        },
+        {
+            startTime: 10.32,
+            finishTime: 12.685,
+            posX: (948.99  * 10.32)/19,
+            width: (948.99 * (12.685 - 10.32))/19,
+            commonName: 'Hormiguero de Esmeraldas',
+            scientificName: 'Sipia nigricauda',
+            color: '#53D470'
+        },
+        {
+            startTime: 13.32,
+            finishTime: 14.414,
+            posX: (948.99  * 13.32)/19,
+            width: (948.99 * (14.414 - 13.32))/19,
+            commonName: 'Vireón Coronigris',
+            scientificName: 'Vireolanius leucotis',
+            color: '#FAC22B'
+        },
+        {
+            startTime: 16.189,
+            finishTime: 18.985,
+            posX: (948.99  * 16.189)/19,
+            width: (948.99 * (18.985 - 16.189))/19,
+            commonName: 'Hormiguero de Zeledón',
+            scientificName: 'Hafferia zeledoni',
+            color: '#53D470'
+        },
+        {
+            startTime: 17.154,
+            finishTime: 19,
+            posX: (948.99  * 17.154)/19,
+            width: (948.99 * (19 - 17.154))/19,
+            commonName: 'Hormiguero de Esmeraldas',
+            scientificName: 'Sipia nigricauda',
+            color: '#53D470'
+        },
+    ];
+
     // RECOMMENDATION
 
     @observable playingSuggestion = false;
@@ -332,7 +390,7 @@ class TaggingStore {
     //SELECTION-TAG WITHOUT AI
     @observable isNoteActivated = false;
 
-    @action onNoteClick(){
+    @action onNoteClick() {
         this.isNoteActivated = true;
     }
 

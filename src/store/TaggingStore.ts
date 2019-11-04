@@ -221,66 +221,99 @@ class TaggingStore {
 
     // RECOMMENDATION GENERAL SPECTROGRAM B
     @observable specieIndex = 0;
+    @observable specieMarkSelected = false;
+    @observable displayMark = 'none';
     @observable speciesArray = [
         {
             index: 0,
+            startTime: 0,
+            finishTime: 0,
+            posX: 0,
+            width: 0,
+            percentage: '',
+            commonName: '',
+            scientificName: '',
+            color: 'rgba(0, 0, 0, 0)',
+            rectColor: '',
+            photo: ''
+        },
+        {
+            index: 1,
             startTime: 1.921,
             finishTime: 2.666,
             posX: (948.99  * 1.921)/19,
             width: (948.99 * (2.666 - 1.921))/19,
+            percentage: 30,
             commonName: 'Vireón Coronigris',
             scientificName: 'Vireolanius leucotis',
-            color: '#FAC22B'
+            color: '#FAC22B',
+            rectColor: 'rgba(251, 212, 102, 0.3)',
+            photo: './assets/birds/vireolaniusleucotis.jpg'
         },
         {
-            index: 1,
+            index: 2,
             startTime: 4.186,
             finishTime: 6.264,
             posX: (948.99  * 4.186)/19,
             width: (948.99 * (6.264 - 4.186))/19,
+            percentage: 89,
             commonName: 'Hormiguero de Esmeraldas',
             scientificName: 'Sipia nigricauda',
-            color: '#53D470'
+            color: '#53D470',
+            rectColor: 'rgba(83, 212, 112, 0.3)',
+            photo: './assets/birds/sipianigricauda.jpg'
         },
         {
-            index: 2,
+            index: 3,
             startTime: 10.32,
             finishTime: 12.685,
             posX: (948.99  * 10.32)/19,
             width: (948.99 * (12.685 - 10.32))/19,
+            percentage: 89,
             commonName: 'Hormiguero de Esmeraldas',
             scientificName: 'Sipia nigricauda',
-            color: '#53D470'
+            color: '#53D470',
+            rectColor: 'rgba(83, 212, 112, 0.3)',
+            photo: './assets/birds/sipianigricauda.jpg'
         },
         {
-            index: 3,
+            index: 4,
             startTime: 13.32,
             finishTime: 14.414,
             posX: (948.99  * 13.32)/19,
             width: (948.99 * (14.414 - 13.32))/19,
+            percentage: 30,
             commonName: 'Vireón Coronigris',
             scientificName: 'Vireolanius leucotis',
-            color: '#FAC22B'
+            color: '#FAC22B',
+            rectColor: 'rgba(251, 212, 102, 0.3)',
+            photo: './assets/birds/vireolaniusleucotis.jpg'
         },
         {
-            index: 4,
+            index: 5,
             startTime: 16.189,
             finishTime: 18.985,
             posX: (948.99  * 16.189)/19,
             width: (948.99 * (18.985 - 16.189))/19,
+            percentage: 85,
             commonName: 'Hormiguero de Zeledón',
             scientificName: 'Hafferia zeledoni',
-            color: '#53D470'
+            color: '#53D470',
+            rectColor: 'rgba(83, 212, 112, 0.3)',
+            photo: './assets/birds/hafferiazeledoni.jpg'
         },
         {
-            index: 5,
+            index: 6,
             startTime: 17.154,
-            finishTime: 19,
+            finishTime: 1,
             posX: (948.99  * 17.154)/19,
             width: (948.99 * (19 - 17.154))/19,
+            percentage: 80,
             commonName: 'Hormiguero de Esmeraldas',
             scientificName: 'Sipia nigricauda',
-            color: '#53D470'
+            color: '#53D470',
+            rectColor: 'rgba(83, 212, 112, 0.3)',
+            photo: './assets/birds/sipianigricauda.jpg'
         },
     ];
 

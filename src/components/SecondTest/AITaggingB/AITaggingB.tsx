@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './AITaggingA.scss';
+import './AITaggingB.scss';
 import Select from 'react-select'
 import CreatableSelect from 'react-select/creatable';
 import chroma from 'chroma-js';
@@ -74,7 +74,7 @@ const colourStyles = {
 
 
 @observer
-export class AITaggingA extends React.Component {
+export class AITaggingB extends React.Component {
     handleChange = (newValue: any, actionMeta: any) => {
         console.group('Value Changed');
         console.log(newValue);

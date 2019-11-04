@@ -84,25 +84,25 @@ class TaggingStore {
                 this.comparedMicro6Activated = !this.comparedMicro6Activated
                 break;
             case 'all':
-                if(this.comparedMicro1Activated  && 
-                    this.comparedMicro2Activated  &&
-                    this.comparedMicro3Activated && 
-                    this.comparedMicro4Activated && 
-                    this.comparedMicro5Activated && 
+                if (this.comparedMicro1Activated &&
+                    this.comparedMicro2Activated &&
+                    this.comparedMicro3Activated &&
+                    this.comparedMicro4Activated &&
+                    this.comparedMicro5Activated &&
                     this.comparedMicro6Activated) {
-                        this.comparedMicro1Activated = true;
-                        this.comparedMicro2Activated = false;
-                        this.comparedMicro3Activated = false;
-                        this.comparedMicro4Activated = false;
-                        this.comparedMicro5Activated = false;
-                        this.comparedMicro6Activated = false;
+                    this.comparedMicro1Activated = true;
+                    this.comparedMicro2Activated = false;
+                    this.comparedMicro3Activated = false;
+                    this.comparedMicro4Activated = false;
+                    this.comparedMicro5Activated = false;
+                    this.comparedMicro6Activated = false;
                 } else {
-                this.comparedMicro1Activated = true
-                this.comparedMicro2Activated = true;
-                this.comparedMicro3Activated = true;
-                this.comparedMicro4Activated = true;
-                this.comparedMicro5Activated = true;
-                this.comparedMicro6Activated = true;
+                    this.comparedMicro1Activated = true
+                    this.comparedMicro2Activated = true;
+                    this.comparedMicro3Activated = true;
+                    this.comparedMicro4Activated = true;
+                    this.comparedMicro5Activated = true;
+                    this.comparedMicro6Activated = true;
                 }
                 break;
         }
@@ -332,7 +332,7 @@ class TaggingStore {
     //SELECTION-TAG WITHOUT AI
     @observable isNoteActivated = false;
 
-    @action onNoteClick(){
+    @action onNoteClick() {
         this.isNoteActivated = true;
     }
 
@@ -355,6 +355,26 @@ class TaggingStore {
                 break;
         }
     }
+
+    //SAVING TAGGINg WITH AI
+
+    @observable mainSpecSuggested = false;
+    @observable isSomethingZoomed = false;
+    @observable zoomedSpeImgUrl = ""
+    @observable zoomedSpeAudioUrl = ""
+
+    @action onSpecZoomView(img, audio) {
+        this.isSomethingZoomed = true;
+        this.zoomedSpeAudioUrl = audio;
+        this.zoomedSpeImgUrl = img;
+    }
+
+    @action onExitZoomView() {
+        this.isSomethingZoomed = false;
+        this.zoomedSpeAudioUrl = '';
+        this.zoomedSpeImgUrl = '';
+    }
+
 }
 
 

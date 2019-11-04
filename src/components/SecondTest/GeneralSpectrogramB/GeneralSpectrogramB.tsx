@@ -45,27 +45,65 @@ export class GeneralSpectrogramB extends React.Component {
                     </div>
                     <div className="suggestion-cont"
                         style={{
-                            height: (taggingStore.specieMarkSelected) ? 100 : 0,
+                            height: (taggingStore.specieMarkSelected) ? 120 : 0,
                             backgroundColor: (taggingStore.specieMarkSelected) ? '#E6E6E6' : 'rgba(255, 255, 255, 0)'
                         }}>
                         <div className="mark-card" style={{
-                            height: (taggingStore.specieMarkSelected) ? 93 : 0,
+                            height: (taggingStore.specieMarkSelected) ? 105 : 0,
                             padding: (taggingStore.specieMarkSelected) ? 15 : 0,
                             backgroundColor: (taggingStore.specieMarkSelected) ? 'rgba(255, 255, 255)' : 'rgba(255, 255, 255, 0)'
                         }}>
-                            <div className="bird-photo-cont" style={{
+                            <span className="bird-info-section" style={{
                                 display: (taggingStore.specieMarkSelected) ? 'flex' : 'none'
                             }}>
-                                <img src={taggingStore.speciesArray[taggingStore.specieIndex].photo} />
-                            </div>
-                            <div className="info-mark-card" style={{
-                                display: (taggingStore.specieMarkSelected) ? 'flex' : 'none'
-                            }}>
-                                <div className="sci-and-percentage">
-                                    <h4 className="percentage">{'' + taggingStore.speciesArray[taggingStore.specieIndex].percentage + '% -'}</h4>
-                                    <h4 className="sci-name">{taggingStore.speciesArray[taggingStore.specieIndex].scientificName}</h4>
+                                <div className="bird-photo-cont" style={{
+                                    display: (taggingStore.specieMarkSelected) ? 'flex' : 'none'
+                                }}>
+                                    <img src={taggingStore.speciesArray[taggingStore.specieIndex].photo} />
                                 </div>
-                                <p>{taggingStore.speciesArray[taggingStore.specieIndex].commonName}</p>
+                                <div className="info-mark-card" style={{
+                                    display: (taggingStore.specieMarkSelected) ? 'flex' : 'none'
+                                }}>
+                                    <div className="sci-and-percentage">
+                                        <h4 className="percentage" style={{
+                                            color: taggingStore.speciesArray[taggingStore.specieIndex].color
+                                        }}>{' ' + taggingStore.speciesArray[taggingStore.specieIndex].percentage + '% '}</h4>
+                                        <h4 className="sci-name">{' - ' + taggingStore.speciesArray[taggingStore.specieIndex].scientificName + ''}</h4>
+                                    </div>
+                                    <p>{taggingStore.speciesArray[taggingStore.specieIndex].commonName}</p>
+                                </div>
+                            </span>
+                            <div className="card-btns" style={{
+                                display: (taggingStore.specieMarkSelected) ? 'flex' : 'none'
+                            }}>
+                                <span className="actions">
+                                    <span className="tooltip">
+                                        <button>
+                                            <img src="./assets/Tagging/tick.png" height="28px" width="28px" alt="" />
+                                        </button>
+                                        <span className="tooltiptextUp">Validar sugerencia</span>
+                                    </span>
+                                    <span className="tooltip">
+                                        <button>
+                                            <img src="./assets/Tagging/question.svg" height="28px" width="28px" alt="" />
+                                        </button>
+                                        <span className="tooltiptextUp">Pedir opinión a la comunidad</span>
+                                    </span>
+                                    <span className="tooltip">
+                                        <button>
+                                            <img src="./assets/Tagging/cancel.png" height="28px" width="28px" alt="" />
+                                        </button>
+                                        <span className="tooltiptextUp">No es esta especie</span>
+                                    </span>
+                                </span>
+                                <span className="tooltip">
+                                    <button>
+                                        <div className="explore">
+                                            <img src="./assets/Tagging/vision.png" height="35px" width="35px" alt="" />
+                                        </div>
+                                    </button>
+                                    <span className="tooltiptextUp">Explorar canto</span>
+                                </span>
                             </div>
                         </div>
                     </div>

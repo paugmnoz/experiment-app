@@ -1,6 +1,183 @@
+@import "./../../../variables.scss";
+
+
 .tagging-section {
     background-color: white;
     width: 100%;
+    font-size: 15px;
+    .suggest-header {
+        background-color: $thirdActiveColor;
+        padding: 7px 10px;
+        h1 {
+            font-size: 15px;
+        }
+    }
+    .cards-cont{
+        background-color: $semiWhite;
+        padding: 10px;
+        position: relative;
+        .next-card{
+            position: absolute;
+            top: 40%;
+            right: 1.5%;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            background-color: rgb(255, 254, 241);
+            border-radius: 50px;
+            box-shadow: 2px 2px 2px $boxShadow;
+            cursor: pointer;
+            img {
+                margin: auto;
+            }
+
+            &:hover {
+                background-color: rgb(255, 252, 225);
+
+                transition: scale 0s;
+                transform: scale(1.02);
+            }
+        }
+    }
+    .suggest-card-cont {
+        background-color: white;
+        border-radius: 5px;
+        width: 97%;
+        margin: auto;
+    }
+    .ai-sources {
+        padding: 0 15px 1rem 15px;
+        >p {
+            margin: 0 0 0.5rem 0;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            article {
+                padding: 0.2rem 0.5rem;
+                margin: 0.5rem 0;
+                border-left: 1px solid $thirdActiveColor;
+                width: auto;
+                .spectro-img {
+                    height: 80px;
+                    margin: 0.2rem 0;
+                }
+                .play {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    p {
+                        font-weight: 700;
+                        margin: 0 0 0 0.5rem;
+                    }
+                }
+            }
+        }
+        
+    }
+   .ai-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            .row {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+    
+            }
+    
+            .main-spec {
+                height: 90px;
+                margin: 0 0.5rem 0 1.5rem;
+                position: relative;
+                .spec-img {
+                    height: 100%;
+                    padding: 2px;
+                    border: 1.5px solid $mainActiveColor;
+                }
+                .lens-img{
+                    position: absolute;
+                    top: 30%;
+                    left: 37%;
+                    height: 35px;
+                    display: none;
+    
+                }
+    
+                &:hover {
+                    .lens-img {
+                        display: inherit;
+                    }
+                }
+            }
+    
+            .suggestion-actions {
+                display:flex;
+                flex-direction: column;
+                width: 25%;
+                .play {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    p {
+                        font-weight: 700;
+                        margin: 0 0 0 0.5rem;
+                    }
+                }
+                .match-perc {
+                    border-left: 3px solid $mainActiveColor;
+                    padding: 0 10px;
+                    margin: 0.5rem 0 0 8px;
+                }
+                p {
+                    font-size: 14px;
+                }
+    
+                .actions-wrapper {
+                    display:flex;
+                    flex-direction: row;
+                    .action-btn {
+                        margin: 0.2rem 0.5rem;
+                        cursor: pointer;
+    
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            .bird-info {
+                p {
+                    margin: 0.2rem 0;
+                    font-size: 15px;
+                }
+            }
+    
+            .bird-photo-cont {
+                width: 70px;
+                height: 70px;
+                border-radius: 35px;
+                margin: 0 0.5rem 0 0;
+                overflow: hidden;
+                background-color: white;
+                border: solid  2px $thirdActiveColor;
+    
+                img {
+                    height: 115%;
+                    width: 115%;
+                    object-fit: cover;
+                }
+            }
+        }
+    
 }
 
 .spec {
@@ -10,12 +187,14 @@
     flex-wrap: nowrap;
     align-items: flex-start;
     width: 100%;
+
     .spectro-img {
         height: 100%;
         width: auto;
     }
+
     .spectro-play {
-        width:100%;
+        width: 100%;
         height: 35px;
     }
 }
@@ -38,7 +217,8 @@
     display: flex;
     flex-direction: row;
     margin: 0.3rem 0;
-    .img-birds{
+
+    .img-birds {
         padding: 4px;
     }
 }
@@ -69,6 +249,7 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+
     #note {
         &.undisplay {
             display: none;
@@ -76,19 +257,23 @@
         }
 
     }
+
     textarea {
         width: 100%;
         margin: 0.5rem 0;
         font-family: 'Lato', sans-serif;
     }
+
     .naming {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
         span {
             width: 50%;
         }
+
         .react-selector {
             width: 60%;
             margin: 0 0 0 0.5rem;
@@ -121,3 +306,4 @@
         margin: 0.5rem;
     }
 }
+

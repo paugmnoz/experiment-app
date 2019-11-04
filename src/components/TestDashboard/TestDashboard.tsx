@@ -81,12 +81,12 @@ import { GeneralSpectrogramB } from '../SecondTest/GeneralSpectrogramB/GeneralSp
                         {/*<CompareAudiosB />*/}
                     </div>
                 ) : (dashboardStore.actualAtom === '3A') ? (
-                    <div className="identifySoundA atom">
+                    <div className="tagging atom">
                         {<AITaggingA />}
                         {/*<IdentifySoundA />*/}
                     </div>
                 ) : (dashboardStore.actualAtom === '3B') ? (
-                    <div className="identifySoundA atom">
+                    <div className="tagging atom">
                         <div>LMAO 3B</div>
                         {/*<IdentifySoundB />*/}
                     </div>

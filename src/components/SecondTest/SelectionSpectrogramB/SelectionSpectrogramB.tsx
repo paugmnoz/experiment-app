@@ -54,12 +54,21 @@ export class SelectionSpectrogramB extends React.Component {
                                         style={{
                                             border: 'solid 3px ' + suggestion.color,
                                         }} />
-                                    <div className="percentage-sci">
-                                        <h2 className="percentage"></h2>
-                                        <h2 className="sci-name"></h2>
+                                    <div className="specie-card-down">
+                                        <div className="bird-info">
+                                            <img className="bird-photo" src={suggestion.birdPhoto} alt="" />
+                                            <div className="bird-text">
+                                                <div className="position-sci">
+                                                    <h2 className="position">{'#' + suggestion.position + '-'}</h2>
+                                                    <h2 className="sci-name">{suggestion.scientificName}</h2>
+                                                </div>
+                                                <h2 className="common-name">{suggestion.commonName}</h2>
+                                            </div>
+                                        </div>
+                                        <p className="coincidence" style={{
+                                            color: suggestion.color,
+                                        }}>{suggestion.coincidences}</p>
                                     </div>
-                                    <h2 className="common-name"></h2>
-                                    <p className="coincidence"></p>
                                 </span>
                             </div>;
                         })}

@@ -74,6 +74,8 @@
         #sipia {
             padding: 3px;
             background-color: white;
+            margin-right: 3px;
+            height: 199px;
         }
 
         .filtered-spectrogram {
@@ -87,7 +89,7 @@
             }
 
             img {
-                width: 220px;
+                width: 238px;
                 border: solid 3px #333333;
                 cursor: pointer;
             }
@@ -103,8 +105,10 @@
         .suggestions-cont {
             display: flex;
             flex-direction: row;
+            height: 199px;
 
             .specie-suggested {
+                margin: 0 3px 0 3px;
                 padding: 3px;
                 background-color: white;
 
@@ -118,15 +122,58 @@
                     }
 
                     .spectrogram {
-                        width: 220px;
+                        width: 238px;
                         cursor: pointer;
                     }
 
-                    p {
-                        margin: 10px;
-                        font-size: 13px;
-                        font-weight: 800;
-                        text-align: center;
+                    .specie-card-down {
+                        margin: 5px;
+
+                        .bird-info {
+                            display: flex;
+                            flex-direction: row;
+
+                            .bird-photo {
+                                width: 35px;
+                                height: 35px;
+                                margin-right: 10px;
+                            }
+
+                            .bird-text {
+                                display: flex;
+                                flex-direction: column;
+
+                                .position-sci {
+                                    display: flex;
+                                    flex-direction: row;
+                                    margin-bottom: 1px;
+
+                                    .position {
+                                        font-size: 15px;
+                                        font-weight: 800;
+                                    }
+
+                                    .sci-name {
+                                        font-size: 15px;
+                                        font-weight: 800;
+                                        font-style: italic;
+                                        color: #828282;
+                                    }
+                                }
+
+                                .common-name {
+                                    font-size: 14px;
+                                    font-weight: 800;
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+
+
+                        p {
+                            font-size: 12px;
+                            font-weight: 800;
+                        }
                     }
                 }
             }

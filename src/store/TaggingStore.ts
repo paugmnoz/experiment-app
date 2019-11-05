@@ -23,6 +23,7 @@ class TaggingStore {
     @action handlePosChange(e: any) {
         this.audioPos = e.originalArgs[0]
     }
+    
     @action birdClick(value: number) {
         switch (value) {
             case 1:

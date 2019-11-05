@@ -464,7 +464,57 @@ class TaggingStore {
     }
 
     // SELECTION SPECTROGRAM B
-    @observable suggestionsArray = [1, 2];
+    @observable suggestionsArray = [
+        [{
+            index: 0,
+            position: '1',
+            percentage: 87,
+            commonName: 'Hormiguero colimocho',
+            scientificName: 'Sipia berlepschi',
+            coincidences: 'EN BASE A 2 COINCIDENCIAS ENCONTRADAS',
+            color: '#53D470',
+            spectrogramImg:'./assets/atom2B-assets/sipiaberlepschi.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/sipiaberlepschi.png',
+            audio: './assets/audio-samples/sipia.wav'
+        },
+        {
+            index: 0,
+            position: '2',
+            percentage: 81,
+            commonName: 'Hormiguero de zeledón',
+            scientificName: 'Sipia nigricauda',
+            coincidences: 'EN BASE A 3 COINCIDENCIAS ENCONTRADAS',
+            color: '#53D470',
+            spectrogramImg:'./assets/atom2B-assets/sipianigricauda.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/sipianigricauda.png',
+            audio: './assets/audio-samples/sipia.wav'
+        },
+        {
+            index: 0,
+            position: '3',
+            percentage: 61,
+            commonName: 'Homiguero guardarribera oriental',
+            scientificName: 'Sipia palliata',
+            coincidences: 'EN BASE A 1 COINCIDENCIA ENCONTRADA',
+            color: '#B8D449',
+            spectrogramImg:'./assets/atom2B-assets/sipiapalliata.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/sipiapalliata.png',
+            audio: './assets/audio-samples/sipia.wav'
+        },
+        {
+            index: 0,
+            position: '4',
+            percentage: 87,
+            commonName: 'Hormiguero cuerniblanco',
+            scientificName: 'Pithys albifrons peruvianus',
+            coincidences: 'EN BASE A 1 COINCIDENCIA ENCONTRADA',
+            color: '#53D470',
+            spectrogramImg:'./assets/atom2B-assets/pithysalbifrons.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/pithysalbifrons.png',
+            audio: './assets/audio-samples/sipia.wav'
+        }],
+        [],
+    ];
 
     //FINAL DE LA CLASE TAGGING STORE
 }

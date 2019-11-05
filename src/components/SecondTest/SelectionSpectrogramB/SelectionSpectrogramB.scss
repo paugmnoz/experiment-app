@@ -108,9 +108,36 @@
             height: 199px;
 
             .specie-suggested {
+                position: relative;
                 margin: 0 3px 0 3px;
                 padding: 3px;
                 background-color: white;
+
+                .play-audio{
+                    display: none;
+                    position: absolute;
+                    top: 28%;
+                    right: 30%;
+                }
+                .exploreaction {
+                    display: none;
+                    position: absolute;
+                    top: 25%;
+                    left: 30%;
+                }
+
+                &:hover {
+                    transform: scale(1.01);
+
+                    .exploreaction {
+                        display: inherit;
+                        cursor: pointer;
+                    }
+                    .play-audio {
+                        display: inherit;
+                        cursor: pointer;
+                    }
+                }
 
                 .specie-card {
                     .percentage-title {

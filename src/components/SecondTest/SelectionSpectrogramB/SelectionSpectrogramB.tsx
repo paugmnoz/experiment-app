@@ -45,6 +45,14 @@ export class SelectionSpectrogramB extends React.Component {
 
                         {taggingStore.suggestionsArray[0].map((suggestion) => {
                             return <div className="specie-suggested">
+                                <span className="tooltip exploreaction">
+                                    <img src="./assets/Tagging/vision.png" height="auto" width="45px" alt="" />
+                                    <span className="tooltiptextUp">Explorar canto</span>
+                                </span>
+                                <span className="tooltip play-audio">
+                                    <img src="./assets/Tagging/play-audio.svg" height="auto" width="35px" alt="" />
+                                    <span className="tooltiptextUp">Reproducir canto</span>
+                                </span>
                                 <span className="specie-card">
                                     <div className="percentage-title"
                                         style={{

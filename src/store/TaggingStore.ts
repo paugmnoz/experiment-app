@@ -504,11 +504,11 @@ class TaggingStore {
         {
             index: 0,
             position: '4',
-            percentage: 87,
+            percentage: 30,
             commonName: 'Hormiguero cuerniblanco',
             scientificName: 'Pithys albifrons peruvianus',
             coincidences: 'EN BASE A 1 COINCIDENCIA ENCONTRADA',
-            color: '#53D470',
+            color: '#FAC22B',
             spectrogramImg:'./assets/atom2B-assets/pithysalbifrons.png',
             birdPhoto: './assets/atom2B-assets/birds-photos/pithysalbifrons.png',
             audio: './assets/audio-samples/sipia.wav'

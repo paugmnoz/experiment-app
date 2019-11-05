@@ -41,9 +41,29 @@ export class SelectionSpectrogramB extends React.Component {
                         </span>
                     </div>
 
-                    <span className="suggestions">
+                    <div className="suggestions-cont">
 
-                    </span>
+                        {taggingStore.suggestionsArray[0].map((suggestion) => {
+                            return <div className="specie-suggested">
+                                <span className="specie-card">
+                                    <div className="percentage-title"
+                                        style={{
+                                            backgroundColor: suggestion.color,
+                                        }}>{suggestion.percentage + '% DE COINCIDENCIA'}</div>
+                                    <img className="spectrogram" src={suggestion.spectrogramImg} alt=""
+                                        style={{
+                                            border: 'solid 3px ' + suggestion.color,
+                                        }} />
+                                    <div className="percentage-sci">
+                                        <h2 className="percentage"></h2>
+                                        <h2 className="sci-name"></h2>
+                                    </div>
+                                    <h2 className="common-name"></h2>
+                                    <p className="coincidence"></p>
+                                </span>
+                            </div>;
+                        })}
+                    </div>
                 </span>
 
             </div>

@@ -63,12 +63,13 @@
     }
 
     .down {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: -webkit-inline-box;
+        //flex-direction: row;
+        //flex-wrap: wrap;
         padding: 3px 0 3px 0;
         background-color: #E6E6E6;
+        max-width: 899.9px;
+        overflow-x: auto;
 
         #sipia {
             padding: 3px;
@@ -96,6 +97,38 @@
                 font-size: 13px;
                 font-weight: 800;
                 text-align: center;
+            }
+        }
+
+        .suggestions-cont {
+            display: flex;
+            flex-direction: row;
+
+            .specie-suggested {
+                padding: 3px;
+                background-color: white;
+
+                .specie-card {
+                    .percentage-title {
+                        padding: 3px;
+                        font-size: 13px;
+                        font-weight: 800;
+                        text-align: center;
+                        color: white;
+                    }
+
+                    .spectrogram {
+                        width: 220px;
+                        cursor: pointer;
+                    }
+
+                    p {
+                        margin: 10px;
+                        font-size: 13px;
+                        font-weight: 800;
+                        text-align: center;
+                    }
+                }
             }
         }
 

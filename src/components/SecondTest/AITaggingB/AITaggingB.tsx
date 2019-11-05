@@ -105,7 +105,7 @@ export class AITaggingB extends React.Component {
                 </div>
                 <div className="left-main-suggestion-card">
                     <div className="header">
-                        <h2>87% DE COINCIDENCIA</h2>
+                        <h2>87% DE COINCIDENCIA TOTAL</h2>
                     </div>
                     <div className="bird-card">
                         <div className="bird-photo-cont">
@@ -121,7 +121,7 @@ export class AITaggingB extends React.Component {
                     <div className="btns-section">
                         <span className="actions">
                             <span className="tooltip">
-                                <img src="./assets/Tagging/tick.png" height="30px" width="30px"/>
+                                <img src="./assets/Tagging/tick.png" height="30px" width="30px" />
                                 <span className="tooltiptextUp">Validar sugerencia</span>
                             </span>
                             <span className="tooltip">
@@ -133,7 +133,11 @@ export class AITaggingB extends React.Component {
                                 <span className="tooltiptextUp">No es esta especie</span>
                             </span>
                             <span className="tooltip">
-                                <img src="./assets/Tagging/play-audio.svg" height="30px" width="30px" alt="" />
+                                <img src="./assets/Tagging/play-audio.svg" height="30px" width="30px" alt=""
+                                    onClick={() => {
+                                        taggingStore.playBirdSong('./assets/audio-samples/Atom2B/sipiaberlepschi.mp3');
+                                    }
+                                    } />
                                 <span className="tooltiptextUp">Reproducir audio</span>
                             </span>
                         </span>

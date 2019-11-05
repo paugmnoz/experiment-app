@@ -513,7 +513,31 @@ class TaggingStore {
             birdPhoto: './assets/atom2B-assets/birds-photos/pithysalbifrons.png',
             audio: './assets/audio-samples/Atom2B/pithysalbifrons.mp3'
         }],
-        [],
+        [{
+            index: 0,
+            position: '1',
+            percentage: 92,
+            commonName: 'Hormiguero de zeledón',
+            scientificName: 'Hafferia zeledoni',
+            coincidences: '4 AUDIOS SIMILARES ENCONTRADO',
+            color: '#B8D449',
+            spectrogramImg:'./assets/atom2B-assets/hafferiazeledoni.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/hafferiazeledoni.png',
+            audio: './assets/audio-samples/Atom2B/hafferiazeledoni.wav'
+        },
+        {
+            index: 1,
+            position: '2',
+            percentage: 55,
+            commonName: 'Hormiguero tiznado',
+            scientificName: 'Hafferia fortis',
+            coincidences: '1 AUDIO SIMILAR ENCONTRADO',
+            color: '#FAC22B',
+            spectrogramImg:'./assets/atom2B-assets/hafferiafortis.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/hafferiafortis.png',
+            audio: './assets/audio-samples/Atom2B/hafferiafortis.mp3'
+        }
+    ],
     ];
 
     //FINAL DE LA CLASE TAGGING STORE

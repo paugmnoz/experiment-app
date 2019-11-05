@@ -8,7 +8,7 @@ export class SelectionSpectrogramA extends React.Component {
 
     render() {
 
-        return <div className="selected-spectro-section" >
+        return <div className="selected-spectro-section-A" >
             <span className="up">
                 <div className="marks">
                     <span className={((taggingStore.selectedMark1) ? "mark selected" : "mark") /* + ((taggingStore.isSomethingSelected && !taggingStore.selected1) ? " prevent-hover" : "")*/}

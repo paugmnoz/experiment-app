@@ -8,7 +8,7 @@ export class SelectionSpectrogramB extends React.Component {
 
     render() {
 
-        return <div className="selected-spectro-section" >
+        return <div className="selected-spectro-section-B" >
             <span className="up">
                 <div className="spectro-cont">
                     <div className="time">

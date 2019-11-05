@@ -78,7 +78,6 @@ import { GeneralSpectrogramB } from '../SecondTest/GeneralSpectrogramB/GeneralSp
                     </div>
                 ) : (dashboardStore.actualAtom === '2B') ? (
                     <div className="SpectroA atom">
-                        <div>LMAO 2B</div>
                         {<SelectionSpectrogramB />}
                         {/*<CompareAudiosB />*/}
                     </div>

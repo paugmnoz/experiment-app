@@ -6,99 +6,58 @@
     display: flex;
     flex-direction: column;
 
-    .suggestions {
-        display: flex;
-        flex-direction: column;
-        background-color: $semiWhite;
-        .section-title-ai {
-            background-color: $thirdActiveColor;
-            
-        }
-    }
     .up {
         .marks {
+            display: flex;
+            flex-direction: column;
             position: relative;
-            height: 20px;
 
-            .mark {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                cursor: pointer;
+            .mark-timeline {
+                position: relative;
                 display: flex;
-                flex-direction: column-reverse;
-                align-content: center;
-                align-items: center;
-                &.selected {
-                    z-index: 100;
-                    transform: scale(1.2);
-                   padding-bottom:3.5px;
-                    .bird-photo-cont { 
-                        
-                    img {
-                        opacity: 1;
-                    }
-                    }
-                }
-                &.prevent-hover {
-                    pointer-events: none;
-                }
+                flex-direction: row;
+                width: 396.99px;
+                min-height: 8px;
+                background-color: #333333;
 
-                &:hover {
-                    z-index: 100;
+                .specie-mark {
+                    position: absolute;
+                    height: 8px;
+                    cursor: pointer;
 
-                    .bird-photo-cont {
-                        transform: scale(1.2);
-                        margin: 0 0 0.2rem 0;
-
-                        img {
-                            opacity: 1;
-                        }
-                    }
-                }
-
-               
-
-                &:first-child {
-                    bottom: 0;
-                    left: 116px;
-                }
-
-                &:nth-child(2) {
-                    bottom: 0;
-                    left: 161px;
-                }
-                .bird-photo-cont {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 15px;
-                    margin: 0 0 0.1rem 0;
-                    overflow: hidden;
-                    background-color: white;
-                    border: solid 1.5px transparent;
-
-                    img {
-                        height: 110%;
-                        width: 110%;
-                        opacity: 0.6;
-                        object-fit: cover;
+                    &:hover {
+                        box-sizing: border-box;
+                        border: solid;
+                        border-color: rgba(255, 255, 255, 0.55);
+                        border-width: 1.3px;
+                        -webkit-transition: 0s;
                     }
                 }
             }
-
         }
 
         .time {
             //      background-color: $mainDarkColor;
             height: 45px;
-                    }
+        }
+    }
+
+    .suggestions {
+        display: flex;
+        flex-direction: column;
+        background-color: $semiWhite;
+
+        .section-title-ai {
+            background-color: $mainDarkColor;
+        }
     }
 
     h1 {
-        margin: 0.5rem ;
-        color: $mainDarkColor;
+        margin: 0.5rem;
+        color: #53D470;
         font-size: 16px;
     }
+
     hr {
         border: 0.5px solid $mainActiveColor;
     }
@@ -108,45 +67,37 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        padding: 3px 0 3px 0;
+        background-color: #E6E6E6;
 
-        .suggested-specie {
-            width: 25%;
-            background-color: $white;
-            padding: 7px;
-            border-radius: 5px;
-            margin: 0.5rem;
-            border: 1.5px solid $ligthGray2;
-            position: relative;
-            cursor: pointer;
+        #sipia {
+            padding: 3px;
+            background-color: white;
+        }
 
-            .row-span {
-                display:flex;
-                flex-direction: row;
-                >img {
-                    margin: 0 0.5rem 0 0 ;
-                }
+        .filtered-spectrogram {
+            .filtered-title {
+                padding: 3px;
+                font-size: 13px;
+                font-weight: 800;
+                text-align: center;
+                color: white;
+                background-color: #333333;
             }
-            .exploreaction {
-                display: none;
-                position: absolute;
-                top: 25%;
-                left: 40%;
+
+            img {
+                width: 220px;
+                border: solid 3px #333333;
+                cursor: pointer;
             }
-            &:hover {
-                transform: scale(1.02);
-                .exploreaction {
-                    display: inherit;
-                }
-            }
-            &.selected {
-                
-                border-color: $thirdActiveColor;
-            }
-            .spectrogram {
-                img {
-                    width: 100%;
-                }
+
+            p {
+                margin: 10px;
+                font-size: 13px;
+                font-weight: 800;
+                text-align: center;
             }
         }
+
     }
 }

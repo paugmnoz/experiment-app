@@ -242,8 +242,8 @@ class TaggingStore {
             index: 1,
             startTime: 1.921,
             finishTime: 2.666,
-            posX: (948.99  * 1.921)/19,
-            width: (948.99 * (2.666 - 1.921))/19,
+            posX: (948.99 * 1.921) / 19,
+            width: (948.99 * (2.666 - 1.921)) / 19,
             percentage: 30,
             commonName: 'Vireón Coronigris',
             scientificName: 'Vireolanius leucotis',
@@ -256,8 +256,8 @@ class TaggingStore {
             index: 2,
             startTime: 4.186,
             finishTime: 6.264,
-            posX: (948.99  * 4.186)/19,
-            width: (948.99 * (6.264 - 4.186))/19,
+            posX: (948.99 * 4.186) / 19,
+            width: (948.99 * (6.264 - 4.186)) / 19,
             percentage: 89,
             commonName: 'Hormiguero de Esmeraldas',
             scientificName: 'Sipia nigricauda',
@@ -270,8 +270,8 @@ class TaggingStore {
             index: 3,
             startTime: 10.32,
             finishTime: 12.685,
-            posX: (948.99  * 10.32)/19,
-            width: (948.99 * (12.685 - 10.32))/19,
+            posX: (948.99 * 10.32) / 19,
+            width: (948.99 * (12.685 - 10.32)) / 19,
             percentage: 89,
             commonName: 'Hormiguero de Esmeraldas',
             scientificName: 'Sipia nigricauda',
@@ -284,8 +284,8 @@ class TaggingStore {
             index: 4,
             startTime: 13.32,
             finishTime: 14.414,
-            posX: (948.99  * 13.32)/19,
-            width: (948.99 * (14.414 - 13.32))/19,
+            posX: (948.99 * 13.32) / 19,
+            width: (948.99 * (14.414 - 13.32)) / 19,
             percentage: 30,
             commonName: 'Vireón Coronigris',
             scientificName: 'Vireolanius leucotis',
@@ -298,8 +298,8 @@ class TaggingStore {
             index: 5,
             startTime: 16.189,
             finishTime: 18.985,
-            posX: (948.99  * 16.189)/19,
-            width: (948.99 * (18.985 - 16.189))/19,
+            posX: (948.99 * 16.189) / 19,
+            width: (948.99 * (18.985 - 16.189)) / 19,
             percentage: 85,
             commonName: 'Hormiguero de Zeledón',
             scientificName: 'Hafferia zeledoni',
@@ -312,8 +312,8 @@ class TaggingStore {
             index: 6,
             startTime: 17.154,
             finishTime: 1,
-            posX: (948.99  * 17.154)/19,
-            width: (948.99 * (19 - 17.154))/19,
+            posX: (948.99 * 17.154) / 19,
+            width: (948.99 * (19 - 17.154)) / 19,
             percentage: 80,
             commonName: 'Hormiguero de Esmeraldas',
             scientificName: 'Sipia nigricauda',
@@ -462,6 +462,11 @@ class TaggingStore {
                 break;
         }
     }
+
+    // SELECTION SPECTROGRAM B
+    @observable suggestionsArray = [1, 2];
+
+    //FINAL DE LA CLASE TAGGING STORE
 }
 
 

@@ -24,10 +24,7 @@ export class GeneralSpectrogramB extends React.Component {
                     <img src="./assets/Tagging/general.png" alt="" />
                 </div>
                 <div className="marks">
-                    <div className="mark-timeline"
-                        style={{
-
-                        }}>
+                    <div className="mark-timeline">
                         {taggingStore.speciesArray.map((specie) => {
                             return <div className="specie-mark"
                                 style={{

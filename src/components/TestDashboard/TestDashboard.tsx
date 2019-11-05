@@ -13,10 +13,11 @@ import { IdentifySoundA } from '../../components/FirstTest/IdentifySoundA/Identi
 import { IdentifySoundB } from '../../components/FirstTest/IdentifySoundB/IdentifySoundB';
 
 import { GeneralSpectrogramA } from '../../components/SecondTest/GeneralSpectrogramA/GeneralSpectrogramA';
+import { GeneralSpectrogramB } from '../SecondTest/GeneralSpectrogramB/GeneralSpectrogramB';
 import { SelectionSpectrogramA } from '../SecondTest/SelectionSpectrogramA/SelectionSpectrogramA';
 import { SelectionSpectrogramB } from '../SecondTest/SelectionSpectrogramB/SelectionSpectrogramB';
 import { AITaggingA } from '../SecondTest/AITaggingA/AITaggingA';
-import { GeneralSpectrogramB } from '../SecondTest/GeneralSpectrogramB/GeneralSpectrogramB';
+import { AITaggingB } from '../SecondTest/AITaggingB/AITaggingB';
 
 @observer export class TestDashboard extends React.Component {
 
@@ -88,7 +89,7 @@ import { GeneralSpectrogramB } from '../SecondTest/GeneralSpectrogramB/GeneralSp
                     </div>
                 ) : (dashboardStore.actualAtom === '3B') ? (
                     <div className="tagging atom">
-                        <div>LMAO 3B</div>
+                        {<AITaggingB />}
                         {/*<IdentifySoundB />*/}
                     </div>
                 ) : ('TERMINAMOS')

@@ -94,11 +94,53 @@ export class AITaggingB extends React.Component {
                 <img className="close-icon" src="./assets/icons/close.svg" alt="" />
             </div>
             <div className="spec">
-            <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
-            <img className="spectro-play" src="./assets/Tagging/play-time.png"  />
+                <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
+                <img className="spectro-play" src="./assets/Tagging/play-time.png" />
             </div>
-            <div className="card-section"> 
+            <div className="card-section">
             </div>
+            <div className="main-suggestion">
+                <div className="spectro-main-suggestion">
+                    <img className="spectro-play" src="./assets/Tagging/ai/colimocho-spec-big.jpg" />
+                </div>
+                <div className="left-main-suggestion-card">
+                    <div className="header">
+                        <h2>87% DE COINCIDENCIA</h2>
+                    </div>
+                    <div className="bird-card">
+                        <div className="bird-photo-cont">
+                            <img src="./assets/birds/sipiaberlepschi.jpg" alt="" />
+                        </div>
+                        <div className="bird-info-cont">
+                            <h4>ESPECIE SUGERIDA</h4>
+                            <h3 className="cursive">Passeriformes > Thamnophilidae</h3>
+                            <h3>Hormiguero colimocho</h3>
+                            <h3 className="cursive">Sipia berlepschi</h3>
+                        </div>
+                    </div>
+                    <div className="btns-section">
+                        <span className="actions">
+                            <span className="tooltip">
+                                <img src="./assets/Tagging/tick.png" height="30px" width="30px"/>
+                                <span className="tooltiptextUp">Validar sugerencia</span>
+                            </span>
+                            <span className="tooltip">
+                                <img src="./assets/Tagging/question.svg" height="30px" width="30px" />
+                                <span className="tooltiptextUp">Pedir opinión a la comunidad</span>
+                            </span>
+                            <span className="tooltip">
+                                <img src="./assets/Tagging/cancel.png" height="30px" width="30px" alt="" />
+                                <span className="tooltiptextUp">No es esta especie</span>
+                            </span>
+                            <span className="tooltip">
+                                <img src="./assets/Tagging/play-audio.svg" height="30px" width="30px" alt="" />
+                                <span className="tooltiptextUp">Reproducir audio</span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {/* TAGGING SECTION */}
             <div className="card-section">
                 <span className="description-items-row">
                     <p><span className="text-title">Esta identificación está:</span> </p>
@@ -176,39 +218,17 @@ export class AITaggingB extends React.Component {
                                 isSearchable />
                         </span>
                     </span>
-                    <p className={taggingStore.isNoteActivated ? 'green-link card-item undisplay' : 'green-link card-item'} 
-                    onClick={()=> taggingStore.onNoteClick()}
+                    <p className={taggingStore.isNoteActivated ? 'green-link card-item undisplay' : 'green-link card-item'}
+                        onClick={() => taggingStore.onNoteClick()}
                     >Agregar anotación o comentario</p>
                     <div className={taggingStore.isNoteActivated ? 'card-item' : 'card-item undisplay'}>
                         <p className="text-title green-text">Anotación</p>
                         <textarea placeholder="Escribir anotación" name="" id="" ></textarea>
                     </div>
-                    {/* <span className="actions">
-                        <p>Marcar como:</p>
-                        <Select className={'react-selector'}
-                                options={tagState}
-                                isClearable = {false}
-                                isSearchable = {false}
-                                styles={colourStyles}
-                                defaultValue={tagState[2]}
-                                />
-                        <br />
-                        <br />
-                        <button className="dark-button">Guardar</button>
-                        </span> */}
                 </div>
 
             </div>
-            {/* 
-            <div className="card-section">
-                <p className="hint-text">¿Alguna duda sobre el canto? Verifica con cantos de Xeno-Canto</p>
-                <span className="input-row search card-item">
-                    <p className="text-title">Buscar en Xeno-Canto:</p> <input type="text" />
-                    <button className="green-button">Buscar</button>
-                </span>
-            </div>
-            */}
-            
+
         </section>
     }
 }

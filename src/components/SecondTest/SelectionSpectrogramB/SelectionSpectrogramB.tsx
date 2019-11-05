@@ -10,23 +10,25 @@ export class SelectionSpectrogramB extends React.Component {
 
         return <div className="selected-spectro-section" >
             <span className="up">
-
-                <div className="time">
-                    <img src="./assets/Tagging/time.png" alt="" width="398px" />
-                </div>
-                <div className="spectro-viz">
-                    <img src="./assets/Tagging/selection.png" height="200px" width="397px" alt="" />
-                </div>
-                <div className="marks">
-                    <div className="mark-timeline">
-                        <div className="specie-mark"
-                            style={{
-                                backgroundColor: taggingStore.speciesArray[5].color,
-                                width: 230,
-                                left: (396.99 * (((taggingStore.speciesArray[5].finishTime * 4) / 19) - ((17.154 * 4) / 19))),
-                            }}></div>
+                <div className="spectro-cont">
+                    <div className="time">
+                        <img src="./assets/Tagging/time.png" alt="" width="398px" />
+                    </div>
+                    <div className="spectro-viz">
+                        <img src="./assets/Tagging/selection.png" height="200px" width="397px" alt="" />
+                    </div>
+                    <div className="marks">
+                        <div className="mark-timeline">
+                            <div className="specie-mark"
+                                style={{
+                                    backgroundColor: taggingStore.speciesArray[5].color,
+                                    width: 230,
+                                    left: (396.99 * (((taggingStore.speciesArray[5].finishTime * 4) / 19) - ((17.154 * 4) / 19))),
+                                }}></div>
+                        </div>
                     </div>
                 </div>
+                <img className="range-probability" src="./assets/Tagging/range-probability.png" width="310px" height="74px" />
             </span>
             <div className="suggestions">
                 <span className="section-title-ai">

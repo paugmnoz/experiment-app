@@ -14,6 +14,7 @@ import { IdentifySoundB } from '../../components/FirstTest/IdentifySoundB/Identi
 
 import { GeneralSpectrogramA } from '../../components/SecondTest/GeneralSpectrogramA/GeneralSpectrogramA';
 import { SelectionSpectrogramA } from '../SecondTest/SelectionSpectrogramA/SelectionSpectrogramA';
+import { SelectionSpectrogramB } from '../SecondTest/SelectionSpectrogramB/SelectionSpectrogramB';
 import { AITaggingA } from '../SecondTest/AITaggingA/AITaggingA';
 import { GeneralSpectrogramB } from '../SecondTest/GeneralSpectrogramB/GeneralSpectrogramB';
 
@@ -77,7 +78,7 @@ import { GeneralSpectrogramB } from '../SecondTest/GeneralSpectrogramB/GeneralSp
                     </div>
                 ) : (dashboardStore.actualAtom === '2B') ? (
                     <div className="SpectroA atom">
-                        <div>LMAO 2B</div>
+                        {<SelectionSpectrogramB />}
                         {/*<CompareAudiosB />*/}
                     </div>
                 ) : (dashboardStore.actualAtom === '3A') ? (

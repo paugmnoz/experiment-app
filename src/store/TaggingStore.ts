@@ -23,6 +23,7 @@ class TaggingStore {
     @action handlePosChange(e: any) {
         this.audioPos = e.originalArgs[0]
     }
+    
     @action birdClick(value: number) {
         switch (value) {
             case 1:
@@ -84,25 +85,25 @@ class TaggingStore {
                 this.comparedMicro6Activated = !this.comparedMicro6Activated
                 break;
             case 'all':
-                if(this.comparedMicro1Activated  && 
-                    this.comparedMicro2Activated  &&
-                    this.comparedMicro3Activated && 
-                    this.comparedMicro4Activated && 
-                    this.comparedMicro5Activated && 
+                if (this.comparedMicro1Activated &&
+                    this.comparedMicro2Activated &&
+                    this.comparedMicro3Activated &&
+                    this.comparedMicro4Activated &&
+                    this.comparedMicro5Activated &&
                     this.comparedMicro6Activated) {
-                        this.comparedMicro1Activated = true;
-                        this.comparedMicro2Activated = false;
-                        this.comparedMicro3Activated = false;
-                        this.comparedMicro4Activated = false;
-                        this.comparedMicro5Activated = false;
-                        this.comparedMicro6Activated = false;
+                    this.comparedMicro1Activated = true;
+                    this.comparedMicro2Activated = false;
+                    this.comparedMicro3Activated = false;
+                    this.comparedMicro4Activated = false;
+                    this.comparedMicro5Activated = false;
+                    this.comparedMicro6Activated = false;
                 } else {
-                this.comparedMicro1Activated = true
-                this.comparedMicro2Activated = true;
-                this.comparedMicro3Activated = true;
-                this.comparedMicro4Activated = true;
-                this.comparedMicro5Activated = true;
-                this.comparedMicro6Activated = true;
+                    this.comparedMicro1Activated = true
+                    this.comparedMicro2Activated = true;
+                    this.comparedMicro3Activated = true;
+                    this.comparedMicro4Activated = true;
+                    this.comparedMicro5Activated = true;
+                    this.comparedMicro6Activated = true;
                 }
                 break;
         }
@@ -219,6 +220,111 @@ class TaggingStore {
         });
     }
 
+    // RECOMMENDATION GENERAL SPECTROGRAM B
+    @observable specieIndex = 0;
+    @observable specieMarkSelected = false;
+    @observable displayMark = 'none';
+    @observable speciesArray = [
+        {
+            index: 0,
+            startTime: 0,
+            finishTime: 0,
+            posX: 0,
+            width: 0,
+            percentage: '',
+            commonName: '',
+            scientificName: '',
+            color: 'rgba(0, 0, 0, 0)',
+            rectColor: '',
+            photo: '',
+            audio: ''
+        },
+        {
+            index: 1,
+            startTime: 1.921,
+            finishTime: 2.666,
+            posX: (948.99 * 1.921) / 19,
+            width: (948.99 * (2.666 - 1.921)) / 19,
+            percentage: 30,
+            commonName: 'Vireón Coronigris',
+            scientificName: 'Vireolanius leucotis',
+            color: '#FAC22B',
+            rectColor: 'rgba(251, 212, 102, 0.3)',
+            photo: './assets/birds/vireolaniusleucotis.jpg',
+            audio: './assets/audio-samples/vireon.wav'
+        },
+        {
+            index: 2,
+            startTime: 4.186,
+            finishTime: 6.264,
+            posX: (948.99 * 4.186) / 19,
+            width: (948.99 * (6.264 - 4.186)) / 19,
+            percentage: 89,
+            commonName: 'Hormiguero de Esmeraldas',
+            scientificName: 'Sipia nigricauda',
+            color: '#53D470',
+            rectColor: 'rgba(83, 212, 112, 0.3)',
+            photo: './assets/birds/sipianigricauda.jpg',
+            audio: './assets/audio-samples/sipia.wav'
+        },
+        {
+            index: 3,
+            startTime: 10.32,
+            finishTime: 12.685,
+            posX: (948.99 * 10.32) / 19,
+            width: (948.99 * (12.685 - 10.32)) / 19,
+            percentage: 89,
+            commonName: 'Hormiguero de Esmeraldas',
+            scientificName: 'Sipia nigricauda',
+            color: '#53D470',
+            rectColor: 'rgba(83, 212, 112, 0.3)',
+            photo: './assets/birds/sipianigricauda.jpg',
+            audio: './assets/audio-samples/sipia2.wav'
+        },
+        {
+            index: 4,
+            startTime: 13.32,
+            finishTime: 14.414,
+            posX: (948.99 * 13.32) / 19,
+            width: (948.99 * (14.414 - 13.32)) / 19,
+            percentage: 30,
+            commonName: 'Vireón Coronigris',
+            scientificName: 'Vireolanius leucotis',
+            color: '#FAC22B',
+            rectColor: 'rgba(251, 212, 102, 0.3)',
+            photo: './assets/birds/vireolaniusleucotis.jpg',
+            audio: './assets/audio-samples/vireon2.wav'
+        },
+        {
+            index: 5,
+            startTime: 16.189,
+            finishTime: 18.985,
+            posX: (948.99 * 16.189) / 19,
+            width: (948.99 * (18.985 - 16.189)) / 19,
+            percentage: 85,
+            commonName: 'Hormiguero de Zeledón',
+            scientificName: 'Hafferia zeledoni',
+            color: '#53D470',
+            rectColor: 'rgba(83, 212, 112, 0.3)',
+            photo: './assets/birds/hafferiazeledoni.jpg',
+            audio: './assets/audio-samples/hafferia.wav'
+        },
+        {
+            index: 6,
+            startTime: 17.154,
+            finishTime: 1,
+            posX: (948.99 * 17.154) / 19,
+            width: (948.99 * (19 - 17.154)) / 19,
+            percentage: 80,
+            commonName: 'Hormiguero de Esmeraldas',
+            scientificName: 'Sipia nigricauda',
+            color: '#53D470',
+            rectColor: 'rgba(83, 212, 112, 0.3)',
+            photo: './assets/birds/sipianigricauda.jpg',
+            audio: './assets/audio-samples/sipia3.wav'
+        },
+    ];
+
     // RECOMMENDATION
 
     @observable playingSuggestion = false;
@@ -235,6 +341,7 @@ class TaggingStore {
     @action updateMark() {
         this.verified = true;
     }
+
     @action playBirdSong(url) {
         let a = new Audio(url);
         a.play()
@@ -243,6 +350,7 @@ class TaggingStore {
         },
             4500)
     }
+
     @action selectMark(url, index) {
 
         switch (index) {
@@ -332,7 +440,7 @@ class TaggingStore {
     //SELECTION-TAG WITHOUT AI
     @observable isNoteActivated = false;
 
-    @action onNoteClick(){
+    @action onNoteClick() {
         this.isNoteActivated = true;
     }
 
@@ -355,6 +463,85 @@ class TaggingStore {
                 break;
         }
     }
+
+    // SELECTION SPECTROGRAM B
+    @observable suggestionsArray = [
+        [{
+            index: 0,
+            position: '1',
+            percentage: 87,
+            commonName: 'Hormiguero colimocho',
+            scientificName: 'Sipia berlepschi',
+            coincidences: '2 AUDIOS SIMILARES ENCONTRADOS',
+            color: '#53D470',
+            spectrogramImg:'./assets/atom2B-assets/sipiaberlepschi.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/sipiaberlepschi.png',
+            audio: './assets/audio-samples/Atom2B/sipiaberlepschi.mp3'
+        },
+        {
+            index: 0,
+            position: '2',
+            percentage: 81,
+            commonName: 'Hormiguero de zeledón',
+            scientificName: 'Sipia nigricauda',
+            coincidences: '3 AUDIOS SIMILARES ENCONTRADOS',
+            color: '#53D470',
+            spectrogramImg:'./assets/atom2B-assets/sipianigricauda.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/sipianigricauda.png',
+            audio: './assets/audio-samples/Atom2B/sipianigricauda.wav'
+        },
+        {
+            index: 0,
+            position: '3',
+            percentage: 61,
+            commonName: 'Homiguero guardarribera',
+            scientificName: 'Sipia palliata',
+            coincidences: '1 AUDIO SIMILAR ENCONTRADO',
+            color: '#B8D449',
+            spectrogramImg:'./assets/atom2B-assets/sipiapalliata.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/sipiapalliata.png',
+            audio: './assets/audio-samples/Atom2B/sipiapalliata.mp3'
+        },
+        {
+            index: 0,
+            position: '4',
+            percentage: 30,
+            commonName: 'Hormiguero cuerniblanco',
+            scientificName: 'Pithys albifrons',
+            coincidences: '1 AUDIO SIMILAR ENCONTRADO',
+            color: '#FAC22B',
+            spectrogramImg:'./assets/atom2B-assets/pithysalbifrons.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/pithysalbifrons.png',
+            audio: './assets/audio-samples/Atom2B/pithysalbifrons.mp3'
+        }],
+        [{
+            index: 0,
+            position: '1',
+            percentage: 92,
+            commonName: 'Hormiguero de zeledón',
+            scientificName: 'Hafferia zeledoni',
+            coincidences: '4 AUDIOS SIMILARES ENCONTRADO',
+            color: '#B8D449',
+            spectrogramImg:'./assets/atom2B-assets/hafferiazeledoni.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/hafferiazeledoni.png',
+            audio: './assets/audio-samples/Atom2B/hafferiazeledoni.wav'
+        },
+        {
+            index: 1,
+            position: '2',
+            percentage: 55,
+            commonName: 'Hormiguero tiznado',
+            scientificName: 'Hafferia fortis',
+            coincidences: '1 AUDIO SIMILAR ENCONTRADO',
+            color: '#FAC22B',
+            spectrogramImg:'./assets/atom2B-assets/hafferiafortis.png',
+            birdPhoto: './assets/atom2B-assets/birds-photos/hafferiafortis.png',
+            audio: './assets/audio-samples/Atom2B/hafferiafortis.mp3'
+        }
+    ],
+    ];
+
+    //FINAL DE LA CLASE TAGGING STORE
 }
 
 

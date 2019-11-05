@@ -8,6 +8,7 @@ export class GeneralSpectrogramB extends React.Component {
 
     render() {
         return <div className="gen-spectro-section">
+            <img className="range-probability" src="./assets/Tagging/range-probability.png" width="320px" />
             <span className="spectro-section">
                 <div className="time">
                     <img src="./assets/time-bar.jpg" alt="" width="949px" />
@@ -23,10 +24,10 @@ export class GeneralSpectrogramB extends React.Component {
                     <img src="./assets/Tagging/general.png" alt="" />
                 </div>
                 <div className="marks">
-                    <div className="mark-timeline" 
-                    style={{
+                    <div className="mark-timeline"
+                        style={{
 
-                    }}>
+                        }}>
                         {taggingStore.speciesArray.map((specie) => {
                             return <div className="specie-mark"
                                 style={{
@@ -49,10 +50,11 @@ export class GeneralSpectrogramB extends React.Component {
                     </div>
                     <div className="suggestion-cont"
                         style={{
-                            height: (taggingStore.specieMarkSelected) ? 120 : 0,
+                            height: (taggingStore.specieMarkSelected) ? 121 : 0,
                             backgroundColor: (taggingStore.specieMarkSelected) ? '#E6E6E6' : 'rgba(255, 255, 255, 0)'
                         }}>
                         <div className="mark-card" style={{
+                            left: (taggingStore.speciesArray[taggingStore.specieIndex].posX < 669.291) ? taggingStore.speciesArray[taggingStore.specieIndex].posX : 669.292,
                             height: (taggingStore.specieMarkSelected) ? 105 : 0,
                             padding: (taggingStore.specieMarkSelected) ? 15 : 0,
                             backgroundColor: (taggingStore.specieMarkSelected) ? 'rgba(255, 255, 255)' : 'rgba(255, 255, 255, 0)'
@@ -100,14 +102,23 @@ export class GeneralSpectrogramB extends React.Component {
                                         <span className="tooltiptextUp">No es esta especie</span>
                                     </span>
                                 </span>
-                                <span className="tooltip">
-                                    <button>
-                                        <div className="explore">
+                                <div className="explore">
+                                    <span className="tooltip">
+                                        <button>
+                                            <img src="./assets/Tagging/play-audio.svg" height="28px" width="28px" alt="" 
+                                            onClick={()=>{
+                                                taggingStore.playBirdSong(taggingStore.speciesArray[taggingStore.specieIndex].audio);
+                                            }}/>
+                                        </button>
+                                        <span className="tooltiptextUp">Escuchar canto</span>
+                                    </span>
+                                    <span className="tooltip">
+                                        <button>
                                             <img src="./assets/Tagging/vision.png" height="35px" width="35px" alt="" />
-                                        </div>
-                                    </button>
-                                    <span className="tooltiptextUp">Explorar canto</span>
-                                </span>
+                                        </button>
+                                        <span className="tooltiptextUp">Explorar canto</span>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>

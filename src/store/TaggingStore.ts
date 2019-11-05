@@ -235,7 +235,8 @@ class TaggingStore {
             scientificName: '',
             color: 'rgba(0, 0, 0, 0)',
             rectColor: '',
-            photo: ''
+            photo: '',
+            audio: ''
         },
         {
             index: 1,
@@ -248,7 +249,8 @@ class TaggingStore {
             scientificName: 'Vireolanius leucotis',
             color: '#FAC22B',
             rectColor: 'rgba(251, 212, 102, 0.3)',
-            photo: './assets/birds/vireolaniusleucotis.jpg'
+            photo: './assets/birds/vireolaniusleucotis.jpg',
+            audio: './assets/audio-samples/vireon.wav'
         },
         {
             index: 2,
@@ -261,7 +263,8 @@ class TaggingStore {
             scientificName: 'Sipia nigricauda',
             color: '#53D470',
             rectColor: 'rgba(83, 212, 112, 0.3)',
-            photo: './assets/birds/sipianigricauda.jpg'
+            photo: './assets/birds/sipianigricauda.jpg',
+            audio: './assets/audio-samples/sipia.wav'
         },
         {
             index: 3,
@@ -274,7 +277,8 @@ class TaggingStore {
             scientificName: 'Sipia nigricauda',
             color: '#53D470',
             rectColor: 'rgba(83, 212, 112, 0.3)',
-            photo: './assets/birds/sipianigricauda.jpg'
+            photo: './assets/birds/sipianigricauda.jpg',
+            audio: './assets/audio-samples/sipia2.wav'
         },
         {
             index: 4,
@@ -287,7 +291,8 @@ class TaggingStore {
             scientificName: 'Vireolanius leucotis',
             color: '#FAC22B',
             rectColor: 'rgba(251, 212, 102, 0.3)',
-            photo: './assets/birds/vireolaniusleucotis.jpg'
+            photo: './assets/birds/vireolaniusleucotis.jpg',
+            audio: './assets/audio-samples/vireon2.wav'
         },
         {
             index: 5,
@@ -300,7 +305,8 @@ class TaggingStore {
             scientificName: 'Hafferia zeledoni',
             color: '#53D470',
             rectColor: 'rgba(83, 212, 112, 0.3)',
-            photo: './assets/birds/hafferiazeledoni.jpg'
+            photo: './assets/birds/hafferiazeledoni.jpg',
+            audio: './assets/audio-samples/hafferia.wav'
         },
         {
             index: 6,
@@ -313,7 +319,8 @@ class TaggingStore {
             scientificName: 'Sipia nigricauda',
             color: '#53D470',
             rectColor: 'rgba(83, 212, 112, 0.3)',
-            photo: './assets/birds/sipianigricauda.jpg'
+            photo: './assets/birds/sipianigricauda.jpg',
+            audio: './assets/audio-samples/sipia3.wav'
         },
     ];
 
@@ -333,6 +340,7 @@ class TaggingStore {
     @action updateMark() {
         this.verified = true;
     }
+
     @action playBirdSong(url) {
         let a = new Audio(url);
         a.play()
@@ -341,6 +349,7 @@ class TaggingStore {
         },
             4500)
     }
+
     @action selectMark(url, index) {
 
         switch (index) {

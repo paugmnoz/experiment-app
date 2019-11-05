@@ -50,7 +50,7 @@ export class GeneralSpectrogramB extends React.Component {
                     </div>
                     <div className="suggestion-cont"
                         style={{
-                            height: (taggingStore.specieMarkSelected) ? 121 : 0,
+                            height: (taggingStore.specieMarkSelected) ? 120 : 0,
                             backgroundColor: (taggingStore.specieMarkSelected) ? '#E6E6E6' : 'rgba(255, 255, 255, 0)'
                         }}>
                         <div className="mark-card" style={{

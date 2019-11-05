@@ -573,27 +573,35 @@ class TaggingStore {
 
     // AI TAGGING B
 
+    @observable aiTaggingMarkSelected = false;
+    @observable aiTaggingIndex = 1;
     @observable aiTaggingArray = [
         {
             index: 0,
+            number: '#1',
+            percentage: '89% DE COINCIDENCIA',
             user: 'Iván Lau',
             location: 'Buenaventura, Colombia',
-            photo: './assets/Tagging/ai/colimocho-spec-2.jpg',
-            audio: ''
+            spectro: './assets/Tagging/ai/colimocho-spec-big2.jpg',
+            audio: '//www.xeno-canto.org/sounds/uploaded/BSFIBFUGKW/XC405735-Stub_tailed_Antbird_Anchicay%C3%A1_20171127_172446.mp3'
         },
         {
             index: 1,
+            number: '#2',
+            percentage: '79% DE COINCIDENCIA',
             user: 'Olaf Jahn',
             location: 'Esmeraldas, Ecuador',
-            photo: './assets/Tagging/ai/colimocho-spec-3.jpg',
-            audio: ''
+            spectro: './assets/Tagging/ai/colimocho-spec-big3.jpg',
+            audio: '//www.xeno-canto.org/sounds/uploaded/UZXDJEAXMH/XC262105-61.085.02.Stub-tailed_Antbird.mp3'
         },
         {
             index: 2,
+            percentage: '77% DE COINCIDENCIA',
+            number: '#3',
             user: 'Todd Mark',
             location: 'Nariño, Colombia',
-            photo: './assets/Tagging/ai/colimocho-spec-4.jpg',
-            audio: ''
+            spectro: './assets/Tagging/ai/colimocho-spec-big4.jpg',
+            audio: '//www.xeno-canto.org/sounds/uploaded/CLKPHLYUHA/MyrBer3IV.mp3'
         },
     ];
 

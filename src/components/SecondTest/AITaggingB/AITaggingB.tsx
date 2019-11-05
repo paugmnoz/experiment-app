@@ -97,53 +97,124 @@ export class AITaggingB extends React.Component {
                 <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
                 <img className="spectro-play" src="./assets/Tagging/play-time.png" />
             </div>
-            <div className="card-section">
+            <div className="suggest-title">
+                <h3>Sugerencia</h3>
             </div>
-            <div className="main-suggestion">
-                <div className="spectro-main-suggestion">
-                    <img className="spectro-play" src="./assets/Tagging/ai/colimocho-spec-big.jpg" />
+            <div className="suggest-card-section">
+                <div className="main-suggestion">
+                    <div className="spectro-main-suggestion">
+                        <img className="spectro-play" src="./assets/Tagging/ai/colimocho-spec-big.jpg" />
+                    </div>
+                    <div className="left-main-suggestion-card">
+                        <div className="header">
+                            <h2>87% DE COINCIDENCIA TOTAL</h2>
+                        </div>
+                        <div className="bird-card">
+                            <div className="bird-photo-cont">
+                                <img src="./assets/birds/sipiaberlepschi.jpg" alt="" />
+                            </div>
+                            <div className="bird-info-cont">
+                                <h4>ESPECIE SUGERIDA</h4>
+                                <h3 className="cursive">Passeriformes > Thamnophilidae</h3>
+                                <h3>Hormiguero colimocho</h3>
+                                <h3 className="cursive">Sipia berlepschi</h3>
+                            </div>
+                        </div>
+                        <div className="btns-section">
+                            <span className="actions">
+                                <span className="tooltip">
+                                    <img src="./assets/Tagging/tick.png" height="30px" width="30px" />
+                                    <span className="tooltiptextUp">Validar sugerencia</span>
+                                </span>
+                                <span className="tooltip">
+                                    <img src="./assets/Tagging/question.svg" height="30px" width="30px" />
+                                    <span className="tooltiptextUp">Pedir opinión a la comunidad</span>
+                                </span>
+                                <span className="tooltip">
+                                    <img src="./assets/Tagging/cancel.png" height="30px" width="30px" alt="" />
+                                    <span className="tooltiptextUp">No es esta especie</span>
+                                </span>
+                                <span className="tooltip">
+                                    <img src="./assets/Tagging/play-audio.svg" height="30px" width="30px" alt=""
+                                        onClick={() => {
+                                            taggingStore.playBirdSong('./assets/audio-samples/Atom2B/sipiaberlepschi.mp3');
+                                        }
+                                        } />
+                                    <span className="tooltiptextUp">Reproducir audio</span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                <div className="left-main-suggestion-card">
-                    <div className="header">
-                        <h2>87% DE COINCIDENCIA TOTAL</h2>
-                    </div>
-                    <div className="bird-card">
-                        <div className="bird-photo-cont">
-                            <img src="./assets/birds/sipiaberlepschi.jpg" alt="" />
+                <div className="other-audios-suggestion">
+                    <div className="comparing-option">
+                        <div className="main-suggestion">
+                            <div className="spectro-main-suggestion">
+                                <img className="spectro-play" src={taggingStore.aiTaggingArray[taggingStore.aiTaggingIndex].spectro} />
+                            </div>
+                            <div className="left-main-suggestion-card">
+                                <div className="header">
+                                    <h2>{taggingStore.aiTaggingArray[taggingStore.aiTaggingIndex].percentage}</h2>
+                                </div>
+                                <div className="bird-card">
+                                    <div className="bird-photo-cont">
+                                        <img src="./assets/birds/sipiaberlepschi.jpg" alt="" />
+                                    </div>
+                                    <div className="bird-info-cont">
+                                        <h4>{taggingStore.aiTaggingArray[taggingStore.aiTaggingIndex].number}</h4>
+                                        <h3 className="cursive">Passeriformes > Thamnophilidae</h3>
+                                        <h3>Hormiguero colimocho</h3>
+                                        <h3 className="cursive">Sipia berlepschi</h3>
+                                    </div>
+                                </div>
+                                <div className="btns-section">
+                                    <span className="actions">
+                                        <span className="tooltip">
+                                            <img src="./assets/Tagging/tick.png" height="30px" width="30px" />
+                                            <span className="tooltiptextUp">Validar sugerencia</span>
+                                        </span>
+                                        <span className="tooltip">
+                                            <img src="./assets/Tagging/question.svg" height="30px" width="30px" />
+                                            <span className="tooltiptextUp">Pedir opinión a la comunidad</span>
+                                        </span>
+                                        <span className="tooltip">
+                                            <img src="./assets/Tagging/cancel.png" height="30px" width="30px" alt="" />
+                                            <span className="tooltiptextUp">No es esta especie</span>
+                                        </span>
+                                        <span className="tooltip">
+                                            <img src="./assets/Tagging/play-audio.svg" height="30px" width="30px" alt=""
+                                                onClick={() => {
+                                                    taggingStore.playBirdSong(taggingStore.aiTaggingArray[taggingStore.aiTaggingIndex].audio);
+                                                }
+                                                } />
+                                            <span className="tooltiptextUp">Reproducir audio</span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="bird-info-cont">
-                            <h4>ESPECIE SUGERIDA</h4>
-                            <h3 className="cursive">Passeriformes > Thamnophilidae</h3>
-                            <h3>Hormiguero colimocho</h3>
-                            <h3 className="cursive">Sipia berlepschi</h3>
-                        </div>
                     </div>
-                    <div className="btns-section">
-                        <span className="actions">
-                            <span className="tooltip">
-                                <img src="./assets/Tagging/tick.png" height="30px" width="30px" />
-                                <span className="tooltiptextUp">Validar sugerencia</span>
-                            </span>
-                            <span className="tooltip">
-                                <img src="./assets/Tagging/question.svg" height="30px" width="30px" />
-                                <span className="tooltiptextUp">Pedir opinión a la comunidad</span>
-                            </span>
-                            <span className="tooltip">
-                                <img src="./assets/Tagging/cancel.png" height="30px" width="30px" alt="" />
-                                <span className="tooltiptextUp">No es esta especie</span>
-                            </span>
-                            <span className="tooltip">
-                                <img src="./assets/Tagging/play-audio.svg" height="30px" width="30px" alt=""
-                                    onClick={() => {
-                                        taggingStore.playBirdSong('./assets/audio-samples/Atom2B/sipiaberlepschi.mp3');
+                    <div className="options">
+                        {taggingStore.aiTaggingArray.map((suggestion) => {
+                            return <div className="spectro" onClick={
+                                () => {
+                                    if (taggingStore.aiTaggingIndex == suggestion.index && taggingStore.specieMarkSelected == true) {
+                                        taggingStore.aiTaggingMarkSelected = false;
+                                        taggingStore.aiTaggingIndex = 0;
+                                        console.log('estado: ' + taggingStore.aiTaggingMarkSelected, 'index: ' + taggingStore.aiTaggingIndex)
+                                    } else {
+                                        taggingStore.aiTaggingIndex = suggestion.index;
+                                        taggingStore.aiTaggingMarkSelected = true;
                                     }
-                                    } />
-                                <span className="tooltiptextUp">Reproducir audio</span>
-                            </span>
-                        </span>
+                                }
+                            }>
+                                <img src={suggestion.spectro} width="160" alt="" />
+                            </div>;
+                        })}
                     </div>
                 </div>
             </div>
+
             {/* TAGGING SECTION */}
             <div className="card-section">
                 <span className="description-items-row">

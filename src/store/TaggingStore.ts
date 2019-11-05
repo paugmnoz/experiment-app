@@ -336,6 +336,7 @@ class TaggingStore {
     @observable selected6 = false;
     @observable isSomethingSelected = false;
 
+    @observable isPlaying = false;
     @observable verified = false;
 
     @action updateMark() {
@@ -344,11 +345,19 @@ class TaggingStore {
 
     @action playBirdSong(url) {
         let a = new Audio(url);
-        a.play()
-        setTimeout(function () {
-            a.pause();
-        },
-            4500)
+        let setPlay = true;
+        if (!this.isPlaying) {
+            this.isPlaying = true;
+            a.play()
+            let that =  this;
+            setTimeout(function () {
+                that.isPlaying = false;
+                a.pause();
+               
+            },
+                4500)
+        }
+       
     }
 
     @action selectMark(url, index) {
@@ -542,6 +551,26 @@ class TaggingStore {
     ];
 
     //FINAL DE LA CLASE TAGGING STORE
+
+    //SAVING TAGGINg WITH AI
+
+    @observable mainSpecSuggested = false;
+    @observable isSomethingZoomed = false;
+    @observable zoomedSpeImgUrl = ""
+    @observable zoomedSpeAudioUrl = ""
+
+    @action onSpecZoomView(img, audio) {
+        this.isSomethingZoomed = true;
+        this.zoomedSpeAudioUrl = audio;
+        this.zoomedSpeImgUrl = img;
+    }
+
+    @action onExitZoomView() {
+        this.isSomethingZoomed = false;
+        this.zoomedSpeAudioUrl = '';
+        this.zoomedSpeImgUrl = '';
+    }
+
 }
 
 

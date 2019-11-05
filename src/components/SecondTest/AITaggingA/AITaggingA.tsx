@@ -95,7 +95,9 @@ export class AITaggingA extends React.Component {
             </div>
             <div className="spec">
                 <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
-                <img className="spectro-play" src="./assets/Tagging/play-time.png" />
+                <img className="spectro-play"
+                    onClick={() => taggingStore.playBirdSong("./assets/audio-samples/filteredSipia.wav")}
+                    src="./assets/Tagging/play-time.png" />
             </div>
             <div className="suggest-header">
                 <h1>Sugerencias del sistema</h1>
@@ -117,12 +119,15 @@ export class AITaggingA extends React.Component {
 
                         <span className="main-spec">
                             <img className="spec-img" src="./assets/Tagging/ai/colimocho-spec.jpg" alt="" />
-                            <img className="lens-img" src="./assets/Tagging/lens.svg" alt="" />
+                            <img className="lens-img"
+                                onClick={() => taggingStore.onSpecZoomView('./assets/Tagging/ai/colimocho-spec.jpg', '//www.xeno-canto.org/sounds/uploaded/FPAGKPAQYO/XC428690-Stub-tailed%20Antbird_SanCipriano_Co_1sep2017_FSchmitt.mp3')}
+                                src="./assets/Tagging/lens.svg" alt="" />
 
                         </span>
                         <div className="suggestion-actions">
-                            <span className="play">
-                                <img className="play-img" src="./assets/Tagging/play-audio.svg" height="25px" alt="" />
+                            <span className="play" onClick={()=> taggingStore.playBirdSong('//www.xeno-canto.org/sounds/uploaded/FPAGKPAQYO/XC428690-Stub-tailed%20Antbird_SanCipriano_Co_1sep2017_FSchmitt.mp3')}>
+                                <img className="play-img" src="./assets/Tagging/play-audio.svg" 
+                                height="25px" alt="" />
                                 <p>Reproducir canto</p>
                             </span>
                             <span className="match-perc">
@@ -164,44 +169,60 @@ export class AITaggingA extends React.Component {
                         <p>Basado en estos cantos encontrados en eBird:</p>
                         <span className="row">
                             <article className="spec">
-
-                                <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
-                                <p className="_14px">Linda Macaulay</p>
-                                <p className="gray-text _14px">Selanche Road Km 126, Ecuador</p>
-                                <span className="play">
+                                <img className="spectro-img" src="./assets/Tagging/ai/colimocho-spec-2.jpg" height="150px" alt="" />
+                                <p className="_14px">Iván Lau</p>
+                                <p className="gray-text _14px">Buenaventura, Colombia</p>
+                                <span className="play" onClick={() => taggingStore.playBirdSong('//www.xeno-canto.org/sounds/uploaded/BSFIBFUGKW/XC405735-Stub_tailed_Antbird_Anchicay%C3%A1_20171127_172446.mp3')}>
                                     <img className="play-img" src="./assets/Tagging/play-audio.svg" height="20px" alt="" />
                                     <p className="_14px"> Reproducir canto</p>
                                 </span>
-
+                                <img className="lens-img"
+                                    onClick={() => taggingStore.onSpecZoomView('./assets/Tagging/ai/colimocho-spec-2.jpg', '//www.xeno-canto.org/sounds/uploaded/BSFIBFUGKW/XC405735-Stub_tailed_Antbird_Anchicay%C3%A1_20171127_172446.mp3')}
+                                    src="./assets/Tagging/lens.svg" alt="" />
                             </article>
                             <article className="spec">
-
-                                <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
-                                <p className="_14px">Linda Macaulay</p>
-                                <p className="gray-text _14px">Selanche Road Km 126, Ecuador</p>
-                                <span className="play">
+                                <img className="spectro-img" src="./assets/Tagging/ai/colimocho-spec-3.jpg" height="150px" alt="" />
+                                <p className="_14px">Olaf Jahn</p>
+                                <p className="gray-text _14px">Esmeraldas, Ecuador</p>
+                                <span className="play" onClick={() => taggingStore.playBirdSong('//www.xeno-canto.org/sounds/uploaded/UZXDJEAXMH/XC262105-61.085.02.Stub-tailed_Antbird.mp3')}>
                                     <img className="play-img" src="./assets/Tagging/play-audio.svg" height="20px" alt="" />
                                     <p className="_14px"> Reproducir canto</p>
                                 </span>
-
+                                <img className="lens-img"
+                                    onClick={() => taggingStore.onSpecZoomView('./assets/Tagging/ai/colimocho-spec-3.jpg', '//www.xeno-canto.org/sounds/uploaded/UZXDJEAXMH/XC262105-61.085.02.Stub-tailed_Antbird.mp3')}
+                                    src="./assets/Tagging/lens.svg" alt="" />
                             </article>
                             <article className="spec">
-
-                                <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
-                                <p className="_14px">Linda Macaulay</p>
-                                <p className="gray-text _14px">Selanche Road Km 126, Ecuador</p>
-                                <span className="play">
+                                <img className="spectro-img" src="./assets/Tagging/ai/colimocho-spec-4.jpg" height="150px" alt="" />
+                                <p className="_14px">Todd Mark</p>
+                                <p className="gray-text _14px">Nariño, Colombia</p>
+                                <span className="play" onClick={() => taggingStore.playBirdSong('//www.xeno-canto.org/sounds/uploaded/CLKPHLYUHA/MyrBer3IV.mp3')}>
                                     <img className="play-img" src="./assets/Tagging/play-audio.svg" height="20px" alt="" />
                                     <p className="_14px"> Reproducir canto</p>
                                 </span>
-
+                                <img className="lens-img"
+                                    onClick={() => taggingStore.onSpecZoomView('./assets/Tagging/ai/colimocho-spec-4.jpg', '//www.xeno-canto.org/sounds/uploaded/CLKPHLYUHA/MyrBer3IV.mp3')}
+                                    src="./assets/Tagging/lens.svg" alt="" />
                             </article>
                         </span>
                     </div>
 
                 </div>
                 <span className="next-card">
-                    <img src="./assets/Tagging/right-arrow.svg" width="25px" alt=""/>
+                    <img src="./assets/Tagging/right-arrow.svg" width="25px" alt="" />
+                </span>
+                <span className={(taggingStore.isSomethingZoomed) ? "zoomed-spectro" : "zoomed-spectro undisplay"} >
+                    <div className='spectro-card'>
+                        <img className="spec-img" src={taggingStore.zoomedSpeImgUrl} alt="" />
+
+                        <span className="play" onClick={() => taggingStore.playBirdSong(taggingStore.zoomedSpeAudioUrl)}>
+                            <img className="play-img" src="./assets/Tagging/play-audio.svg" height="20px" alt="" />
+                            <p className="_14px"> Reproducir canto</p>
+                        </span>
+                        <img className="close-img"
+                            onClick={() => taggingStore.onExitZoomView()}
+                            src="./assets/dark-x-close.svg" alt="" />
+                    </div>
                 </span>
             </div>
             <div className="card-section">

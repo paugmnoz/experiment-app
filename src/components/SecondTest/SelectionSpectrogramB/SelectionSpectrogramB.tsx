@@ -34,6 +34,17 @@ export class SelectionSpectrogramB extends React.Component {
                 </span>
                 <span className="down">
                     <div id="sipia">
+                        <span className="tooltip exploreaction">
+                            <img src="./assets/Tagging/vision.png" height="auto" width="45px" alt="" />
+                            <span className="tooltiptextUp">Explorar canto</span>
+                        </span>
+                        <span className="tooltip play-audio">
+                            <img src="./assets/Tagging/play-audio.svg" height="auto" width="35px" alt=""
+                                onClick={() => {
+                                    taggingStore.playBirdSong('./assets/audio-samples/Atom2B/filteredSipia.wav');
+                                }} />
+                            <span className="tooltiptextUp">Reproducir canto</span>
+                        </span>
                         <span className="filtered-spectrogram">
                             <div className="filtered-title">TRAMO ORIGINAL FILTRADO</div>
                             <img src="./assets/atom2B-assets/filtered1.png" alt="" />
@@ -50,7 +61,10 @@ export class SelectionSpectrogramB extends React.Component {
                                     <span className="tooltiptextUp">Explorar canto</span>
                                 </span>
                                 <span className="tooltip play-audio">
-                                    <img src="./assets/Tagging/play-audio.svg" height="auto" width="35px" alt="" />
+                                    <img src="./assets/Tagging/play-audio.svg" height="auto" width="35px" alt=""
+                                        onClick={() => {
+                                            taggingStore.playBirdSong(suggestion.audio);
+                                        }} />
                                     <span className="tooltiptextUp">Reproducir canto</span>
                                 </span>
                                 <span className="specie-card">

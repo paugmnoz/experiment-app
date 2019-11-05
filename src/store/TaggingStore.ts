@@ -475,7 +475,7 @@ class TaggingStore {
             color: '#53D470',
             spectrogramImg:'./assets/atom2B-assets/sipiaberlepschi.png',
             birdPhoto: './assets/atom2B-assets/birds-photos/sipiaberlepschi.png',
-            audio: './assets/audio-samples/sipia.wav'
+            audio: './assets/audio-samples/Atom2B/sipiaberlepschi.mp3'
         },
         {
             index: 0,
@@ -487,7 +487,7 @@ class TaggingStore {
             color: '#53D470',
             spectrogramImg:'./assets/atom2B-assets/sipianigricauda.png',
             birdPhoto: './assets/atom2B-assets/birds-photos/sipianigricauda.png',
-            audio: './assets/audio-samples/sipia.wav'
+            audio: './assets/audio-samples/Atom2B/sipianigricauda.wav'
         },
         {
             index: 0,
@@ -499,7 +499,7 @@ class TaggingStore {
             color: '#B8D449',
             spectrogramImg:'./assets/atom2B-assets/sipiapalliata.png',
             birdPhoto: './assets/atom2B-assets/birds-photos/sipiapalliata.png',
-            audio: './assets/audio-samples/sipia.wav'
+            audio: './assets/audio-samples/Atom2B/sipiapalliata.mp3'
         },
         {
             index: 0,
@@ -511,7 +511,7 @@ class TaggingStore {
             color: '#FAC22B',
             spectrogramImg:'./assets/atom2B-assets/pithysalbifrons.png',
             birdPhoto: './assets/atom2B-assets/birds-photos/pithysalbifrons.png',
-            audio: './assets/audio-samples/sipia.wav'
+            audio: './assets/audio-samples/Atom2B/pithysalbifrons.mp3'
         }],
         [],
     ];

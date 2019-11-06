@@ -23,7 +23,7 @@ class TaggingStore {
     @action handlePosChange(e: any) {
         this.audioPos = e.originalArgs[0]
     }
-    
+
     @action birdClick(value: number) {
         switch (value) {
             case 1:
@@ -349,15 +349,15 @@ class TaggingStore {
         if (!this.isPlaying) {
             this.isPlaying = true;
             a.play()
-            let that =  this;
+            let that = this;
             setTimeout(function () {
                 that.isPlaying = false;
                 a.pause();
-               
+
             },
                 4500)
         }
-       
+
     }
 
     @action selectMark(url, index) {
@@ -483,7 +483,7 @@ class TaggingStore {
             scientificName: 'Sipia berlepschi',
             coincidences: '2 AUDIOS SIMILARES ENCONTRADOS',
             color: '#53D470',
-            spectrogramImg:'./assets/atom2B-assets/sipiaberlepschi.png',
+            spectrogramImg: './assets/atom2B-assets/sipiaberlepschi.png',
             birdPhoto: './assets/atom2B-assets/birds-photos/sipiaberlepschi.png',
             audio: './assets/audio-samples/Atom2B/sipiaberlepschi.mp3'
         },
@@ -495,7 +495,7 @@ class TaggingStore {
             scientificName: 'Sipia nigricauda',
             coincidences: '3 AUDIOS SIMILARES ENCONTRADOS',
             color: '#53D470',
-            spectrogramImg:'./assets/atom2B-assets/sipianigricauda.png',
+            spectrogramImg: './assets/atom2B-assets/sipianigricauda.png',
             birdPhoto: './assets/atom2B-assets/birds-photos/sipianigricauda.png',
             audio: './assets/audio-samples/Atom2B/sipianigricauda.wav'
         },
@@ -507,7 +507,7 @@ class TaggingStore {
             scientificName: 'Sipia palliata',
             coincidences: '1 AUDIO SIMILAR ENCONTRADO',
             color: '#B8D449',
-            spectrogramImg:'./assets/atom2B-assets/sipiapalliata.png',
+            spectrogramImg: './assets/atom2B-assets/sipiapalliata.png',
             birdPhoto: './assets/atom2B-assets/birds-photos/sipiapalliata.png',
             audio: './assets/audio-samples/Atom2B/sipiapalliata.mp3'
         },
@@ -519,7 +519,7 @@ class TaggingStore {
             scientificName: 'Pithys albifrons',
             coincidences: '1 AUDIO SIMILAR ENCONTRADO',
             color: '#FAC22B',
-            spectrogramImg:'./assets/atom2B-assets/pithysalbifrons.png',
+            spectrogramImg: './assets/atom2B-assets/pithysalbifrons.png',
             birdPhoto: './assets/atom2B-assets/birds-photos/pithysalbifrons.png',
             audio: './assets/audio-samples/Atom2B/pithysalbifrons.mp3'
         }],
@@ -531,7 +531,7 @@ class TaggingStore {
             scientificName: 'Hafferia zeledoni',
             coincidences: '4 AUDIOS SIMILARES ENCONTRADO',
             color: '#B8D449',
-            spectrogramImg:'./assets/atom2B-assets/hafferiazeledoni.png',
+            spectrogramImg: './assets/atom2B-assets/hafferiazeledoni.png',
             birdPhoto: './assets/atom2B-assets/birds-photos/hafferiazeledoni.png',
             audio: './assets/audio-samples/Atom2B/hafferiazeledoni.wav'
         },
@@ -543,16 +543,16 @@ class TaggingStore {
             scientificName: 'Hafferia fortis',
             coincidences: '1 AUDIO SIMILAR ENCONTRADO',
             color: '#FAC22B',
-            spectrogramImg:'./assets/atom2B-assets/hafferiafortis.png',
+            spectrogramImg: './assets/atom2B-assets/hafferiafortis.png',
             birdPhoto: './assets/atom2B-assets/birds-photos/hafferiafortis.png',
             audio: './assets/audio-samples/Atom2B/hafferiafortis.mp3'
         }
-    ],
+        ],
     ];
 
     //FINAL DE LA CLASE TAGGING STORE
 
-    //SAVING TAGGINg WITH AI
+    //SAVING TAGGING WITH AI
 
     @observable mainSpecSuggested = false;
     @observable isSomethingZoomed = false;
@@ -570,6 +570,41 @@ class TaggingStore {
         this.zoomedSpeAudioUrl = '';
         this.zoomedSpeImgUrl = '';
     }
+
+    // AI TAGGING B
+
+    @observable showOtherSuggestions = false;
+    @observable aiTaggingMarkSelected = false;
+    @observable aiTaggingIndex = 1;
+    @observable aiTaggingArray = [
+        {
+            index: 0,
+            number: '#1',
+            percentage: '89% DE COINCIDENCIA',
+            user: 'Iván Lau',
+            location: 'Buenaventura, Colombia',
+            spectro: './assets/Tagging/ai/colimocho-spec-big2.jpg',
+            audio: '//www.xeno-canto.org/sounds/uploaded/BSFIBFUGKW/XC405735-Stub_tailed_Antbird_Anchicay%C3%A1_20171127_172446.mp3'
+        },
+        {
+            index: 1,
+            number: '#2',
+            percentage: '79% DE COINCIDENCIA',
+            user: 'Olaf Jahn',
+            location: 'Esmeraldas, Ecuador',
+            spectro: './assets/Tagging/ai/colimocho-spec-big3.jpg',
+            audio: '//www.xeno-canto.org/sounds/uploaded/UZXDJEAXMH/XC262105-61.085.02.Stub-tailed_Antbird.mp3'
+        },
+        {
+            index: 2,
+            percentage: '77% DE COINCIDENCIA',
+            number: '#3',
+            user: 'Todd Mark',
+            location: 'Nariño, Colombia',
+            spectro: './assets/Tagging/ai/colimocho-spec-big4.jpg',
+            audio: '//www.xeno-canto.org/sounds/uploaded/CLKPHLYUHA/MyrBer3IV.mp3'
+        },
+    ];
 
 }
 

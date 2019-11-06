@@ -1,6 +1,16 @@
+@import "./../../../variables.scss";
+
+h3 {
+    color: #E3E3E3;
+}
+
 .tagging-section {
     background-color: white;
     width: 100%;
+}
+
+.suggest-card-section {
+    padding-bottom: 8px;
 }
 
 .spec {
@@ -10,12 +20,14 @@
     flex-wrap: nowrap;
     align-items: flex-start;
     width: 100%;
+
     .spectro-img {
         height: 100%;
         width: auto;
     }
+
     .spectro-play {
-        width:100%;
+        width: 100%;
         height: 35px;
     }
 }
@@ -38,7 +50,8 @@
     display: flex;
     flex-direction: row;
     margin: 0.3rem 0;
-    .img-birds{
+
+    .img-birds {
         padding: 4px;
     }
 }
@@ -69,6 +82,7 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+
     #note {
         &.undisplay {
             display: none;
@@ -76,19 +90,23 @@
         }
 
     }
+
     textarea {
         width: 100%;
         margin: 0.5rem 0;
         font-family: 'Lato', sans-serif;
     }
+
     .naming {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
         span {
             width: 50%;
         }
+
         .react-selector {
             width: 60%;
             margin: 0 0 0 0.5rem;
@@ -119,5 +137,235 @@
 
     p {
         margin: 0.5rem;
+    }
+}
+
+.suggest-title {
+    background-color: #53D470;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h3 {
+        color: black;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    button {
+        display: flex;
+        align-self: flex-end;
+        border-style: none;
+        padding: 10px;
+        font-weight: 800;
+        font-size: 13px;
+        font-family: 'Lato', sans-serif;
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.suggest-card-section {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.main-suggestion {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+
+
+    .spectro-main-suggestion {
+        width: 350px;
+        border: solid 3px #53D470;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .info-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-main-suggestion-card {
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+        border-top: solid 3px #53D470;
+        border-right: solid 3px #53D470;
+        border-bottom: solid 3px #53D470;
+
+        .header {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            background-color: #53D470;
+
+            h2 {
+                display: flex;
+                font-size: 17px;
+                color: white;
+                text-align: center;
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+        }
+
+        .bird-card {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+
+            .bird-photo-cont {
+                width: 49px;
+                height: 49px;
+                border-radius: 35px;
+                margin: 8px;
+                overflow: hidden;
+                background-color: white;
+                border: solid 3px #53D470;
+
+                img {
+                    height: 115%;
+                    width: 115%;
+                    object-fit: cover;
+                }
+            }
+
+            .bird-info-cont {
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    color: #000;
+                }
+
+                h2 {
+                    font-size: 15px;
+                }
+
+                h4 {
+                    color: #53D470;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    font-size: 15px;
+                }
+
+                .cursive {
+                    color: #828282;
+                    font-style: italic;
+                    margin-bottom: 1.5px;
+                }
+
+                .family {
+                    font-size: 11px;
+                }
+
+                h3 {
+                    margin-bottom: 1.5px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .btns-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .play-audio {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+
+                p {
+                    margin-left: 5px;
+                    font-size: 15px;
+                }
+            }
+
+            .actions {
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                button {
+                    background-color: #333333;
+                    color: white;
+                    border-radius: 27px;
+                    border-style: none;
+                    padding: 0.5rem 1rem;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    font-size: 13px;
+                    font-family: 'Lato', sans-serif;
+                }
+
+                img {
+                    margin-left: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.suggest-title-div {
+    background-color: #333333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h3 {
+        color: #53D470;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    button {
+        background-color: rgba(255, 255, 255, 0);
+        border-style: none;
+        padding: 10px;
+        font-weight: 800;
+        font-size: 13px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.other-audios-suggestion {
+
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        padding: 12px;
+
+        h4 {
+            margin-bottom: 10px;
+        }
+
+        .options-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        img {
+            cursor: pointer;
+            padding: 4px;
+            margin-left: 5px;
+        }
     }
 }

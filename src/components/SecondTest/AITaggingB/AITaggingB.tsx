@@ -94,11 +94,156 @@ export class AITaggingB extends React.Component {
                 <img className="close-icon" src="./assets/icons/close.svg" alt="" />
             </div>
             <div className="spec">
-            <img className="spectro-img" src="./assets/Tagging/sipia_filtered.png" height="150px" alt="" />
-            <img className="spectro-play" src="./assets/Tagging/play-time.png"  />
+                <img className="spectro-img" src="./assets/Tagging/sipia_filtered_spectro.png" height="110px" alt="" />
+                <img className="spectro-play" src="./assets/Tagging/play-time.png" />
             </div>
-            <div className="card-section"> 
+            <div className="suggest-title">
+                <h3>Sugerencia</h3>
             </div>
+            <div className="suggest-card-section">
+                <div className="main-suggestion">
+                    <div className="spectro-main-suggestion">
+                        <img className="spectro-play" src="./assets/Tagging/ai/colimocho-spec-big.jpg" width="100%" />
+                    </div>
+                    <div className="left-main-suggestion-card">
+                        <div className="header">
+                            <h2>87% DE COINCIDENCIA TOTAL</h2>
+                        </div>
+                        <div className="info-wrapper">
+                            <div className="bird-card">
+                                <div className="bird-photo-cont">
+                                    <img src="./assets/birds/sipiaberlepschi.jpg" alt="" />
+                                </div>
+                                <div className="bird-info-cont">
+                                    <h4>ESPECIE SUGERIDA</h4>
+                                    <h3 className="cursive family">Passeriformes > Thamnophilidae</h3>
+                                    <h3>Hormiguero colimocho</h3>
+                                    <h3 className="cursive">Sipia berlepschi</h3>
+                                </div>
+                            </div>
+                            <div className="btns-section">
+                                <span className="actions">
+                                    <span className="tooltip">
+                                        <img src="./assets/Tagging/tick.png" height="30px" width="30px" />
+                                        <span className="tooltiptextUp">Validar sugerencia</span>
+                                    </span>
+                                    <span className="tooltip">
+                                        <img src="./assets/Tagging/question.svg" height="30px" width="30px" />
+                                        <span className="tooltiptextUp">Pedir opinión a la comunidad</span>
+                                    </span>
+                                    <span className="tooltip">
+                                        <img src="./assets/Tagging/cancel.png" height="30px" width="30px" alt="" />
+                                        <span className="tooltiptextUp">No es esta especie</span>
+                                    </span>
+                                    {/*<button>Explorar otros audios de esta sugerencia</button>*/}
+                                </span>
+                                <div className="play-audio">
+                                    <img src="./assets/Tagging/play-audio.svg" height="25px" width="25px" alt=""
+                                        onClick={() => {
+                                            taggingStore.playBirdSong('./assets/audio-samples/Atom2B/sipiaberlepschi.mp3');
+                                        }
+                                        } />
+                                    <p>Reproducir</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="suggest-title-div"
+                    onClick={
+                        () => {
+                            taggingStore.showOtherSuggestions = !taggingStore.showOtherSuggestions;
+                        }
+                    }>
+                    <h3>Otros audios de esta sugerencia</h3>
+                    {(taggingStore.showOtherSuggestions)
+                        ? <button>v</button>
+                        : <button> {">"} </button>
+                    }
+                </div>
+                {(taggingStore.showOtherSuggestions)
+                    ? <div className="other-audios-suggestion">
+                        <div className="comparing-option">
+                            <div className="main-suggestion">
+                                <div className="spectro-main-suggestion">
+                                    <img className="spectro-play" src={taggingStore.aiTaggingArray[taggingStore.aiTaggingIndex].spectro} />
+                                </div>
+                                <div className="left-main-suggestion-card">
+                                    <div className="header">
+                                        <h2>{taggingStore.aiTaggingArray[taggingStore.aiTaggingIndex].percentage}</h2>
+                                    </div>
+                                    <div className="info-wrapper">
+                                        <div className="bird-card">
+                                            <div className="bird-photo-cont">
+                                                <img src="./assets/birds/sipiaberlepschi.jpg" alt="" />
+                                            </div>
+                                            <div className="bird-info-cont">
+                                                <h4>{taggingStore.aiTaggingArray[taggingStore.aiTaggingIndex].number}</h4>
+                                                <h3>{taggingStore.aiTaggingArray[taggingStore.aiTaggingIndex].user}</h3>
+                                                <h3>{taggingStore.aiTaggingArray[taggingStore.aiTaggingIndex].location}</h3>
+                                                <h3 className="cursive">Sipia berlepschi</h3>
+                                            </div>
+                                        </div>
+                                        <div className="btns-section">
+                                            <span className="actions">
+                                                <span className="tooltip">
+                                                    <img src="./assets/Tagging/tick.png" height="30px" width="30px" />
+                                                    <span className="tooltiptextUp">Validar sugerencia</span>
+                                                </span>
+                                                <span className="tooltip">
+                                                    <img src="./assets/Tagging/question.svg" height="30px" width="30px" />
+                                                    <span className="tooltiptextUp">Pedir opinión a la comunidad</span>
+                                                </span>
+                                                <span className="tooltip">
+                                                    <img src="./assets/Tagging/cancel.png" height="30px" width="30px" alt="" />
+                                                    <span className="tooltiptextUp">No es esta especie</span>
+                                                </span>
+                                            </span>
+                                            <div className="play-audio">
+                                                <img src="./assets/Tagging/play-audio.svg" height="25px" width="25px" alt=""
+                                                    onClick={() => {
+                                                        taggingStore.playBirdSong(taggingStore.aiTaggingArray[taggingStore.aiTaggingIndex].audio);
+                                                    }
+                                                    } />
+                                                <p>Reproducir</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr></hr>
+                        <div className="options">
+                            <h4>Otros audios de esta especie encontrados en e-Bird</h4>
+                            <div className="options-wrapper">
+                                {taggingStore.aiTaggingArray.map((suggestion) => {
+                                    return <div className="spectro" onClick={
+                                        () => {
+                                            if (taggingStore.aiTaggingIndex == suggestion.index && taggingStore.specieMarkSelected == true) {
+                                                taggingStore.aiTaggingMarkSelected = false;
+                                                taggingStore.aiTaggingIndex = 0;
+                                                console.log('estado: ' + taggingStore.aiTaggingMarkSelected, 'index: ' + taggingStore.aiTaggingIndex)
+                                            } else {
+                                                taggingStore.aiTaggingIndex = suggestion.index;
+                                                taggingStore.aiTaggingMarkSelected = true;
+                                            }
+                                        }
+                                    }>
+                                        <img src={suggestion.spectro} width="160" alt="" style={{
+                                            border: (taggingStore.aiTaggingIndex == suggestion.index) ? 'solid 1.5px #53D470' : 'solid 1.5px #E3E3E3',
+                                        }} />
+                                    </div>;
+                                })}
+                            </div>
+                        </div>
+                        <hr></hr>
+
+                    </div>
+                    : ''
+                }
+            </div>
+
+            {/* TAGGING SECTION */}
             <div className="card-section">
                 <span className="description-items-row">
                     <p><span className="text-title">Esta identificación está:</span> </p>
@@ -176,39 +321,17 @@ export class AITaggingB extends React.Component {
                                 isSearchable />
                         </span>
                     </span>
-                    <p className={taggingStore.isNoteActivated ? 'green-link card-item undisplay' : 'green-link card-item'} 
-                    onClick={()=> taggingStore.onNoteClick()}
+                    <p className={taggingStore.isNoteActivated ? 'green-link card-item undisplay' : 'green-link card-item'}
+                        onClick={() => taggingStore.onNoteClick()}
                     >Agregar anotación o comentario</p>
                     <div className={taggingStore.isNoteActivated ? 'card-item' : 'card-item undisplay'}>
                         <p className="text-title green-text">Anotación</p>
                         <textarea placeholder="Escribir anotación" name="" id="" ></textarea>
                     </div>
-                    {/* <span className="actions">
-                        <p>Marcar como:</p>
-                        <Select className={'react-selector'}
-                                options={tagState}
-                                isClearable = {false}
-                                isSearchable = {false}
-                                styles={colourStyles}
-                                defaultValue={tagState[2]}
-                                />
-                        <br />
-                        <br />
-                        <button className="dark-button">Guardar</button>
-                        </span> */}
                 </div>
 
             </div>
-            {/* 
-            <div className="card-section">
-                <p className="hint-text">¿Alguna duda sobre el canto? Verifica con cantos de Xeno-Canto</p>
-                <span className="input-row search card-item">
-                    <p className="text-title">Buscar en Xeno-Canto:</p> <input type="text" />
-                    <button className="green-button">Buscar</button>
-                </span>
-            </div>
-            */}
-            
+
         </section>
     }
 }

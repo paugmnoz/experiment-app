@@ -1,5 +1,9 @@
 @import "./../../../variables.scss";
 
+h3 {
+    color: #E3E3E3;
+}
+
 .tagging-section {
     background-color: white;
     width: 100%;
@@ -138,17 +142,35 @@
 
 .suggest-title {
     background-color: #53D470;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     h3 {
         color: black;
         padding: 10px;
+        font-size: 16px;
+    }
+
+    button {
+        display: flex;
+        align-self: flex-end;
+        border-style: none;
+        padding: 10px;
+        font-weight: 800;
+        font-size: 13px;
+        font-family: 'Lato', sans-serif;
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        cursor: pointer;
     }
 }
 
-.suggest-card-section{
+.suggest-card-section {
     max-height: 400px;
     overflow-y: auto;
 }
+
 .main-suggestion {
     display: flex;
     flex-direction: row;
@@ -165,8 +187,15 @@
         }
     }
 
+    .info-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .left-main-suggestion-card {
         display: flex;
+        width: 60%;
         flex-direction: column;
         border-top: solid 3px #53D470;
         border-right: solid 3px #53D470;
@@ -175,7 +204,7 @@
         .header {
             display: flex;
             justify-content: space-around;
-            width: 438px;
+            width: 100%;
             background-color: #53D470;
 
             h2 {
@@ -191,10 +220,11 @@
         .bird-card {
             display: flex;
             flex-direction: row;
+            padding: 10px;
 
             .bird-photo-cont {
-                width: 70px;
-                height: 70px;
+                width: 49px;
+                height: 49px;
                 border-radius: 35px;
                 margin: 8px;
                 overflow: hidden;
@@ -212,10 +242,19 @@
                 display: flex;
                 flex-direction: column;
 
+                h3 {
+                    color: #000;
+                }
+
+                h2 {
+                    font-size: 15px;
+                }
+
                 h4 {
                     color: #53D470;
                     margin-top: 5px;
                     margin-bottom: 5px;
+                    font-size: 15px;
                 }
 
                 .cursive {
@@ -224,19 +263,52 @@
                     margin-bottom: 1.5px;
                 }
 
+                .family {
+                    font-size: 11px;
+                }
+
                 h3 {
                     margin-bottom: 1.5px;
+                    font-size: 14px;
                 }
             }
         }
 
         .btns-section {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-around;
+
+            .play-audio {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+
+                p {
+                    margin-left: 5px;
+                    font-size: 15px;
+                }
+            }
 
             .actions {
                 padding: 10px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                button {
+                    background-color: #333333;
+                    color: white;
+                    border-radius: 27px;
+                    border-style: none;
+                    padding: 0.5rem 1rem;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    font-size: 13px;
+                    font-family: 'Lato', sans-serif;
+                }
 
                 img {
                     margin-left: 5px;
@@ -247,17 +319,52 @@
     }
 }
 
-.other-audios-suggestion{
-    .options{
+.suggest-title-div {
+    background-color: #333333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h3 {
+        color: #53D470;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    button {
+        background-color: rgba(255, 255, 255, 0);
+        border-style: none;
+        padding: 10px;
+        font-weight: 800;
+        font-size: 13px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.other-audios-suggestion {
+
+
+    .options {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        background-color: #E3E3E3;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
         padding: 12px;
-        img{
+
+        h4 {
+            margin-bottom: 10px;
+        }
+
+        .options-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        img {
             cursor: pointer;
             padding: 4px;
-            background-color: white;
             margin-left: 5px;
         }
     }

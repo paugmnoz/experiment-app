@@ -573,6 +573,7 @@ class TaggingStore {
 
     // AI TAGGING B
 
+    @observable showOtherSuggestions = false;
     @observable aiTaggingMarkSelected = false;
     @observable aiTaggingIndex = 1;
     @observable aiTaggingArray = [

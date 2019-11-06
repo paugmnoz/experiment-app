@@ -28,11 +28,12 @@ class DashboardStore {
     ['2A', '2B', '3A', '3B', '1A', '1B'],
     ['2B', '2A', '3B', '3A', '1B', '1A']
   ]
+  
   constructor() {
     let index = Math.floor((Math.random() * 12))
     console.log(index, 'random')
     this.atomList = this.possibleArrays[0]
-    this.actualAtom = this.atomList[5]
+    this.actualAtom = this.atomList[0]
     if (this.actualAtom === '1B') { this.displayWheelAtom = true }
   }
   @observable mousePosArray = Array();

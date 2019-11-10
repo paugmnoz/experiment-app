@@ -49,8 +49,8 @@ import { AITaggingB } from '../SecondTest/AITaggingB/AITaggingB';
 
         return <div className="cont" onMouseMove={this._onMouseMove.bind(this)}>
             <div className={(!dashboardStore.isCounting) ? 'overlay' : 'overlay started'}></div>
-            <div className="soft-handlers">
-                <h1>ATOMO: {dashboardStore.actualAtom}</h1>
+            <div className={(dashboardStore.isCounting) ? 'soft-handlers undisplay' : 'soft-handlers'}>
+                <h1>Interfaz: {dashboardStore.actualAtom}</h1>
                 {
                     (!dashboardStore.isCounting) ? (<button onClick={() => dashboardStore.handleStart('a')}>Empezar</button>) :
                         (<button className="finish" onClick={() => dashboardStore.handleEnd('a')}>He terminado</button>)
@@ -58,43 +58,9 @@ import { AITaggingB } from '../SecondTest/AITaggingB/AITaggingB';
                 <button className="save" onClick={this.downloadTxtFile}>Guardar</button>
                 <button className="next" disabled={dashboardStore.isCounting} onClick={() => dashboardStore.handleNext('a')}>Siguiente</button>
             </div>
-
-            <div className={(dashboardStore.displayWheelAtom) ? 'SpectroA atom' : 'SpectroA atom undisplay'}>
-                {/*<SpectroEditorB display={(dashboardStore.displayWheelAtom) ? 'inherit' : 'none'}></SpectroEditorB>*/}
-            </div>
-
-            {
-                (dashboardStore.actualAtom == '1A') ? (
-                    <div className="SpectroA atom">
-                        {<GeneralSpectrogramA/>}
-                        {/*<SpectroEditorA/>*/}
-                    </div>
-                ) : (dashboardStore.actualAtom === '1B') ? (
-                    <GeneralSpectrogramB/>
-                    /*dashboardStore.setWheelDisplay()*/
-                ) : (dashboardStore.actualAtom === '2A') ? (
-                    <div className="SpectroA atom">
-                        {<SelectionSpectrogramA />}
-                        {/*<CompareAudiosA />*/}
-                    </div>
-                ) : (dashboardStore.actualAtom === '2B') ? (
-                    <div className="SpectroA atom">
-                        {<SelectionSpectrogramB />}
-                        {/*<CompareAudiosB />*/}
-                    </div>
-                ) : (dashboardStore.actualAtom === '3A') ? (
-                    <div className="tagging atom">
-                        {<AITaggingA />}
-                        {/*<IdentifySoundA />*/}
-                    </div>
-                ) : (dashboardStore.actualAtom === '3B') ? (
-                    <div className="tagging atom">
-                        {<AITaggingB />}
-                        {/*<IdentifySoundB />*/}
-                    </div>
-                ) : ('TERMINAMOS')
-
-            }
+            <section className="interface">
+                <button onClick={() => dashboardStore.handleEnd('a')}>Terminar</button>
+            </section>
         </div>
     }
 }

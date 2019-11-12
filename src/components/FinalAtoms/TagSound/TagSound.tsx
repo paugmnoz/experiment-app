@@ -5,6 +5,7 @@ import CreatableSelect from 'react-select/creatable';
 import chroma from 'chroma-js';
 import { taggingStore } from '../../../store/TaggingStore';
 import { observer } from 'mobx-react';
+import TagSuggestion from './TagSuggestion';
 
 const options = [
     { value: 'song', label: 'Canción' },
@@ -88,7 +89,7 @@ export class TagSound extends React.Component {
         console.groupEnd();
     };
     render() {
-        return <section>
+        return <section className="tagging-section">
             <div className="card-header">
                 <h1>Selección</h1>
                 <img className="close-icon" src="./assets/icons/close.svg" alt="" />
@@ -96,6 +97,10 @@ export class TagSound extends React.Component {
             <div className="spec">
                 <img src="./assets/spectroSelected.png" alt="" />
             </div>
+            <div className="suggest-header">
+                <h1>Sugerencias del sistema</h1>
+            </div>
+            <TagSuggestion name = {'hola'} date="a" />
             <div className="card-section">
                 <span className="description-items-row">
                     <p><span className="text-title">Esta identificación está:</span> </p>

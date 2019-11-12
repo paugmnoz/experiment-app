@@ -6,6 +6,7 @@ import { dashboardStore } from '../../store/DashboardStore';
 
 import { SpectroEditor } from '../FinalAtoms/SpectroEditor/SpectroEditor';
 import { SpectroEditorA } from '../FirstTest/SpectroEditorA/SpectroEditorA';
+import { TagSound } from '../FinalAtoms/TagSound/TagSound';
 
 @observer export class TestDashboard extends React.Component {
 
@@ -48,7 +49,7 @@ import { SpectroEditorA } from '../FirstTest/SpectroEditorA/SpectroEditorA';
             </div>
             <section className="interface">
                 <button onClick={() => dashboardStore.handleEnd('a')}>Terminar</button>
-                <SpectroEditor />
+                <TagSound />
             </section>
         </div>
     }

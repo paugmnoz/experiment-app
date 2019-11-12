@@ -118,8 +118,6 @@ class TaggingStore {
     @observable colorEditionStatus: boolean = false;
     @observable contrastEditionStatus: boolean = false;
 
-
-
     @action onColorEdit() {
         this.colorEditionStatus = true;
         this.contrastEditionStatus = false;
@@ -207,6 +205,10 @@ class TaggingStore {
         this.contrastEditionStatus = true;
         this.colorEditionStatus = false;
     }
+
+    
+    @observable brightVal = 1;
+    @observable contrastVal = 1;
 
     //XENO CANTO
 

@@ -2,22 +2,10 @@ import * as React from 'react';
 import './TestDashboard.scss';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
-import { taggingStore } from '../../store/TaggingStore'
 import { dashboardStore } from '../../store/DashboardStore';
 
+import { SpectroEditor } from '../FinalAtoms/SpectroEditor/SpectroEditor';
 import { SpectroEditorA } from '../FirstTest/SpectroEditorA/SpectroEditorA';
-import { SpectroEditorB } from '../../components/FirstTest/SpectroEditorB/SpectroEditorB';
-import { CompareAudiosA } from '../FirstTest/CompareAudiosA/CompareAudiosA';
-import { CompareAudiosB } from '../FirstTest/CompareAudiosB/CompareAudiosB';
-import { IdentifySoundA } from '../../components/FirstTest/IdentifySoundA/IdentifySoundA';
-import { IdentifySoundB } from '../../components/FirstTest/IdentifySoundB/IdentifySoundB';
-
-import { GeneralSpectrogramA } from '../../components/SecondTest/GeneralSpectrogramA/GeneralSpectrogramA';
-import { GeneralSpectrogramB } from '../SecondTest/GeneralSpectrogramB/GeneralSpectrogramB';
-import { SelectionSpectrogramA } from '../SecondTest/SelectionSpectrogramA/SelectionSpectrogramA';
-import { SelectionSpectrogramB } from '../SecondTest/SelectionSpectrogramB/SelectionSpectrogramB';
-import { AITaggingA } from '../SecondTest/AITaggingA/AITaggingA';
-import { AITaggingB } from '../SecondTest/AITaggingB/AITaggingB';
 
 @observer export class TestDashboard extends React.Component {
 
@@ -60,12 +48,8 @@ import { AITaggingB } from '../SecondTest/AITaggingB/AITaggingB';
             </div>
             <section className="interface">
                 <button onClick={() => dashboardStore.handleEnd('a')}>Terminar</button>
+                <SpectroEditor />
             </section>
         </div>
     }
-}
-
-const Comp = (props) => {
-    console.log(props.position);
-    return null;
 }

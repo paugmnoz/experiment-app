@@ -60,6 +60,7 @@ class ContrastEditor extends Component {
                 min={0}
                 max={2}
                 step={0.1}
+                onAfterChange={this.onBrightAfterChange}
                 trackStyle={{ backgroundColor: '#AFEA7D', height: 6 }}
                 handleStyle={{
                     borderColor: '#fff',
@@ -82,6 +83,7 @@ class ContrastEditor extends Component {
                 defaultValue={1}
                 value={taggingStore.contrastVal}
                 onChange={(e) => this.onContrastChange(e)}
+                onAfterChange={this.onContrastAfterChange}
                 min={0}
                 max={2}
                 step={0.1}

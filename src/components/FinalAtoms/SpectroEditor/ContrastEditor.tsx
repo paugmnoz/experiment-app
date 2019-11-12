@@ -4,6 +4,7 @@ import { taggingStore } from '../../../store/TaggingStore';
 import { observable } from 'mobx';
 import * as CSS from 'csstype';
 import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 interface contrastEditorProps {
     name: string;
@@ -100,11 +101,13 @@ class ContrastEditor extends Component {
                 onChange={(e) => this.onContrastInputChange(e.target.value)}
                 name="" id="" />
         </span>
+       
         <br/>
         <span className="bcEditOption">
         <button className="dark-button">Cancelar</button>
         <button className="green-button">Guardar cambios</button>
         </span>
+       
     </span>;
     }
 

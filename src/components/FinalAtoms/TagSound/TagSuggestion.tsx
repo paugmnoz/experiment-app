@@ -18,20 +18,15 @@ class TagSuggestion extends Component<tagSuggestionProps> {
                     <div className="column-wrapper">
                         <div className="coincidence-header">
                             <h2>87% DE COINCIDENCIA TOTAL</h2>
-
                         </div>
                         <span className="main-spec">
                             <img className="spec-img" src="./assets/Tagging/ai/colimocho-spec.jpg" alt="" />
                             <img className="lens-img"
                                 onClick={() => taggingStore.onSpecZoomView('./assets/Tagging/ai/colimocho-spec.jpg', '//www.xeno-canto.org/sounds/uploaded/FPAGKPAQYO/XC428690-Stub-tailed%20Antbird_SanCipriano_Co_1sep2017_FSchmitt.mp3')}
                                 src="./assets/Tagging/lens.svg" alt="" />
-
                         </span>
                     </div>
-
-
                     <div className="row suggestion-info">
-
                         <div className="bird-info">
                             <div className="row">
                                 <div className="bird-photo-cont">
@@ -84,13 +79,14 @@ class TagSuggestion extends Component<tagSuggestionProps> {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
                 <div className="card-section ai-sources">
-                    <p>Basado en estos cantos encontrados en eBird:</p>
-                    <span className="row">
+                    <p className={(taggingStore.isUnfoldedReference) ? 'unfolded' : ''}
+                     onClick={() => taggingStore.onDisplayOtherSings()}> 
+                     <div className="arrow-down"></div> 
+                     Ver otros cantos de esta especie encontrados en eBird:</p>
+                    {
+                        (taggingStore.isUnfoldedReference) ?   <span className="row">
                         <article className="spec">
                             <img className="spectro-img" src="./assets/Tagging/ai/colimocho-spec-2.jpg" height="150px" alt="" />
                             <span className="play" onClick={() => taggingStore.playBirdSong('//www.xeno-canto.org/sounds/uploaded/BSFIBFUGKW/XC405735-Stub_tailed_Antbird_Anchicay%C3%A1_20171127_172446.mp3')}>
@@ -98,7 +94,6 @@ class TagSuggestion extends Component<tagSuggestionProps> {
                                 <p className="_14px"> Reproducir canto</p>
                             </span><p className=" _14px">Buenaventura, Colombia</p>
                             <p className="gray-text _14px">Iván Lau</p>
-
                             <img className="lens-img"
                                 onClick={() => taggingStore.onSpecZoomView('./assets/Tagging/ai/colimocho-spec-2.jpg', '//www.xeno-canto.org/sounds/uploaded/BSFIBFUGKW/XC405735-Stub_tailed_Antbird_Anchicay%C3%A1_20171127_172446.mp3')}
                                 src="./assets/Tagging/lens.svg" alt="" />
@@ -111,7 +106,6 @@ class TagSuggestion extends Component<tagSuggestionProps> {
                             </span>
                             <p className=" _14px">Esmeraldas, Ecuador</p>
                             <p className="gray-text _14px">Olaf Jahn</p>
-
                             <img className="lens-img"
                                 onClick={() => taggingStore.onSpecZoomView('./assets/Tagging/ai/colimocho-spec-3.jpg', '//www.xeno-canto.org/sounds/uploaded/UZXDJEAXMH/XC262105-61.085.02.Stub-tailed_Antbird.mp3')}
                                 src="./assets/Tagging/lens.svg" alt="" />
@@ -124,14 +118,14 @@ class TagSuggestion extends Component<tagSuggestionProps> {
                             </span>
                             <p className=" _14px">Nariño, Colombia</p>
                             <p className="gray-text _14px">Todd Mark</p>
-
                             <img className="lens-img"
                                 onClick={() => taggingStore.onSpecZoomView('./assets/Tagging/ai/colimocho-spec-4.jpg', '//www.xeno-canto.org/sounds/uploaded/CLKPHLYUHA/MyrBer3IV.mp3')}
                                 src="./assets/Tagging/lens.svg" alt="" />
                         </article>
-                    </span>
+                    </span> : ''
+                    }
+                  
                 </div>
-
             </div>
             <span className="next-card">
                 <img src="./assets/Tagging/right-arrow.svg" width="25px" alt="" />

@@ -573,6 +573,10 @@ class TaggingStore {
         this.zoomedSpeImgUrl = '';
     }
 
+    @observable isUnfoldedReference = false;
+    @action onDisplayOtherSings() {
+        this.isUnfoldedReference = !this.isUnfoldedReference;
+    }
     // AI TAGGING B
 
     @observable showOtherSuggestions = false;

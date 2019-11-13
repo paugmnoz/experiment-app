@@ -45,10 +45,11 @@ export class TagSound extends React.Component {
             <div className="spec">
                 <img src="./assets/spectroSelected.png" alt="" />
             </div>
-            <div className="cards-cont">
-                <div className="suggest-header">
+            <div className="suggest-header">
                     <h1>Sugerencias del sistema</h1>
                 </div>
+            <div className="cards-cont">
+            
                 {
                     suggestionStore.speciesSuggested.map((e) => {
                         const jsonData =JSON.stringify(e.otherSongs);

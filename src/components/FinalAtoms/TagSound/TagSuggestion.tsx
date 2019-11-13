@@ -53,7 +53,11 @@ class TagSuggestion extends Component<tagSuggestionProps> {
                                 <span className="play" onClick={() => taggingStore.playBirdSong(this.props.mainAudioUrl)}>
                                     <img className="play-img" src="./assets/Tagging/play-audio.svg"
                                         height="25px" alt="" />
-                                    <p>Reproducir canto</p>
+                                    <p> Reproducir canto</p>
+                                    {/*(!taggingStore.isPlaying) ?  <img className="play-img" src="./assets/Tagging/play-audio.svg"
+                                        height="25px" alt="" />  :  <img className="play-img" src="./assets/Tagging/pause.svg"
+                                    height="25px" alt="" /> */}
+
                                 </span>
                                 <div className="actions-wrapper">
                                     <span className="action-btn">
@@ -110,7 +114,7 @@ class TagSuggestion extends Component<tagSuggestionProps> {
                                 </article>
                             })
                         }
-                       </span> : ''
+                    </span> : ''
                 }
 
             </div>

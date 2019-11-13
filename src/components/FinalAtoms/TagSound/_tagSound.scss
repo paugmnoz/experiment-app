@@ -261,6 +261,9 @@
             color: $mainDarkColor;
             font-weight: 700;
             cursor: pointer;
+            &:hover {
+                color: $mainActiveColor;
+            }
             &.unfolded {
                 div {
                     transform: rotate(90deg);

@@ -6,6 +6,7 @@ import chroma from 'chroma-js';
 import { taggingStore } from '../../../store/TaggingStore';
 import { observer } from 'mobx-react';
 import TagSuggestion from './TagSuggestion';
+import { suggestionStore } from '../../../store/suggestionStore';
 
 const options = [
     { value: 'song', label: 'Canción' },
@@ -19,59 +20,6 @@ const species = [
     { value: 'c', label: 'Piranga rubra' },
     { value: 'c', label: 'Hafferia zeledoni' }
 ]
-
-const tagState = [
-    { value: 'a', label: 'Duda', color: '#f3773e' },
-    { value: 'b', label: 'Seguro', color: '#44cd88' },
-    { value: 'c', label: 'Pendiente', color: '#AFEA7D' }
-]
-const dot = (color = '#ccc') => ({
-    alignItems: 'center',
-    display: 'flex',
-
-    ':before': {
-        backgroundColor: color,
-        borderRadius: 10,
-        content: '" "',
-        display: 'block',
-        marginRight: 8,
-        height: 10,
-        width: 10,
-    },
-});
-
-const colourStyles = {
-    control: styles => ({ ...styles, backgroundColor: 'white' }),
-    option: (styles, { data, isDisabled, isFocused, isSelected }) => {
-        const color = chroma(data.color);
-        return {
-            ...styles,
-            backgroundColor: isDisabled
-                ? null
-                : isSelected
-                    ? data.color
-                    : isFocused
-                        ? color.alpha(0.1).css()
-                        : null,
-            color: isDisabled
-                ? '#ccc'
-                : isSelected
-                    ? chroma.contrast(color, 'white') > 2
-                        ? 'white'
-                        : 'black'
-                    : data.color,
-            cursor: isDisabled ? 'not-allowed' : 'default',
-
-            ':active': {
-                ...styles[':active'],
-                backgroundColor: !isDisabled && (isSelected ? data.color : color.alpha(0.3).css()),
-            },
-        };
-    },
-    input: styles => ({ ...styles, ...dot() }),
-    placeholder: styles => ({ ...styles, ...dot() }),
-    singleValue: (styles, { data }) => ({ ...styles, ...dot(data.color) }),
-};
 
 
 @observer
@@ -98,9 +46,46 @@ export class TagSound extends React.Component {
                 <img src="./assets/spectroSelected.png" alt="" />
             </div>
             <div className="suggest-header">
-                <h1>Sugerencias del sistema</h1>
+                    <h1>Sugerencias del sistema</h1>
+                </div>
+            <div className="cards-cont">
+            
+                {
+                    suggestionStore.speciesSuggested.map((e) => {
+                        const jsonData =JSON.stringify(e.otherSongs);
+                        return <TagSuggestion
+                            sciName={e.sciName}
+                            commonName={e.commonName}
+                            order={e.order}
+                            family={e.family}
+                            gender={e.gender}
+                            coincidence={e.coincidence}
+                            mainAudioUrl={e.mainAudioUrl}
+                            spectroImgUrl={e.spectroImgUrl}
+                            birdPhoto={e.birdPhotoUrl}
+                            otherSongs={jsonData} />
+                    })
+                }
+
+
+                <span className="next-card">
+                    <img src="./assets/Tagging/right-arrow.svg" width="25px" alt="" />
+                </span>
+                <span className={(taggingStore.isSomethingZoomed) ? "zoomed-spectro" : "zoomed-spectro undisplay"} >
+                    <div className='spectro-card'>
+                        <img className="spec-img" src={taggingStore.zoomedSpeImgUrl} alt="" />
+
+                        <span className="play" onClick={() => taggingStore.playBirdSong(taggingStore.zoomedSpeAudioUrl)}>
+                            <img className="play-img" src="./assets/Tagging/play-audio.svg" height="20px" alt="" />
+                            <p className="_14px"> Reproducir canto</p>
+                        </span>
+                        <img className="close-img"
+                            onClick={() => taggingStore.onExitZoomView()}
+                            src="./assets/dark-x-close.svg" alt="" />
+                    </div>
+                </span>
+
             </div>
-            <TagSuggestion name = {'hola'} date="a" />
             <div className="card-section">
                 <span className="description-items-row">
                     <p><span className="text-title">Esta identificación está:</span> </p>
@@ -178,8 +163,8 @@ export class TagSound extends React.Component {
                                 isSearchable />
                         </span>
                     </span>
-                    <p className={taggingStore.isNoteActivated ? 'green-link card-item undisplay' : 'green-link card-item'} 
-                    onClick={()=> taggingStore.onNoteClick()}
+                    <p className={taggingStore.isNoteActivated ? 'green-link card-item undisplay' : 'green-link card-item'}
+                        onClick={() => taggingStore.onNoteClick()}
                     >Agregar anotación o comentario</p>
                     <div className={taggingStore.isNoteActivated ? 'card-item' : 'card-item undisplay'}>
                         <p className="text-title green-text">Anotación</p>
@@ -210,7 +195,7 @@ export class TagSound extends React.Component {
                 </span>
             </div>
             */}
-            
+
         </section>
     }
 }
